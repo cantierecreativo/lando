@@ -16,7 +16,7 @@ export default function VideoPlayer({ record }) {
       className="react-player-custom"
       playIcon={
         <button>
-          <div class="triangle"></div>
+          <div className="triangle"></div>
           <span>Vedi il video</span>
         </button>
       }
