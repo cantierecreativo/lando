@@ -16,9 +16,9 @@ export default function Footer({ org, visual, site, locale }) {
   const alignClass = newsletterFormUrl ? "" : "justify-center text-center";
 
   return (
-    <footer id="footer" className="container py-6 ">
-      <div className={`${alignClass} md:flex gap-16`}>
-        <div className="flex-1 my-12">
+    <footer id="footer" className="bg-back-rev text-rev">
+      <div className="container py-6 ">
+        <div className={`${alignClass} md:flex gap-16 my-12`}>
           <div>
             <Image
               src={visual.logo.url}
@@ -28,18 +28,45 @@ export default function Footer({ org, visual, site, locale }) {
             />
           </div>
           {streetAddress && (
-            <div className="my-6">{renderHTML(streetAddress)}</div>
+            <div className="my-2">{renderHTML(streetAddress)}</div>
           )}
-          {phoneNumber && (
-            <div className="my-2 font-medium">
-              <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
-            </div>
-          )}
-          {emailAddress && (
-            <div className="my-2 font-medium">
-              <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
-            </div>
-          )}
+          <div>
+            {phoneNumber && (
+              <div className="my-2 font-medium">
+                <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+              </div>
+            )}
+            {emailAddress && (
+              <div className="my-2 font-medium">
+                <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
+              </div>
+            )}
+          </div>
+          <div className="py-2 font-medium">
+            <a
+              className="block"
+              href="https://www.cantierecreativo.net"
+              target="_blank"
+              rel="noreferrer noopener"
+              title={`${i18n.linkExternal.label[locale]} Cantiere Creativo`}
+            >
+              Design & Develop by Cantiere Creativo
+            </a>
+            <a
+              href={`https://www.iubenda.com/privacy-policy/${org.iubendaPolicyId}`}
+              className="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed block"
+              title="Privacy Policy"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href={`https://www.iubenda.com/privacy-policy/${org.iubendaPolicyId}/cookie-policy`}
+              className="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed block"
+              title="Privacy Policy"
+            >
+              Cookie Policy
+            </a>
+          </div>
           {(facebookUrl || instagramUrl) && (
             <ul className={`${alignClass} flex my-6 gap-4`}>
               {facebookUrl && (
@@ -85,50 +112,6 @@ export default function Footer({ org, visual, site, locale }) {
             </ul>
           )}
         </div>
-        {newsletterFormUrl && (
-          <section className="flex-1 my-12">
-            {org.newsletterLabel && (
-              <div className="font-bold text-xs uppercase text-accent tracking-widest my-2">
-                {org.newsletterLabel}
-              </div>
-            )}
-            {org.newsletterTitle && (
-              <h2 className="font-heading font-medium break-words uppercase text-alt text-lg my-4 xl:text-xl xl:my-6">
-                {org.newsletterTitle}
-              </h2>
-            )}
-            {/* <SignupForm
-              url={newsletterFormUrl}
-              locale={locale}
-            /> */}
-          </section>
-        )}
-      </div>
-      <div className="text-center py-6 text-sm">
-        <a
-          href="https://www.cantierecreativo.net"
-          target="_blank"
-          rel="noreferrer noopener"
-          title={`${i18n.linkExternal.label[locale]} Cantiere Creativo`}
-        >
-          Design & Develop by Cantiere Creativo
-        </a>
-        {" - "}
-        <a
-          href={`https://www.iubenda.com/privacy-policy/${org.iubendaPolicyId}`}
-          className="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed"
-          title="Privacy Policy"
-        >
-          Privacy Policy
-        </a>
-        {" - "}
-        <a
-          href={`https://www.iubenda.com/privacy-policy/${org.iubendaPolicyId}/cookie-policy`}
-          className="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed"
-          title="Privacy Policy"
-        >
-          Cookie Policy
-        </a>
       </div>
     </footer>
   );

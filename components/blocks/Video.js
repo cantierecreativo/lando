@@ -31,7 +31,7 @@ export default function Text({ block, visual, locale }) {
           {block.title}
         </h2>
       )}
-      <div className={`${alignClass} xl:text-lg`}>{renderHTML(block.text)}</div>
+      <div className={`${alignClass}`}>{renderHTML(block.text)}</div>
       <div className="relative inline-block w-full mt-6 xl:mt-12">
         <div className="mt-[56.25%]" />
         <div className="absolute top-0 h-full w-full">
