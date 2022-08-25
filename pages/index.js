@@ -1,20 +1,24 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router';
-import { request } from 'lib/datocms';
-import { blockSetupFields, colorFields, responsiveImageFragment } from 'lib/fragments';
-import { renderMetaTags } from 'react-datocms';
-import { setGoogleFonts } from 'lib/fonts';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { request } from "lib/datocms";
+import {
+  blockSetupFields,
+  colorFields,
+  responsiveImageFragment,
+} from "lib/fragments";
+import { renderMetaTags } from "react-datocms";
+import { setGoogleFonts } from "lib/fonts";
 
-import CustomCssVars from 'components/layout/CustomCssVars';
-import SkipLinks from 'components/layout/SkipLinks';
-import Header from 'components/layout/Header';
-import Footer from 'components/layout/Footer';
-import Blocks from 'components/layout/Blocks';
+import CustomCssVars from "components/layout/CustomCssVars";
+import SkipLinks from "components/layout/SkipLinks";
+import Header from "components/layout/Header";
+import Footer from "components/layout/Footer";
+import Blocks from "components/layout/Blocks";
 
-import Iubenda from 'components/scripts/Iubenda';
-import GoogleAnalytics from 'components/scripts/GoogleAnalytics';
-import GoogleTagManager from 'components/scripts/GoogleTagManager';
-import FacebookPixel from 'components/scripts/FacebookPixel';
+import Iubenda from "components/scripts/Iubenda";
+import GoogleAnalytics from "components/scripts/GoogleAnalytics";
+import GoogleTagManager from "components/scripts/GoogleTagManager";
+import FacebookPixel from "components/scripts/FacebookPixel";
 
 export async function getStaticProps({ locale }) {
   const formattedLocale = locale.split("-")[0];
@@ -203,11 +207,54 @@ export async function getStaticProps({ locale }) {
                 url
               }
             }
+            ... on PartnersBlockRecord {
+              ${blockSetupFields}
+              menuLabel
+              title
+              images {
+                id
+                responsiveImage(sizes: "230px", imgixParams: { fit: clip, h: 100, auto: [format,compress] }) {
+                  ...responsiveImageFragment
+                }
+              }
+            }
+            ... on VideoBlockRecord {
+              ${blockSetupFields}
+              menuLabel
+              title
+              text
+              videoExternal {
+                url
+                height
+                width
+                title
+                provider
+                providerUid
+                thumbnailUrl
+              }
+              videoInternal {
+                height
+                width
+                title
+                url
+                video {
+                  mp4Url
+                  thumbnailUrl
+                  streamingUrl
+                }
+              }
+              poster {
+                id
+                responsiveImage(sizes: "(min-width: 768px) 80vw, 100vw, 1160px", imgixParams: {auto: [format, compress], fit: crop, ar: "16:9"}){
+                  ...responsiveImageFragment
+                }
+              }
+            }
           }
         }
       }
       ${responsiveImageFragment}
-    `
+    `,
   };
 
   return {
@@ -239,23 +286,12 @@ export default function Home({ data }) {
       />
 
       <main id="content">
-        <Blocks
-          blocks={page.headerBlocks}
-          visual={visual}
-        />
-        <Blocks
-          blocks={page.contentBlocks}
-          visual={visual}
-          locale={locale}
-        />
+        <Blocks blocks={page.headerBlocks} visual={visual} />
+        <Blocks blocks={page.contentBlocks} visual={visual} locale={locale} />
+        {console.log("page.contentBlocks:", page.contentBlocks)}
       </main>
 
-      <Footer
-        org={org}
-        visual={visual}
-        site={site}
-        locale={locale}
-      />
+      <Footer org={org} visual={visual} site={site} locale={locale} />
 
       <Iubenda
         siteId={org.iubendaSiteId}
@@ -268,13 +304,9 @@ export default function Home({ data }) {
         <GoogleTagManager id={org.googleTagManagerId} />
       )}
 
-      {org.googleAnalyticsId && (
-        <GoogleAnalytics id={org.googleAnalyticsId} />
-      )}
+      {org.googleAnalyticsId && <GoogleAnalytics id={org.googleAnalyticsId} />}
 
-      {org.facebookPixelId && (
-        <FacebookPixel id={org.facebookPixelId} />
-      )}
+      {org.facebookPixelId && <FacebookPixel id={org.facebookPixelId} />}
     </>
-  )
+  );
 }
