@@ -40,6 +40,9 @@ export async function getStaticProps({ locale }) {
           logo {
             url
           }
+          logoRev {
+            url
+          }
           uppercaseTitles
           colorText {
             ${colorFields}
@@ -198,6 +201,20 @@ export async function getStaticProps({ locale }) {
               text
               authorName
             }
+            ... on BannerCtaBlockRecord {
+              ${blockSetupFields}
+              text
+              title
+              imageBg {
+                id
+                responsiveImage(sizes: "100vw", imgixParams: { fit: crop, w: 1550, h: 800, auto: [format,compress] }) {
+                  ...responsiveImageFragment
+                }
+              }
+              link
+              cta
+              menuLabel
+            }
             ... on TextBlockRecord {
               ${blockSetupFields}
               menuLabel
@@ -291,7 +308,6 @@ export default function Home({ data }) {
       <main id="content">
         <Blocks blocks={page.headerBlocks} visual={visual} />
         <Blocks blocks={page.contentBlocks} visual={visual} locale={locale} />
-        {console.log("page.contentBlocks:", page.contentBlocks)}
       </main>
 
       <Footer org={org} visual={visual} site={site} locale={locale} />

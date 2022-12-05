@@ -8,6 +8,7 @@ import Quote from "components/blocks/Quote";
 import Text from "components/blocks/Text";
 import Video from "components/blocks/Video";
 import Partners from "components/blocks/Partners";
+import Banner from "components/blocks/Banner";
 
 function renderBlock(block, visual, locale) {
   switch (block._modelApiKey) {
@@ -50,6 +51,11 @@ function renderBlock(block, visual, locale) {
           key={block.id}
           locale={locale}
         />
+      );
+
+    case "banner_cta_block":
+      return (
+        <Banner block={block} visual={visual} key={block.id} locale={locale} />
       );
   }
 }

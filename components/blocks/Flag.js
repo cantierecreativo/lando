@@ -1,5 +1,6 @@
 import { renderHTML } from "lib/html";
 import { uppercaseClass } from "lib/visual";
+import { anchorId } from "lib/anchors";
 import { Image } from "react-datocms";
 import { useInView } from "react-intersection-observer";
 
@@ -10,7 +11,7 @@ export default function Flag({ block, visual }) {
   const colorsClass = block.colorsRev ? "bg-back-rev text-rev" : "text-alt";
   const spacingClass = block.colorsRev
     ? "py-8 lg:py-24 xl:py-36"
-    : "my-8 lg:my-24 xl:my-36";
+    : "py-8 lg:py-24 xl:py-36";
 
   const { ref, inView, entry } = useInView({
     threshold: 0.2,
@@ -20,7 +21,11 @@ export default function Flag({ block, visual }) {
   const inViewClass = inView ? "fade-down-on" : "fade-down-off";
 
   return (
-    <section ref={ref} className={`${colorsClass} ${spacingClass}`}>
+    <section
+      id={anchorId(block)}
+      ref={ref}
+      className={`${colorsClass} ${spacingClass}`}
+    >
       <div
         className={`${alignClass} container lg:flex lg:items-center lg:gap-12 xl:gap-24`}
       >

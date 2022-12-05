@@ -21,7 +21,7 @@ export default function Footer({ org, visual, site, locale }) {
         <div className={`${alignClass} md:flex gap-16 my-12`}>
           <div>
             <Image
-              src={visual.logo.url}
+              src={visual.logoRev.url}
               alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}
               width={220}
               height={90}
