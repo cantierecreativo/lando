@@ -8,15 +8,17 @@ export default function HeroImage({ block, visual }) {
 
   return (
     <header className="mx-auto max-w-screen-2xl relative">
-      <div className="cover">
-        <Image
-          data={image.responsiveImage}
-          alt={image.alt}
-          title={image.title}
-          layout="fill"
-          objectFit="cover"
-          lazyLoad={false}
-        />
+      <div className="h-96 lg:h-[600px] xl:h-[700px]">
+        <div className="w-full h-44 md:h-80 lg:h-96 xl:h-[700px] relative">
+          <Image
+            data={image.responsiveImage}
+            alt={image.alt}
+            title={image.title}
+            layout="fill"
+            objectFit="cover"
+            lazyLoad={false}
+          />
+        </div>
         <div
           className={`${titleClass} absolute z-20 inset-x-0 bottom-0 container`}
         >

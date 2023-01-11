@@ -30,13 +30,13 @@ export default function Text({ block, visual, locale }) {
           <h2
             className={`${alignClass} ${uppercaseClass(
               visual
-            )} font-heading font-medium text-accent-rev text-xl mb-6 xl:text-2xl xl:mb-12`}
+            )} font-heading font-medium text-accent-rev text-lg md:text-xl mb-6 xl:text-2xl xl:mb-12`}
           >
             {block.title}
           </h2>
         )}
         <div>
-          {renderHTML(block.text)}
+          <div className="text-sm md:text-base">{renderHTML(block.text)}</div>
           {block.link && (
             <div className="mt-8">
               <a

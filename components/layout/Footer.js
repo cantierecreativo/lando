@@ -16,9 +16,9 @@ export default function Footer({ org, visual, site, locale }) {
   const alignClass = newsletterFormUrl ? "" : "justify-center text-center";
 
   return (
-    <footer id="footer" className="bg-back-rev text-rev">
+    <footer id="footer" className="bg-back-rev text-rev text-sm">
       <div className="container py-6 ">
-        <div className={`${alignClass} md:flex gap-16 my-12`}>
+        <div className={`${alignClass} lg:flex gap-16 my-12`}>
           <div>
             <Image
               src={visual.logoRev.url}

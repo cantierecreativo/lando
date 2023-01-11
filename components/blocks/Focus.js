@@ -25,7 +25,7 @@ export default function Focus({ block, visual }) {
           <h2
             className={`${uppercaseClass(
               visual
-            )} font-heading font-medium text-accent break-words text-2xl mb-6 xl:text-2xl xl:mb-12`}
+            )} font-heading font-medium text-accent break-words text-lg md:text-2xl mb-6 xl:text-2xl xl:mb-12`}
           >
             {block.title}
           </h2>

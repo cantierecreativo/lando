@@ -2,7 +2,7 @@
 
 @layer base {
   html {
-    @apply motion-safe:scroll-smooth;
+    @apply motion-safe:scroll-smooth text-base-color;
   }
   body {
     @apply font-body text-base bg-back;
@@ -29,10 +29,6 @@
   .product-bg:before,
   .product-bg-rev:before {
     @apply -z-10 content-[''] absolute inset-0 bg-back-rev/10 -top-[33vh];
-  }
-
-  .cover {
-    @apply h-72 md:h-96 lg:h-128 xl:h-160;
   }
 
   @media screen(lg) {

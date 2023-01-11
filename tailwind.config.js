@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
     },
     fontFamily: {
       heading: ["var(--font-heading)", "sans-serif"],
@@ -32,7 +32,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        base: withOpacityValue("--color-text"),
+        "base-color": withOpacityValue("--color-text"),
         alt: withOpacityValue("--color-text-alt"),
         rev: withOpacityValue("--color-text-rev"),
         back: withOpacityValue("--color-back"),

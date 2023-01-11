@@ -8,6 +8,7 @@ export default function Flag({ block, visual }) {
   const image = block.image;
   const alignClass = block.alignRev ? "flex-row-reverse" : "";
   const titleClass = block.colorsRev ? "text-accent-rev" : "text-accent";
+  const textClass = block.colorsRev ? "!text-base-rev" : "!text-base";
   const colorsClass = block.colorsRev ? "bg-back-rev text-rev" : "text-alt";
   const spacingClass = block.colorsRev
     ? "py-8 lg:py-24 xl:py-36"
@@ -36,11 +37,13 @@ export default function Flag({ block, visual }) {
           <h2
             className={`${uppercaseClass(
               visual
-            )} ${titleClass} font-heading font-medium break-words text-xl my-4 xl:my-6`}
+            )} ${titleClass} font-heading font-medium break-words text-lg md:text-xl my-4 xl:my-6`}
           >
             {block.title}
           </h2>
-          <div className="">{renderHTML(block.text)}</div>
+          <div className={`${textClass} text-sm md:text-base`}>
+            {renderHTML(block.text)}
+          </div>
         </div>
         <div className="flex-1 my-8 lg:my-0">
           <div className="lg:px-12">
