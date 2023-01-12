@@ -19,12 +19,12 @@ export default function Footer({ org, visual, site, locale }) {
     <footer id="footer" className="bg-back-rev text-rev text-sm">
       <div className="container py-6 ">
         <div className={`${alignClass} lg:flex gap-16 my-12`}>
-          <div>
+          <div className="h-16 w-40 xl:w-60 relative">
             <Image
               src={visual.logoRev.url}
               alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}
-              width={220}
-              height={90}
+              layout="fill"
+              objectFit="contain"
             />
           </div>
           {streetAddress && (
