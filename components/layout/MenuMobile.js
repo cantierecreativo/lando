@@ -47,10 +47,13 @@ function RenderMobileNavItem(item, navNewsCategories, locale) {
               <Disclosure.Panel className="p-8">
                 <div className="relative grid divide-y divide-black/5 bg-white text-xs">
                   {navNewsCategories.map((p) => (
-                    <Link key={p.id} href={resolveLink(p, locale)}>
-                      <a title={p.title} onClick={() => close()}>
-                        <span className={classDropdownItem}>{p.title}</span>
-                      </a>
+                    <Link
+                      title={p.title}
+                      onClick={() => close()}
+                      key={p.id}
+                      href={resolveLink(p, locale)}
+                    >
+                      <span className={classDropdownItem}>{p.title}</span>
                     </Link>
                   ))}
                 </div>
@@ -62,18 +65,17 @@ function RenderMobileNavItem(item, navNewsCategories, locale) {
     );
   }
   return (
-    <Link key={item.id} href={resolveLink(item, locale)}>
-      <a
-        key={item.slug}
-        title={item.title}
-        className={`${
-          Object(router.asPath).indexOf(item.slug) > -1
-            ? { classNameActiveMobile }
-            : "none"
-        }`}
-      >
-        <span className="text-black duration-200">{item.menuLabel}</span>
-      </a>
+    <Link
+      key={item.id}
+      href={resolveLink(item, locale)}
+      title={item.title}
+      className={`${
+        Object(router.asPath).indexOf(item.slug) > -1
+          ? { classNameActiveMobile }
+          : "none"
+      }`}
+    >
+      <span className="text-black duration-200">{item.menuLabel}</span>
     </Link>
   );
 }

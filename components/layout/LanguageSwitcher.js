@@ -16,8 +16,8 @@ function LanguageSwitcher({ page, locale }) {
           } else
             return (
               <Fragment key={l}>
-                <Link href={resolveLink(page, l, link)}>
-                  <a className="text-green">{t(`${l}`, locale)}</a>
+                <Link className="text-green" href={resolveLink(page, l, link)}>
+                  {t(`${l}`, locale)}
                 </Link>
               </Fragment>
             );

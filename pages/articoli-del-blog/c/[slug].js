@@ -14,11 +14,7 @@ function NewsCategory({ locale, site, page, items }) {
           ELENCO ARTICOLI FILTRATI PER CATEGORIA
           {items.map((i) => (
             <li key={i.id}>
-              <Link href={resolveLink(i, locale)}>
-                <a title="" className="">
-                  {i.title}
-                </a>
-              </Link>
+              <Link href={resolveLink(i, locale)}>{i.title}</Link>
             </li>
           ))}
         </ul>

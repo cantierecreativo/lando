@@ -50,10 +50,13 @@ function RenderNavItem(item, navNewsCategories, locale) {
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid divide-y divide-black/5 bg-white text-xs">
                     {navNewsCategories.map((p) => (
-                      <Link key={p.id} href={resolveLink(p, locale)}>
-                        <a title={p.title} onClick={() => close()}>
-                          <span className={classDropdownItem}>{p.title}</span>
-                        </a>
+                      <Link
+                        title={p.title}
+                        onClick={() => close()}
+                        key={p.id}
+                        href={resolveLink(p, locale)}
+                      >
+                        <span className={classDropdownItem}>{p.title}</span>
                       </Link>
                     ))}
                   </div>
@@ -66,20 +69,19 @@ function RenderNavItem(item, navNewsCategories, locale) {
     );
   }
   return (
-    <Link key={item.id} href={resolveLink(item, locale)}>
-      <a
-        key={item.slug}
-        title={item.title}
-        className={`${
-          Object(router.asPath).indexOf(item.slug) > -1
-            ? { classNameActive }
-            : "none"
-        }`}
-      >
-        <span className="text-black duration-200 hover:text-orange">
-          {item.menuLabel}
-        </span>
-      </a>
+    <Link
+      key={item.id}
+      href={resolveLink(item, locale)}
+      title={item.title}
+      className={`${
+        Object(router.asPath).indexOf(item.slug) > -1
+          ? { classNameActive }
+          : "none"
+      }`}
+    >
+      <span className="text-black duration-200 hover:text-orange">
+        {item.menuLabel}
+      </span>
     </Link>
   );
 }
@@ -98,17 +100,20 @@ function Header(props) {
         <div className="">
           <div className="container">
             <div className="flex items-center justify-between lg:justify-start lg:space-x-5">
-              <Link href={prefix} key="homepage">
-                <a title="Homepage" className="flex items-center">
-                  <div className="relative h-7 w-20 lg:h-12 lg:w-32">
-                    {/* <Image
+              <Link
+                title="Homepage"
+                className="flex items-center"
+                href={prefix}
+                key="homepage"
+              >
+                <div className="relative h-7 w-20 lg:h-12 lg:w-32">
+                  {/* <Image
                         priority
                         src="/images/logo.svg"
                         alt="Logo Voc Services"
                         layout="fill"
                       /> */}
-                  </div>
-                </a>
+                </div>
               </Link>
               <div className="flex items-center lg:hidden">
                 <Popover.Button className="inline-flex items-center justify-center text-black">

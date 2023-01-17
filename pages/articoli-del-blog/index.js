@@ -14,11 +14,7 @@ export default function IndexBlog({ locale, site, page, categories }) {
           ELENCO CATEGORIE
           {categories.map((c) => (
             <li key={c.id}>
-              <Link href={resolveLink(c, locale)}>
-                <a title="" className="">
-                  {c.title}
-                </a>
-              </Link>
+              <Link href={resolveLink(c, locale)}>{c.title}</Link>
             </li>
           ))}
         </ul>
