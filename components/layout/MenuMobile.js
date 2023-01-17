@@ -7,6 +7,8 @@ import { Fragment } from "react";
 import t from "lib/locales";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { resolveLink } from "lib/utils";
+import InternalLink from "components/blocks/InternalLink";
+import Button from "./Button";
 
 function RenderMobileNavItem(item, navNewsCategories, locale) {
   const router = useRouter();
@@ -102,43 +104,58 @@ export default function MenuMobile({
           focus
           className="fixed inset-x-0 top-0 origin-top transform overflow-hidden transition lg:hidden"
         >
-          <div className="relative z-40 min-h-[100vh] bg-yellow-200">
-            <div className="pt-5 pb-6">
+          <div className="min-h-[100vh] relative z-40 bg-red border-b border-white/20">
+            <div className="pt-3 pb-6">
               <div className="flex items-center justify-between px-4">
-                <div>
-                  {/* <Image
-                      priority
-                      src="/logo/logo.svg"
-                      height={35}
-                      width={150}
-                      alt="Logo"
-                    /> */}
+                <div className="relative h-8 w-24 lg:h-12 lg:w-32">
+                  <Image
+                    priority
+                    src="/images/logo.svg"
+                    alt="Logo Museo Civico Siena"
+                    layout="fill"
+                  />
                 </div>
-                <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange">
+                <div className="flex items-center lg:hidden">
+                  <Popover.Button className="flex items-center gap-2 justify-center text-black">
+                    <InternalLink
+                      element={site.ticketsPage}
+                      label={t("tickets", locale)}
+                      locale={locale}
+                      className="group"
+                    >
+                      <Button
+                        label={t("tickets", locale)}
+                        color="yellow"
+                        icon="ticket"
+                      />
+                    </InternalLink>
                     <span className="sr-only">Close menu</span>
                     <Icon
                       name="close"
-                      fill="#4F3143"
-                      className="mx-auto"
-                      size="25"
+                      className="mx-auto fill-white"
+                      fill="white"
+                      size="35"
                     />
                   </Popover.Button>
                 </div>
               </div>
-              <nav className="mt-3">
-                <div className="grid border-b border-gray/20">
-                  {navItems.map((item) => (
-                    <div key={item.id}>
-                      {RenderMobileNavItem(item, navNewsCategories, locale)}
-                    </div>
-                  ))}
+              <div className="bg-yellow-light">
+                <div className="bg-white/40">
+                  <div className="space-y-6 px-5 pb-6">
+                    <div className="mb-2 text-xxs text-white/70">Lingua</div>
+                    <LanguageSwitcher page={page} locale={locale} />
+                  </div>
                 </div>
-              </nav>
-            </div>
-            <div className="space-y-6 px-5 pb-6">
-              <div className="mb-2 text-xxs text-white/70">Lingua</div>
-              <LanguageSwitcher page={page} locale={locale} />
+                <nav className="mt-3">
+                  <div className="grid border-b border-gray/20">
+                    {navItems.map((item) => (
+                      <div key={item.id}>
+                        {RenderMobileNavItem(item, navNewsCategories, locale)}
+                      </div>
+                    ))}
+                  </div>
+                </nav>
+              </div>
             </div>
           </div>
         </Popover.Panel>

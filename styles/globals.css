@@ -1,11 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400&display=swap");
+
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/Graphik-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/Graphik-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
 @tailwind base;
 
 @layer base {
-  html {
-    @apply motion-safe:scroll-smooth text-base-color;
-  }
   body {
-    @apply font-body text-base bg-back;
+    @apply font-sans m-0 p-0 text-white bg-red;
   }
 }
 
@@ -13,110 +25,57 @@
 @tailwind utilities;
 
 @layer components {
-  .skiplink {
-    @apply bg-back-rev text-rev sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:inline-block focus-visible:p-2 focus-visible:left-1/2 focus-visible:-translate-x-1/2;
+  .image-cover img {
+    @apply h-full object-cover;
   }
-
-  .button,
-  .button-arrow {
-    @apply inline-flex items-center font-medium font-heading tracking-wide py-2 px-4 rounded;
-  }
-
-  .button-arrow {
-    @apply after:m-2 after:h-2 after:w-2 after:block after:border-solid after:border-accent after:border-l-2 after:border-t-2 after:rotate-[135deg];
-  }
-
-  .product-bg:before,
-  .product-bg-rev:before {
-    @apply -z-10 content-[''] absolute inset-0 bg-back-rev/10 -top-[33vh];
-  }
-
-  @media screen(lg) {
-    .product-bg:before {
-      @apply -right-full top-0;
-    }
-    .product-bg-rev:before {
-      @apply -left-full top-0;
-    }
-  }
-  .fade-down {
-    @apply transition-all duration-700 delay-100;
-  }
-
-  .fade-down-on {
-    @apply opacity-100 translate-y-0;
-  }
-
-  .fade-down-off {
-    @apply opacity-0 -translate-y-6;
-  }
-
-  .image-contain {
-    @apply w-full h-full mx-auto;
-  }
-
   .image-contain img {
-    @apply object-contain;
+    @apply h-full object-contain;
+  }
+
+  .form__label {
+    @apply sr-only;
+  }
+
+  .form__input {
+    @apply block w-full p-2 px-4 text-xs text-black placeholder:text-black;
+  }
+
+  .form__error {
+    @apply text-xs text-red;
+  }
+
+  .formatted-text ul {
+    @apply my-2 pl-4;
+  }
+
+  .formatted-text ol {
+    @apply my-2;
+    counter-reset: my-awesome-counter;
+  }
+
+  .formatted-text ul li {
+    @apply relative py-[3px] after:absolute after:top-[15px] after:-left-4 after:h-[7px] after:w-[7px] after:rotate-45 after:rounded-full after:bg-black;
+  }
+
+  .formatted-text ol li {
+    @apply relative py-[3px] before:pr-1 before:font-bold before:text-black;
+    counter-increment: my-awesome-counter;
+  }
+
+  .formatted-text ol li:before {
+    content: counter(my-awesome-counter) ". ";
   }
 }
 
-.react-player__preview button {
-  color: rgba(var(--color-text-rev));
-  background-color: rgba(var(--color-white));
-  @apply font-heading uppercase text-lg absolute right-0 bottom-0 py-2 w-full flex justify-center items-center gap-2 lg:w-auto lg:px-10 lg:py-8;
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-.react-player__preview button .triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid rgba(var(--color-accent-rev));
-}
-
-.swiper-pagination {
-  margin-bottom: var(--swiper-margin);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  margin: var(--swiper-margin);
-  width: var(--swiper-navigation-size);
-  height: var(--swiper-navigation-size);
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 0 !important;
-  display: block;
-  border: solid var(--swiper-theme-color);
-  border-width: 0 calc(var(--swiper-navigation-size) / 12)
-    calc(var(--swiper-navigation-size) / 12) 0;
-  padding: calc(var(--swiper-navigation-size) / 12);
-}
-
-.swiper-button-next:after {
-  transform: rotate(-45deg) translateX(-15%) translateY(-10%);
-}
-
-.swiper-button-prev:after {
-  transform: rotate(135deg) translateX(-20%) translateY(-10%);
-}
-
-.swiper-button-next:before,
-.swiper-button-prev:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  background-color: rgba(var(--color-white));
-  opacity: 0.4;
-  width: var(--swiper-navigation-size);
-  height: var(--swiper-navigation-size);
-  z-index: -1;
-}
-
-.slider-auto-width .swiper-slide {
-  width: auto;
+@media (max-width: 767px) {
+  .unwrapped {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
 }

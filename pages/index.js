@@ -6,9 +6,9 @@ export default function Home({ locale, site, page }) {
   return (
     <Layout site={site} locale={locale} page={page}>
       <h1 className="sr-only">Homepage | </h1>
-      <div className="container py-20 text-5xl border-t">
-        <p>{page.title}</p>
-        <p>{page.record}</p>
+      <div className="container py-20 text-5xl">
+        {/* <p>{page.title}</p>
+        <p>{page.record}</p> */}
       </div>
     </Layout>
   );

@@ -28,8 +28,16 @@
     "skipContent": "Vai al contenuto principale",
     "skipFooter": "Vai al footer",
     "externaLink": "(Go to external link)",
-    "slug_news_index": "articoli-del-blog",
-    "slug_contact_page": "contatti"
+    "tickets": "Biglietti",
+    "slug_news_index": "articoli",
+    "slug_contact_page": "contatti",
+    "slug_artworks_index": "opere",
+    "slug_museum": "museo",
+    "slug_siena": "siena",
+    "slug_rooms_index": "sale",
+    "slug_itineraries_index": "itinerari",
+    "slug_videos_index": "video",
+    "slug_tickets_page": "biglietti"
   },
   "en": {
     "it": "Italian",
@@ -60,7 +68,15 @@
     "skipContent": "Go to main content",
     "skipFooter": "Go to footer",
     "externaLink": "(Vai ad un link esterno)",
-    "slug_news_index": "index-blog",
-    "slug_contact_page": "contact-us"
+    "tickets": "Tickets",
+    "slug_news_index": "articles",
+    "slug_contact_page": "contact-us",
+    "slug_artworks_index": "artworks",
+    "slug_museum": "museum",
+    "slug_siena": "siena",
+    "slug_rooms_index": "rooms",
+    "slug_itineraries_index": "itineraries",
+    "slug_videos_index": "videos",
+    "slug_tickets_page": "tickets"
   }
 }

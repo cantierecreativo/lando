@@ -6,8 +6,10 @@ import { Popover, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import MenuMobile from "components/layout/MenuMobile";
 import t from "lib/locales";
+import InternalLink from "components/blocks/InternalLink";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { resolveLink } from "lib/utils";
+import Button from "./Button";
 
 function RenderNavItem(item, navNewsCategories, locale) {
   const router = useRouter();
@@ -95,7 +97,7 @@ function Header(props) {
   const prefix = locale === "it" ? "/" : "/en";
 
   return (
-    <header className="relative z-40 bg-red-100 py-1">
+    <header className="relative z-40 bg-red-100 py-3 border-b border-white/20">
       <Popover className="">
         <div className="">
           <div className="container">
@@ -106,23 +108,35 @@ function Header(props) {
                 href={prefix}
                 key="homepage"
               >
-                <div className="relative h-7 w-20 lg:h-12 lg:w-32">
-                  {/* <Image
-                        priority
-                        src="/images/logo.svg"
-                        alt="Logo Voc Services"
-                        layout="fill"
-                      /> */}
+                <div className="relative h-8 w-24 lg:h-12 lg:w-32">
+                  <Image
+                    priority
+                    src="/images/logo.svg"
+                    alt="Logo Museo Civico Siena"
+                    layout="fill"
+                  />
                 </div>
               </Link>
               <div className="flex items-center lg:hidden">
-                <Popover.Button className="inline-flex items-center justify-center text-black">
+                <Popover.Button className="flex items-center gap-2 justify-center text-black">
+                  <InternalLink
+                    element={site.ticketsPage}
+                    label={t("tickets", locale)}
+                    locale={locale}
+                    className="group"
+                  >
+                    <Button
+                      label={t("tickets", locale)}
+                      color="yellow"
+                      icon="ticket"
+                    />
+                  </InternalLink>
                   <span className="sr-only">Open menu</span>
                   <Icon
                     name="menu"
-                    fill="#4F3143"
-                    className="mx-auto"
-                    size="25"
+                    className="mx-auto fill-white"
+                    fill="white"
+                    size="35"
                   />
                 </Popover.Button>
               </div>
