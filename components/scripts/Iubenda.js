@@ -24,6 +24,8 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
         dangerouslySetInnerHTML={{
           __html: `var _iub = _iub || [];
             _iub.csConfiguration = {
+            "localConsentDomain": "museocivico.comune.siena.it”,
+            "invalidateConsentWithoutLog": true,
             "consentOnContinuedBrowsing": true,
             "lang":"${locale}",
             "siteId":${siteId},
