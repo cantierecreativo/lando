@@ -17,7 +17,7 @@ function LanguageSwitcher({ page, locale }) {
             return (
               <Fragment key={l}>
                 <Link
-                  className="text-xxs font-bold"
+                  className="text-xxs font-bold lg:text-sm lg:font-normal"
                   href={resolveLink(page, l, link)}
                 >
                   {t(`${l}`, locale)}

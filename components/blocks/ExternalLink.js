@@ -13,7 +13,7 @@ export default function ExternalLink({
       className={className}
       rel="noreferrer"
       target="_blank"
-      title={`${t("externaLink", locale)} ${title}`}
+      title={`${title} ${t("externaLink", locale)}`}
     >
       {children}
     </a>
