@@ -37,7 +37,9 @@
     "slug_rooms_index": "sale",
     "slug_itineraries_index": "itinerari",
     "slug_videos_index": "video",
-    "slug_tickets_page": "biglietti"
+    "slug_tickets_page": "biglietti",
+    "slug_history_page": "storia",
+    "slug_thematic_routes_index": "percorsi-tematici"
   },
   "en": {
     "it": "Italian",
@@ -77,6 +79,8 @@
     "slug_rooms_index": "rooms",
     "slug_itineraries_index": "itineraries",
     "slug_videos_index": "videos",
-    "slug_tickets_page": "tickets"
+    "slug_tickets_page": "tickets",
+    "slug_history_page": "history",
+    "slug_thematic_routes_index": "thematic-routes"
   }
 }

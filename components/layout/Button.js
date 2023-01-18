@@ -17,7 +17,7 @@ export default function Button({ label, color, icon }) {
             className={`${colorIconClasses[color]} duration-300 group-hover:translate-x-1`}
             size="20"
           />
-          <div className="group-hover:mr-1 font-sans uppercase text-sm font-bold duration-200 xl:hover:text-green-light xl:group-hover:text-green-light">
+          <div className="group-hover:mr-1 font-medium font-sans uppercase text-sm duration-200 xl:hover:text-green-light xl:group-hover:text-green-light">
             {label}
           </div>
         </div>

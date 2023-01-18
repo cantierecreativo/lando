@@ -10,14 +10,14 @@ import { resolveLink } from "lib/utils";
 import InternalLink from "components/blocks/InternalLink";
 import Button from "./Button";
 
-function RenderMobileNavItem(item, navNewsCategories, locale) {
+function RenderMobileNavItem(item, locale) {
   const router = useRouter();
   const classNameActiveMobile = "text-red";
   const classNameItemMobile =
-    "group inline-flex items-center text-sm text-black duration-200 hover:text-orange focus:ring-orange";
+    "group flex items-center text-sm text-black/80 uppercase font-sans justify-between w-full py-3 border-b border-black/20";
   const classDropdownItem =
-    "block whitespace-nowrap py-3 px-4 pr-12 text-sm text-black";
-  if (item.model === "news_index") {
+    "block whitespace-nowrap py-2 text-xs text-black/80";
+  if (!item.linkMenu) {
     return (
       <Disclosure className="relative">
         {({ open, close }) => (
@@ -29,12 +29,11 @@ function RenderMobileNavItem(item, navNewsCategories, locale) {
                   : ""
               } ${classNameItemMobile}`}
             >
-              <span>Categorie news</span>
+              <span>{item.labelMenu}</span>
               <Icon
                 name="down"
-                size="15"
-                fill="#4F3143"
-                className={`${open ? "rotate-180" : ""}`}
+                size="20"
+                className={`${open ? "rotate-180" : ""} fill-siena`}
               />
             </Disclosure.Button>
 
@@ -46,16 +45,16 @@ function RenderMobileNavItem(item, navNewsCategories, locale) {
               leaveFrom="transform opacity-100"
               leaveTo="transform opacity-0"
             >
-              <Disclosure.Panel className="p-8">
-                <div className="relative grid divide-y divide-black/5 bg-white text-xs">
-                  {navNewsCategories.map((p) => (
+              <Disclosure.Panel className="">
+                <div className="relative grid text-xs py-4">
+                  {item.itemsMenu.map((p) => (
                     <Link
                       title={p.title}
                       onClick={() => close()}
                       key={p.id}
-                      href={resolveLink(p, locale)}
+                      href={resolveLink(p.linkMenu, locale)}
                     >
-                      <span className={classDropdownItem}>{p.title}</span>
+                      <span className={classDropdownItem}>{p.labelMenu}</span>
                     </Link>
                   ))}
                 </div>
@@ -69,26 +68,20 @@ function RenderMobileNavItem(item, navNewsCategories, locale) {
   return (
     <Link
       key={item.id}
-      href={resolveLink(item, locale)}
-      title={item.title}
+      href={resolveLink(item.linkMenu, locale)}
+      title={item.labelMenu}
       className={`${
         Object(router.asPath).indexOf(item.slug) > -1
           ? { classNameActiveMobile }
           : "none"
       }`}
     >
-      <span className="text-black duration-200">{item.menuLabel}</span>
+      <span className={classNameItemMobile}>{item.labelMenu}</span>
     </Link>
   );
 }
 
-export default function MenuMobile({
-  site,
-  locale,
-  page,
-  navItems,
-  navNewsCategories,
-}) {
+export default function MenuMobile({ site, locale, page }) {
   return (
     <>
       <Transition
@@ -104,8 +97,8 @@ export default function MenuMobile({
           focus
           className="fixed inset-x-0 top-0 origin-top transform overflow-hidden transition lg:hidden"
         >
-          <div className="min-h-[100vh] relative z-40 bg-red border-b border-white/20">
-            <div className="pt-3 pb-6">
+          <div className="min-h-[100vh] relative z-40 bg-yellow-light border-b border-white/20">
+            <div className="py-3 bg-red">
               <div className="flex items-center justify-between px-4">
                 <div className="relative h-8 w-24 lg:h-12 lg:w-32">
                   <Image
@@ -139,23 +132,21 @@ export default function MenuMobile({
                   </Popover.Button>
                 </div>
               </div>
-              <div className="bg-yellow-light">
-                <div className="bg-white/40">
-                  <div className="space-y-6 px-5 pb-6">
-                    <div className="mb-2 text-xxs text-white/70">Lingua</div>
-                    <LanguageSwitcher page={page} locale={locale} />
-                  </div>
-                </div>
-                <nav className="mt-3">
-                  <div className="grid border-b border-gray/20">
-                    {navItems.map((item) => (
-                      <div key={item.id}>
-                        {RenderMobileNavItem(item, navNewsCategories, locale)}
-                      </div>
-                    ))}
-                  </div>
-                </nav>
+            </div>
+            <div className="bg-white/40 text-black">
+              <div className="container py-2 pb-3">
+                <LanguageSwitcher page={page} locale={locale} />
               </div>
+            </div>
+            <div className="overflow-scroll h-[calc(100vh-129px)]">
+              <nav className="container">
+                <div className="grid py-4">
+                  {site.menu.groupsMenu.map((m) => (
+                    <div key={m.id}>{RenderMobileNavItem(m, locale)}</div>
+                  ))}
+                </div>
+                <div className="py-4 text-black">Social</div>
+              </nav>
             </div>
           </div>
         </Popover.Panel>
