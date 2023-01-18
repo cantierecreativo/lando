@@ -8,11 +8,11 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        "2xl": "6rem",
+        "2xl": "5rem",
       },
     },
     fontFamily: {
-      serif: ["Graphik", "serif"],
+      serif: ["MillerBanner", "serif"],
       sans: ["Libre Franklin", "sans-serif"],
     },
     extend: {

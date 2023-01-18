@@ -1,15 +1,12 @@
 import Layout from "components/layout/Layout";
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
+import HeroHp from "components/headers/HeroHp";
 
 export default function Home({ locale, site, page }) {
   return (
     <Layout site={site} locale={locale} page={page}>
-      <h1 className="sr-only">Homepage | </h1>
-      <div className="container py-20 text-5xl">
-        {/* <p>{page.title}</p>
-        <p>{page.record}</p> */}
-      </div>
+      <HeroHp page={page} locale={locale} />
     </Layout>
   );
 }

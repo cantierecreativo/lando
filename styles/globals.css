@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;600;700&display=swap");
 
 @font-face {
-  font-family: "Graphik";
-  src: url("/fonts/Graphik-Regular.woff2") format("woff2");
+  font-family: "MillerBanner";
+  src: url("/fonts/MillerBannerRegular.woff2") format("woff2");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "Graphik";
-  src: url("/fonts/Graphik-Bold.woff2") format("woff2");
+  font-family: "MillerBanner";
+  src: url("/fonts/MillerBannerBold.woff2") format("woff2");
   font-style: normal;
   font-weight: bold;
 }
@@ -17,7 +17,7 @@
 
 @layer base {
   body {
-    @apply font-sans m-0 p-0 text-white bg-red font-light;
+    @apply font-sans m-0 p-0 text-white text-base bg-red font-light;
   }
 }
 
@@ -68,6 +68,10 @@
 
   .centered {
     @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .title {
+    @apply uppercase font-serif text-xl;
   }
 }
 
