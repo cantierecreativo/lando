@@ -38,11 +38,6 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
               "rejectButtonDisplay":true,
               "closeButtonRejects":true
             },
-            "callback":{
-              onPreferenceExpressedOrNotNeeded: function(preference) {
-                window.consentIsGiven = preference;
-              }
-            }};
             `,
         }}
       />
