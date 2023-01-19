@@ -10,14 +10,18 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
         dangerouslySetInnerHTML={{
           __html: `var _iub = _iub || [];
           _iub.csConfiguration = {
-            "localConsentDomain":"museocivico.comune.siena.it”,
-            "consentOnContinuedBrowsing":true,
+            "askConsentAtCookiePolicyUpdate":true,
+            "countryDetection":true,
+            "enableLgpd":true,
+            "enableUspr":true,
+            "floatingPreferencesButtonDisplay":"bottom-right",
             "invalidateConsentWithoutLog":true,
             "lang":"${locale}",
-            "siteId":${siteId},
-            "cookiePolicyId":${policyId},
+            "lgpdAppliesGlobally":false
             "perPurposeConsent":true,
             "purposes":"1,4,5",
+            "siteId":${siteId},
+            "cookiePolicyId":${policyId},
             "banner":{
               "acceptButtonDisplay":true,
               "customizeButtonDisplay":true,
