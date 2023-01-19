@@ -9,7 +9,7 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
         id="iubenda"
         dangerouslySetInnerHTML={{
           __html: `var _iub = _iub || [];
-_iub.csConfiguration = {"localConsentDomain":"museocivico.comune.siena.it”,"askConsentAtCookiePolicyUpdate":true,"countryDetection":true,"enableLgpd":true,"enableUspr":true,"floatingPreferencesButtonDisplay":"bottom-right","invalidateConsentWithoutLog":true,"lang":"it","lgpdAppliesGlobally":false,"perPurposeConsent":true,"siteId":2934512,"whitelabel":false,"cookiePolicyId":29463556, "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-top-center","rejectButtonDisplay":true }};`,
+_iub.csConfiguration = {"localConsentDomain":"museocivico.comune.siena.it”,"askConsentAtCookiePolicyUpdate":true,"countryDetection":true,"enableLgpd":true,"enableUspr":true,"floatingPreferencesButtonDisplay":"bottom-right","invalidateConsentWithoutLog":true,"lang":"it","lgpdAppliesGlobally":false,"perPurposeConsent":true,"siteId":2934512,"whitelabel":false,"cookiePolicyId":29463556, "banner":{ "acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"position":"float-bottom-right","rejectButtonDisplay":true }};`,
         }}
       />
       <Script id="iubenda-stub" src="//cdn.iubenda.com/cs/gpp/stub.js" />
