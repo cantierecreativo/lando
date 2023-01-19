@@ -6,7 +6,7 @@
     "cookiePolicyTitle": "Vai a (link esterno) Cookie Policy",
     "privacyPolicyTitle": "Vai a (link esterno) Privacy Policy",
     "creditsTitle": "Vai a (link esterno) Cantiere Creativo Agenzia web Firenze",
-    "more": "Scopri",
+    "more": "Scopri di più",
     "formFullName": "Nome e Cognome",
     "firstName": "Nome",
     "lastName": "Cognome",
@@ -40,7 +40,10 @@
     "slug_videos_index": "video",
     "slug_tickets_page": "biglietti",
     "slug_history_page": "storia",
-    "slug_thematic_routes_index": "percorsi-tematici"
+    "slug_thematic_routes_index": "percorsi-tematici",
+    "info_museum": "Info ingresso museo",
+    "info_ticket": "Info biglietti",
+    "buy_tickets": "Acquista i biglietti"
   },
   "en": {
     "it": "Italian",
@@ -49,7 +52,7 @@
     "cookiePolicyTitle": "Go to (external link) Cookie Policy",
     "privacyPolicyTitle": "Go to (external link) Privacy Policy",
     "creditsTitle": "Go to (external link) Cantiere Creativo Agency web Firenze",
-    "more": "More",
+    "more": "Discover More",
     "formFullName": "Nome e Cognome",
     "firstName": "First Name",
     "lastName": "Last Name",
@@ -83,6 +86,9 @@
     "slug_videos_index": "videos",
     "slug_tickets_page": "tickets",
     "slug_history_page": "history",
-    "slug_thematic_routes_index": "thematic-routes"
+    "slug_thematic_routes_index": "thematic-routes",
+    "info_museum": "Info entrance museum",
+    "info_ticket": "Info tickets",
+    "buy_tickets": "Buy tickets"
   }
 }

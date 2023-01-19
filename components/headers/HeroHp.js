@@ -29,7 +29,7 @@ export default function HeroHp({ locale, page }) {
             />
           </div>
           <div className="py-10 xl:px-6 2xl:px-12 grid gap-4 lg:absolute lg:z-20 lg:right-6 lg:w-2/5 lg:text-right lg:top-1/2 lg:-translate-y-1/2">
-            <h1 className="title md:text-4xl">{page.titleHero}</h1>
+            <h1 className="title">{page.titleHero}</h1>
             <h2 className="opacity-80">{renderHTML(page.textHero)}</h2>
           </div>
         </div>

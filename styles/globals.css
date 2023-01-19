@@ -71,7 +71,14 @@
   }
 
   .title {
-    @apply uppercase font-serif text-xl;
+    @apply uppercase font-serif text-xl md:text-3xl lg:text-4xl;
+  }
+
+  .ellipse {
+    background-color: #45597e;
+    height: 100px;
+    width: 150px;
+    border-radius: 50%;
   }
 }
 

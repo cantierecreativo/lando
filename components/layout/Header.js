@@ -87,10 +87,6 @@ function RenderNavItem(item, locale) {
 
 function Header(props) {
   const { locale, site, page } = props;
-  const navNewsCategories = site.allCategoryNews;
-  const navItems = [...site.allPages, site.newsIndex, site.contactPage].filter(
-    (item) => item !== null
-  );
   const prefix = locale === "it" ? "/" : "/en";
 
   return (
