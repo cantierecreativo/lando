@@ -70,7 +70,7 @@ export default function MenuMobile({ site, locale, page }) {
               <nav className="container">
                 <div className="grid py-4">
                   {site.menu.groupsMenu.map((m) => (
-                    <RenderNavItem locale={locale} item={m} />
+                    <RenderNavItem key={m.id} locale={locale} item={m} />
                   ))}
                 </div>
                 <Socials site={site} locale />

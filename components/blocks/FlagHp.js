@@ -7,7 +7,7 @@ import t from "lib/locales";
 export default function FlagHp({ locale, record, site }) {
   return (
     <>
-      <div className="py-6 grid gap-6 md:grid-cols-2 md:py-12 xl:grid-cols-12 xl:gap-4">
+      <section className="py-6 grid gap-6 md:grid-cols-2 md:py-12 xl:grid-cols-12 xl:gap-4">
         <div className="px-6 xl:px-0 xl:col-span-4 xl:col-start-2">
           <DatoImage
             className=""
@@ -30,6 +30,7 @@ export default function FlagHp({ locale, record, site }) {
             element={site.historyPage}
             locale={locale}
             label={site.historyPage.title}
+            className="group"
           >
             <Button
               label={t("more", locale)}
@@ -38,7 +39,7 @@ export default function FlagHp({ locale, record, site }) {
             />
           </InternalLink>
         </div>
-      </div>
+      </section>
     </>
   );
 }

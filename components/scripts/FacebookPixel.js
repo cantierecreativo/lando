@@ -1,7 +1,7 @@
 export default function FacebookPixel({ id }) {
   return (
     <>
-      <script
+      {/* <script
         type="plain/text"
         className="_iub_cs_activate"
         data-iub-purposes="5"
@@ -31,7 +31,7 @@ export default function FacebookPixel({ id }) {
           style={{display: 'none'}}
           src={`https://www.facebook.com/tr?id=${id}&ev=PageView&noscript=1`}
         />
-      </noscript>
+      </noscript> */}
     </>
-  )
+  );
 }

@@ -27,7 +27,6 @@
     "404cta": "Torna in homepage",
     "skipContent": "Vai al contenuto principale",
     "skipFooter": "Vai al footer",
-    "externaLink": "(Go to external link)",
     "tickets": "Biglietti",
     "contact_us": "contattaci",
     "slug_news_index": "articoli",
@@ -42,8 +41,17 @@
     "slug_history_page": "storia",
     "slug_thematic_routes_index": "percorsi-tematici",
     "info_museum": "Info ingresso museo",
+    "info_title_museum": "Orario di ingresso",
     "info_ticket": "Info biglietti",
-    "buy_tickets": "Acquista i biglietti"
+    "buy_tickets": "Acquista i biglietti",
+    "info_title_ticket": "Biglietti",
+    "externaLink": "(Vai ad un link esterno)",
+    "artworks": "Le Opere",
+    "show_all": "Vedi tutte",
+    "building_Url": "/cantiere-del-buon-governo",
+    "siena_Url": "/siena/visita-i-musei",
+    "news_title": "News e eventi",
+    "vews_cta": "Vedi tutti"
   },
   "en": {
     "it": "Italian",
@@ -73,7 +81,6 @@
     "404cta": "Back to home",
     "skipContent": "Go to main content",
     "skipFooter": "Go to footer",
-    "externaLink": "(Vai ad un link esterno)",
     "tickets": "Tickets",
     "contact_us": "contattaci",
     "slug_news_index": "articles",
@@ -85,10 +92,18 @@
     "slug_itineraries_index": "itineraries",
     "slug_videos_index": "videos",
     "slug_tickets_page": "tickets",
+    "info_title_ticket": "Tickets",
     "slug_history_page": "history",
     "slug_thematic_routes_index": "thematic-routes",
     "info_museum": "Info entrance museum",
+    "info_title_museum": "Orario di ingresso",
     "info_ticket": "Info tickets",
-    "buy_tickets": "Buy tickets"
+    "externaLink": "(Go to external link)",
+    "buy_tickets": "Buy tickets",
+    "artworks": "Artworks",
+    "show_all": "Vedi tutte",
+    "siena_Url": "/en/siena/museums-visit",
+    "news_title": "News and events",
+    "vews_cta": "View all"
   }
 }

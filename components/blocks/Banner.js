@@ -1,22 +1,14 @@
-import { useInView } from "react-intersection-observer";
 import { renderHTML } from "lib/html";
-import { anchorId } from "lib/anchors";
 import { Image as DatoImage } from "react-datocms";
+import Button from "components/layout/Button";
+import DynamicLink from "components/blocks/DynamicLink";
 
-export default function Banner({ locale, block }) {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-  });
-  const { title, text, imageBg, cta, link } = block;
-  const inViewClass = inView ? "fade-down-on" : "fade-down-off";
+export default function Banner({ locale, record }) {
+  const { title, text, imageBg, cta, link } = record;
 
   return (
-    <section
-      ref={ref}
-      id={anchorId(block)}
-      className={`${inViewClass} fade-down relative`}
-    >
+    <section className="relative overflow-hidden">
+      <div className="bg-gradient-to-b md:bg-gradient-to-r from-black absolute inset-0 z-10 md:w-[200%] h-[300%]" />
       <DatoImage
         className=""
         data={imageBg.responsiveImage}
@@ -25,27 +17,19 @@ export default function Banner({ locale, block }) {
         layout="fill"
         objectFit="cover"
       />
-      <div className="container py-8 lg:py-20 xl:py-28">
-        <div className="py-12 px-4 z-10 relative bg-back text-center lg:px-12 xl:py-20 max-w-[1000px] mx-auto">
-          {title && (
-            <h2 className="uppercase font-heading font-medium text-accent text-lg md:text-xl mb-6 xl:text-2xl xl:mb-12">
-              {title}
-            </h2>
-          )}
+      <div className="container py-8 md:px-20 lg:py-20">
+        <div className="py-16 z-10 relative bg-back max-w-[1000px]">
+          {title && <h2 className="text-xs lg:text-sm mb-6">{title}</h2>}
           {text && (
-            <h2 className="text-sm md:text-base mb-6 xl:mb-12">
+            <h3 className="max-w-sm title text-3xl lg:text-4xl lg:max-w-md mb-8 xl:mb-12">
               {renderHTML(text)}
-            </h2>
+            </h3>
           )}
-          <a
-            className="inline-flex font-heading text-button bg-button-back uppercase tracking-wide transition-opacity hover:opacity-80 text-sm py-4 px-4"
-            href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            title={`${title} ${("linkExternal", locale)}`}
-          >
-            {cta}
-          </a>
+          <div className="inline-block">
+            <DynamicLink link={link} locale={locale} className="group">
+              <Button label={link.label} color="yellow" />
+            </DynamicLink>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 export default function GoogleTagManager({ id }) {
   return (
     <>
-      <script
+      {/* <script
         type="plain/text"
         className="_iub_cs_activate"
         data-iub-purposes="4"
@@ -26,7 +26,7 @@ export default function GoogleTagManager({ id }) {
           style={{display: 'none', visibility: 'hidden'}}
         >
         </iframe>
-      </noscript>
+      </noscript> */}
     </>
-  )
+  );
 }
