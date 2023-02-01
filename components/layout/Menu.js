@@ -12,7 +12,7 @@ export default function Menu({ locale, page }) {
 
   return (
     <>
-      <div className="sticky top-0 z-20">
+      <div className="sticky top-0 z-30">
         {navItems.length > 0 && (
           <div className="text-white text-xs lg:text-base bg-[#713121]">
             <div className="container">

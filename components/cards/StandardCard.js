@@ -14,13 +14,15 @@ export default function StandardCard({ locale, record }) {
         slug={record.slug}
       >
         <div className="bg-yellow-light text-black p-3 lg:p-5">
-          <DatoImage
-            className=""
-            data={record.imageHero.responsiveImage}
-            alt={record.imageHero.responsiveImage.alt}
-            title={record.imageHero.responsiveImage.title}
-            layout=""
-          />
+          {record.imageHero && (
+            <DatoImage
+              className=""
+              data={record.imageHero.responsiveImage}
+              alt={record.imageHero.responsiveImage.alt}
+              title={record.imageHero.responsiveImage.title}
+              layout=""
+            />
+          )}
           <div className="grid gap-2 content-start pt-4 lg:pt-6">
             <h2 className="uppercase font-serif text-xl">{record.title}</h2>
             {record.textHero && (

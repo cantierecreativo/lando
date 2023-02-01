@@ -142,7 +142,7 @@ export default function DastContent({ content, locale, site }) {
                   {node.attribution}
                 </footer>
               </div>
-              {console.log("node:", node)}
+              {/* {console.log("node:", node)} */}
             </blockquote>
           );
         }),

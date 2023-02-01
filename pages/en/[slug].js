@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params, locale = "en", preview }) {
+export async function getStaticProps({ params, preview, locale = "en" }) {
   const { slug } = params;
   const response = await fetchData(queries.getPage, { slug, locale }, preview);
   const site = await fetchData(queries.site, { locale });

@@ -15,11 +15,11 @@ export default function Breadcrumbs({ page, parent, grandParent, locale }) {
             <div className="flex items-center gap-1">
               <Link
                 href={`${locale === "en" ? "/en" : "/"}`}
-                className="duration-200 xl:hover:text-green-light"
+                className="duration-200 xl:hover:text-yellow fill-white hover:fill-yellow"
                 title="Homepage"
                 key="homepage"
               >
-                <Icon name="home" size="28" fill={"white"} />
+                <Icon name="home" size="28" />
               </Link>
               {page.model !== "homepage" && (
                 <Icon name="down" className="-rotate-90 fill-siena" size="23" />
@@ -33,7 +33,7 @@ export default function Breadcrumbs({ page, parent, grandParent, locale }) {
                   locale={locale}
                   label={grandParent.title}
                   element={grandParent}
-                  className="truncate duration-200 xl:hover:text-green-light"
+                  className="truncate duration-200 xl:hover:text-yellow"
                 >
                   {grandParent.menuLabel}
                 </InternalLink>
@@ -49,7 +49,7 @@ export default function Breadcrumbs({ page, parent, grandParent, locale }) {
                   label={parent.title}
                   element={parent}
                   slug={parent.slug}
-                  className="truncate duration-200 xl:hover:text-green-light"
+                  className="truncate duration-200 xl:hover:text-yellow"
                 >
                   {parent.menuLabel !== undefined
                     ? parent.menuLabel
