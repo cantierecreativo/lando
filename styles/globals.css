@@ -13,14 +13,21 @@
   font-weight: bold;
 }
 
-@tailwind base;
-
 @layer base {
+  html {
+    @apply !scroll-smooth;
+  }
+  @media (prefers-reduced-motion) {
+    html {
+      @apply !scroll-auto;
+    }
+  }
   body {
     @apply font-sans m-0 p-0 text-white text-base bg-red font-light;
   }
 }
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -80,12 +87,26 @@
     width: 150px;
     border-radius: 50%;
   }
+
+  blockquote p {
+    @apply !font-serif !text-white xl:!text-3xl;
+  }
+
+  .container-left {
+    @apply pl-4 lg:pl-[calc(((100vw-1024px)/2)+1rem)] xl:pl-[calc(((100vw-1280px)/2)+1rem)] 2xl:pl-[calc(((100vw-1536px)/2)+5rem)] 3xl:pl-[calc(((100vw-1920px)/2)+5rem)];
+  }
 }
 
-@media (prefers-reduced-motion) {
-  html {
-    scroll-behavior: auto;
-  }
+.splide__pagination {
+  @apply gap-3 py-2 absolute bottom-4 left-1/2 -translate-x-1/2;
+}
+
+.gallery .splide__pagination__page {
+  @apply w-2 h-2 bg-white/50 rounded-full xl:w-3 xl:h-3;
+}
+
+.gallery .splide__pagination__page.is-active {
+  @apply bg-white;
 }
 
 @media (max-width: 767px) {

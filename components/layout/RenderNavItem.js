@@ -8,7 +8,7 @@ export default function RenderNavItem({ locale, item }) {
   const router = useRouter();
   const classNameActiveMobile = "text-red";
   const classNameItemMobile =
-    "group flex items-center text-sm text-black/80 uppercase font-sans justify-between w-full py-3 border-b border-black/20";
+    "group flex items-center font-semibold text-sm text-black/80 uppercase font-sans justify-between w-full py-3 border-b border-black/20";
   const classDropdownItem =
     "block whitespace-nowrap py-2 text-xs text-black/80";
   if (!item.linkMenu) {

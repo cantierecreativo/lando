@@ -7,7 +7,7 @@ export default function Banner({ locale, record }) {
   const { title, text, imageBg, cta, link } = record;
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden lg:my-12">
       <div className="bg-gradient-to-b md:bg-gradient-to-r from-black absolute inset-0 z-10 md:w-[200%] h-[300%]" />
       <DatoImage
         className=""

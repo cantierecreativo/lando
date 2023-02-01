@@ -1,7 +1,7 @@
 {
   "it": {
     "it": "Italiano",
-    "en": "Inglese",
+    "en": "English",
     "cookiePolicyId": "",
     "cookiePolicyTitle": "Vai a (link esterno) Cookie Policy",
     "privacyPolicyTitle": "Vai a (link esterno) Privacy Policy",
@@ -51,10 +51,11 @@
     "building_Url": "/cantiere-del-buon-governo",
     "siena_Url": "/siena/visita-i-musei",
     "news_title": "News e eventi",
-    "vews_cta": "Vedi tutti"
+    "vews_cta": "Vedi tutti",
+    "downloadLabel": "Scarica il documento"
   },
   "en": {
-    "it": "Italian",
+    "it": "Italiano",
     "en": "English",
     "cookiePolicyId": "",
     "cookiePolicyTitle": "Go to (external link) Cookie Policy",
@@ -101,9 +102,10 @@
     "externaLink": "(Go to external link)",
     "buy_tickets": "Buy tickets",
     "artworks": "Artworks",
-    "show_all": "Vedi tutte",
+    "show_all": "Show all",
     "siena_Url": "/en/siena/museums-visit",
     "news_title": "News and events",
-    "vews_cta": "View all"
+    "vews_cta": "View all",
+    "downloadLabel": "Download document"
   }
 }

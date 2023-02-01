@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { resolveLink } from "lib/utils";
 import t from "lib/locales";
+import Icon from "./Icon";
 
 function LanguageSwitcher({ page, locale }) {
   const locales = ["it", "en"];
@@ -20,7 +21,15 @@ function LanguageSwitcher({ page, locale }) {
                   className="text-xxs font-bold lg:text-sm lg:font-normal"
                   href={resolveLink(page, l, link)}
                 >
-                  {t(`${l}`, locale)}
+                  <div className="hidden lg:flex items-center">
+                    {t(`${l}`, locale)}
+                    <Icon
+                      name="down"
+                      className="mx-auto fill-white -rotate-90"
+                      fill="white"
+                      size="25"
+                    />
+                  </div>
                 </Link>
               </Fragment>
             );

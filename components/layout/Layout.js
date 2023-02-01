@@ -4,7 +4,7 @@ import SkipLinks from "components/layout/SkipLinks";
 import MetaTags from "components/layout/MetaTags";
 import { useEffect } from "react";
 
-function Layout({ children, locale = "it", site, page }) {
+function Layout({ children, locale = "it", site, page, grandParent, parent }) {
   useEffect(() => {
     if (locale) {
       const currentLocale = document.documentElement.lang;
@@ -18,7 +18,13 @@ function Layout({ children, locale = "it", site, page }) {
     <>
       {page !== "404" && <MetaTags site={site} page={page} locale={locale} />}
       <SkipLinks locale={locale} />
-      <Header page={page} locale={locale} site={site} />
+      <Header
+        grandParent={grandParent}
+        parent={parent}
+        page={page}
+        locale={locale}
+        site={site}
+      />
       <main id="content">{children}</main>
       <Footer id="footer" site={site} locale={locale} />
     </>

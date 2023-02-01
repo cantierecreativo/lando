@@ -1,14 +1,16 @@
 import Layout from "components/layout/Layout";
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
+import DastContent from "components/DastContent";
+import EditorialTmp from "components/templates/EditorialTmp";
+import Section from "components/layout/Section";
 
 function EditorialPage({ locale, site, page }) {
   return (
     <Layout site={site} locale={locale} page={page}>
-      <div className="container py-20 text-5xl border-t">
-        <p>Title: {page.title}</p>
-        <p>Model: {page.model}</p>
-      </div>
+      <EditorialTmp locale={locale} page={page}>
+        <Section blocks={page.blocks} locale={locale} site={site} />
+      </EditorialTmp>
     </Layout>
   );
 }

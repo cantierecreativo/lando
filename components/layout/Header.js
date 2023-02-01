@@ -10,6 +10,7 @@ import InternalLink from "components/blocks/InternalLink";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { resolveLink } from "lib/utils";
 import Button from "./Button";
+import Breadcrumbs from "./Breadcrumbs";
 
 function RenderNavItem(item, locale) {
   const router = useRouter();
@@ -86,84 +87,86 @@ function RenderNavItem(item, locale) {
 }
 
 function Header(props) {
-  const { locale, site, page } = props;
+  const { locale, site, page, grandParent, parent } = props;
   const prefix = locale === "it" ? "/" : "/en";
 
   return (
-    <header className="relative z-40 bg-red-100 py-3 border-b border-white/20 lg:pt-5 lg:pb-0 lg:border-0">
-      <Popover className="">
-        <div className="">
-          <div className="container">
-            <div className="flex items-center justify-between lg:space-x-5">
-              <Link
-                title="Homepage"
-                className="flex items-center"
-                href={prefix}
-                key="homepage"
-              >
-                <div className="relative h-8 w-24 lg:h-16 lg:w-44">
-                  <Image
-                    priority
-                    src="/images/logo.svg"
-                    alt="Logo Museo Civico Siena"
-                    layout="fill"
-                  />
-                </div>
-              </Link>
-              <div className="flex items-center gap-2 lg:gap-5">
-                <InternalLink
-                  element={site.contactPage}
-                  label={t("contact_us", locale)}
-                  locale={locale}
-                  className="group hidden lg:block"
+    <>
+      <header className="relative z-40 bg-red-100 py-3 border-b border-white/20 lg:pt-5 lg:pb-0 lg:border-0">
+        <Popover className="">
+          <div className="">
+            <div className="container">
+              <div className="flex items-center justify-between lg:space-x-5">
+                <Link
+                  title="Homepage"
+                  className="flex items-center"
+                  href={prefix}
+                  key="homepage"
                 >
-                  <Button label={t("contact_us", locale)} color="white" />
-                </InternalLink>
-                <InternalLink
-                  element={site.ticketsPage}
-                  label={t("tickets", locale)}
-                  locale={locale}
-                  className="group"
-                >
-                  <Button
+                  <div className="relative h-8 w-24 lg:h-16 lg:w-44">
+                    <Image
+                      priority
+                      src="/images/logo.svg"
+                      alt="Logo Museo Civico Siena"
+                      layout="fill"
+                    />
+                  </div>
+                </Link>
+                <div className="flex items-center gap-2 lg:gap-5">
+                  <InternalLink
+                    element={site.contactPage}
+                    label={t("contact_us", locale)}
+                    locale={locale}
+                    className="group hidden lg:block"
+                  >
+                    <Button label={t("contact_us", locale)} color="white" />
+                  </InternalLink>
+                  <InternalLink
+                    element={site.ticketsPage}
                     label={t("tickets", locale)}
-                    color="yellow"
-                    icon="ticket"
-                  />
-                </InternalLink>
-                <Popover.Button className="lg:hidden">
-                  <span className="sr-only">Open menu</span>
-                  <Icon
-                    name="menu"
-                    className="mx-auto fill-white"
-                    fill="white"
-                    size="35"
-                  />
-                </Popover.Button>
-                <div className="hidden lg:flex items-center">
+                    locale={locale}
+                    className="group"
+                  >
+                    <Button
+                      label={t("tickets", locale)}
+                      color="yellow"
+                      icon="ticket"
+                    />
+                  </InternalLink>
+                  <Popover.Button className="lg:hidden">
+                    <span className="sr-only">Open menu</span>
+                    <Icon
+                      name="menu"
+                      className="mx-auto fill-white"
+                      fill="white"
+                      size="35"
+                    />
+                  </Popover.Button>
                   <LanguageSwitcher page={page} locale={locale} />
-                  <Icon
-                    name="down"
-                    className="mx-auto fill-white -rotate-90"
-                    fill="white"
-                    size="25"
-                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <Popover.Group
-          as="nav"
-          className="hidden space-x-5 lg:flex lg:container lg:justify-end py-3 pb-5"
-        >
-          {site.menu.groupsMenu.map((item) => (
-            <div key={item.id}>{RenderNavItem(item, locale)}</div>
-          ))}
-        </Popover.Group>
-        <MenuMobile site={site} page={page} locale={locale} />
-      </Popover>
-    </header>
+          <Popover.Group
+            as="nav"
+            className="hidden space-x-5 lg:flex lg:container lg:justify-end py-3 pb-5"
+          >
+            {site.menu.groupsMenu.map((item) => (
+              <div key={item.id}>{RenderNavItem(item, locale)}</div>
+            ))}
+          </Popover.Group>
+          <MenuMobile site={site} page={page} locale={locale} />
+        </Popover>
+      </header>
+      {page.model !== "homepage" && (
+        <Breadcrumbs
+          page={page}
+          grandParent={grandParent}
+          parent={parent}
+          locale={locale}
+        />
+      )}
+    </>
   );
 }
 

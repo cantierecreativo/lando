@@ -6,7 +6,7 @@ import MainInfo from "components/blocks/MainInfo";
 import { Image as DatoImage } from "react-datocms";
 import TitleSection from "components/blocks/TitleSection";
 import FlagHp from "components/blocks/FlagHp";
-import RoomsCard from "components/cards/RoomsCard";
+import StandardCard from "components/cards/StandardCard";
 import HpCard from "components/cards/HpCard";
 import PostContent from "components/PostContent";
 import t from "lib/locales";
@@ -26,6 +26,7 @@ export default function Home({ locale, site, page, rooms, news }) {
           alt={page.imageBgIntro.responsiveImage.alt}
           title={page.imageBgIntro.responsiveImage.title}
           objectFit="cover"
+          usePlaceholder={false}
           layout="fill"
         />
         <div className="bg-black/95 absolute inset-0" />
@@ -39,8 +40,8 @@ export default function Home({ locale, site, page, rooms, news }) {
                 {page.titleRoom}
               </h2>
               <div className="grid gap-5 mt-6 md:mt-20 md:grid-cols-2 lg:grid-cols-3">
-                {rooms.map((r) => (
-                  <RoomsCard key={r.id} record={r} locale={locale} />
+                {rooms?.map((r) => (
+                  <StandardCard key={r.id} record={r} locale={locale} />
                 ))}
               </div>
             </div>
@@ -97,7 +98,7 @@ export default function Home({ locale, site, page, rooms, news }) {
           </InternalLink>
         </div>
         <div className="mt-8 lg:my-16">
-          {news.map((n) => (
+          {news?.map((n) => (
             <NewsCard key={n.id} news={n} locale={locale} />
           ))}
         </div>

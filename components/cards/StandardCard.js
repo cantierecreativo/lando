@@ -3,7 +3,7 @@ import { renderHTML } from "lib/html";
 import { Image as DatoImage } from "react-datocms";
 import Icon from "components/layout/Icon";
 
-export default function RoomsCard({ locale, record }) {
+export default function StandardCard({ locale, record }) {
   return (
     <>
       <InternalLink
