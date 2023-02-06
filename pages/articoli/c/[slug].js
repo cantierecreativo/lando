@@ -1,24 +1,12 @@
 import Layout from "components/layout/Layout";
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
-import Link from "next/link";
-import { resolveLink } from "lib/utils";
+import IndexNewsTmp from "components/templates/IndexNewsTmp";
 
 function NewsCategory({ locale, site, page, items }) {
   return (
     <Layout site={site} locale={locale} page={page}>
-      <div className="container py-20 text-5xl border-t">
-        <p>Title: {page.title}</p>
-        <p>Model: {page.model}</p>
-        <ul className="pt-5 mt-5 text-xl border-t">
-          ELENCO ARTICOLI FILTRATI PER CATEGORIA
-          {items.map((i) => (
-            <li key={i.id}>
-              <Link href={resolveLink(i, locale)}>{i.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <IndexNewsTmp locale={locale} page={page} items={items} />
     </Layout>
   );
 }
