@@ -4,7 +4,15 @@ import SkipLinks from "components/layout/SkipLinks";
 import MetaTags from "components/layout/MetaTags";
 import { useEffect } from "react";
 
-function Layout({ children, locale = "it", site, page, grandParent, parent }) {
+function Layout({
+  children,
+  locale = "it",
+  site,
+  page,
+  grandParent,
+  parent,
+  color,
+}) {
   useEffect(() => {
     if (locale) {
       const currentLocale = document.documentElement.lang;
@@ -24,6 +32,7 @@ function Layout({ children, locale = "it", site, page, grandParent, parent }) {
         page={page}
         locale={locale}
         site={site}
+        color={color}
       />
       <main id="content">{children}</main>
       <Footer id="footer" site={site} locale={locale} />

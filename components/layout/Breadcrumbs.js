@@ -2,12 +2,20 @@ import Link from "next/link";
 import InternalLink from "components/blocks/InternalLink";
 import Icon from "components/layout/Icon";
 
-export default function Breadcrumbs({ page, parent, grandParent, locale }) {
+export default function Breadcrumbs({
+  page,
+  parent,
+  grandParent,
+  locale,
+  color,
+}) {
   const breadcrumbItemClass = "gap-2 items-center text-xxs lg:text-xs";
   return (
     <nav
       aria-label="Breadcrumbs"
-      className="py-3 border-b border-white/20 lg:py-4"
+      className={`${
+        color === "rev" ? "bg-black" : ""
+      } py-3 border-b border-white/20 lg:py-4`}
     >
       <div className="container">
         <ol className="flex items-center gap-1">
@@ -35,7 +43,9 @@ export default function Breadcrumbs({ page, parent, grandParent, locale }) {
                   element={grandParent}
                   className="truncate duration-200 xl:hover:text-yellow"
                 >
-                  {grandParent.menuLabel}
+                  {grandParent.menuLabel !== undefined
+                    ? grandParent.menuLabel
+                    : grandParent.title}
                 </InternalLink>
                 <Icon name="down" className="-rotate-90 fill-siena" size="23" />
               </div>

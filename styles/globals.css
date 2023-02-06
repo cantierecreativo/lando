@@ -51,8 +51,9 @@
     @apply text-xs text-red;
   }
 
-  .formatted-text ul {
-    @apply my-2 pl-4;
+  .formatted-text ul div {
+    grid-template-columns: none;
+    @apply block max-w-none p-0;
   }
 
   .formatted-text ol {
@@ -61,11 +62,11 @@
   }
 
   .formatted-text ul li {
-    @apply relative py-[3px] after:absolute after:top-[15px] after:-left-4 after:h-[7px] after:w-[7px] after:rotate-45 after:rounded-full after:bg-black;
+    @apply relative py-[3px] after:absolute after:top-[13px] after:-left-4 after:h-[7px] after:w-[7px] after:xl:top-[18px] after:rounded-full after:bg-yellow;
   }
 
   .formatted-text ol li {
-    @apply relative py-[3px] before:pr-1 before:font-bold before:text-black;
+    @apply relative py-[3px] before:pr-1 before:font-bold before:text-white;
     counter-increment: my-awesome-counter;
   }
 
@@ -94,6 +95,16 @@
 
   .container-left {
     @apply pl-4 lg:pl-[calc(((100vw-1024px)/2)+1rem)] xl:pl-[calc(((100vw-1280px)/2)+1rem)] 2xl:pl-[calc(((100vw-1536px)/2)+5rem)] 3xl:pl-[calc(((100vw-1920px)/2)+5rem)];
+  }
+
+  .thumbnail .splide__slide.is-active {
+    @apply bg-white;
+  }
+  .thumbnail .splide__slide.is-active .border-custom {
+    @apply bg-black;
+  }
+  .thumbnail .splide__list {
+    @apply items-center;
   }
 }
 

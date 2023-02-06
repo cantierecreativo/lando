@@ -87,12 +87,16 @@ function RenderNavItem(item, locale) {
 }
 
 function Header(props) {
-  const { locale, site, page, grandParent, parent } = props;
+  const { locale, site, page, grandParent, parent, color } = props;
   const prefix = locale === "it" ? "/" : "/en";
 
   return (
     <>
-      <header className="relative z-40 bg-red-100 py-3 border-b border-white/20 lg:pt-5 lg:pb-0 lg:border-0">
+      <header
+        className={`${
+          color === "rev" ? "bg-black" : ""
+        } relative z-40 py-3 border-b border-white/20 lg:pt-5 lg:pb-0 lg:border-0`}
+      >
         <Popover className="">
           <div className="">
             <div className="container">
@@ -164,6 +168,7 @@ function Header(props) {
           grandParent={grandParent}
           parent={parent}
           locale={locale}
+          color={color}
         />
       )}
     </>

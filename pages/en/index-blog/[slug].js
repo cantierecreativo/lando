@@ -1,7 +1,7 @@
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
 
-import { default as Article } from "pages/articoli-del-blog/[slug].js";
+import { default as Article } from "pages/articoli/[slug].js";
 
 export async function getStaticPaths() {
   const response = await fetchData(queries.getAllSlugsNews, { locale: "en" });

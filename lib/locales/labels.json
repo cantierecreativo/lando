@@ -53,7 +53,10 @@
     "siena_Url": "/siena/visita-i-musei",
     "news_title": "News e eventi",
     "vews_cta": "Vedi tutti",
-    "downloadLabel": "Scarica il documento"
+    "downloadLabel": "Scarica il documento",
+    "prev": "Torna al precedente",
+    "read_all": "Leggi tutto",
+    "path": "Il Percorso"
   },
   "en": {
     "it": "Italiano",
@@ -108,6 +111,9 @@
     "siena_Url": "/en/siena/museums-visit",
     "news_title": "News and events",
     "vews_cta": "View all",
-    "downloadLabel": "Download document"
+    "downloadLabel": "Download document",
+    "prev": "Back to previous",
+    "read_all": "Read all",
+    "path": "The Path"
   }
 }

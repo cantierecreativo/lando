@@ -8,6 +8,7 @@ export default function NewsCard({ locale, news }) {
   const image = news.image;
   const categoryClass =
     "uppercase white text-xxs bg-black text-white absolute top-3 left-3 tracking-wide rounded-2xl py-2 px-4 lg:relative lg:top-auto lg:left-auto";
+
   return (
     <>
       <InternalLink

@@ -1,7 +1,7 @@
 import { renderHTML } from "lib/utils";
 import { Image as DatoImage } from "react-datocms";
 
-export default function HeroImage({ page, visual }) {
+export default function Hero({ page, visual }) {
   const { title, imageHero, descriptionImageHero, textHero } = page;
 
   return (

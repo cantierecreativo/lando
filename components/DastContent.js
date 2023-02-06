@@ -4,9 +4,9 @@ import {
   isHeading,
   isThematicBreak,
   isList,
+  // isListItem,
   isBlockquote,
   isParagraph,
-  isListItem,
 } from "datocms-structured-text-utils";
 
 import ArtworksBlock from "./blocks/ArtworksBlock";
@@ -112,6 +112,13 @@ export default function DastContent({ content, locale, site }) {
               <div className="xl:col-span-10 xl:col-start-2">
                 <p className="text-white/80 xl:text-lg">{children}</p>
               </div>
+            </div>
+          );
+        }),
+        renderRule(isList, ({ children, key }) => {
+          return (
+            <div key={key} className="container xl:grid xl:grid-cols-12 ">
+              <ul className="xl:col-span-10 xl:col-start-2 ml-4">{children}</ul>
             </div>
           );
         }),

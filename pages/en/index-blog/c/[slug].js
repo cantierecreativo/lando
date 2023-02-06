@@ -1,7 +1,7 @@
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
 
-import { default as NewsCategory } from "pages/articoli-del-blog/c/[slug]";
+import { default as NewsCategory } from "pages/articoli/c/[slug]";
 export default NewsCategory;
 
 export async function getStaticPaths() {
