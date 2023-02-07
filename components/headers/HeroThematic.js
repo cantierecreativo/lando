@@ -5,15 +5,26 @@ import React, { useRef, useEffect } from "react";
 import t from "lib/locales";
 import Icon from "components/layout/Icon";
 
-// function getIndexSlide(slider) {
-//   useEffect(() => {
-//     if (slider.current) {
-//       return slider.current.splide.index;
-//     }
-//   });
-// }
+function renderNextSlideIndex(items, index) {
+  let nextSlideIndex;
+  if (items.length - 1 === index) {
+    nextSlideIndex = 0;
+  } else {
+    nextSlideIndex = index + 1;
+  }
+  return nextSlideIndex;
+}
 
-function renderCard(s, steps, index, locale, show, setShow) {
+function renderCard(
+  s,
+  steps,
+  index,
+  locale,
+  show,
+  setShow,
+  handleThumbs,
+  nextSlideImg
+) {
   return (
     <>
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 xl:gap-36">
@@ -54,6 +65,33 @@ function renderCard(s, steps, index, locale, show, setShow) {
               {show ? null : <>{t("read_all", locale)}</>}
             </button>
           </div>
+          <div className="inline-block">
+            <button
+              className="bg-[#27221F] rounded-[400px] p-2 mt-4 inline-flex items-center gap-4 duration-150 hover:bg-siena group"
+              onClick={() => handleThumbs(index)}
+            >
+              <div className="w-20 h-14 relative">
+                {nextSlideImg && (
+                  <DatoImage
+                    className="rounded-[400px]"
+                    data={nextSlideImg.responsiveImage}
+                    alt={nextSlideImg.responsiveImage.alt}
+                    title={nextSlideImg.responsiveImage.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                )}
+              </div>
+              <div className="inline-flex items-center pr-4 gap-2 duration-100">
+                <div className="">{t("next", locale)}</div>
+                <Icon
+                  name="down"
+                  className="-rotate-90 fill-white group-hover:translate-x-1 duration-200"
+                  size="25"
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -63,20 +101,21 @@ function renderCard(s, steps, index, locale, show, setShow) {
 export default function HeroThematic({ locale, page }) {
   const slideShow = useRef();
   const thumbs = useRef();
-  // let indexSlider;
+  const handleThumbs = (i) => {
+    slideShow.current.go(i + 1);
+  };
+
   useEffect(() => {
     if (slideShow.current && thumbs.current && thumbs.current.splide) {
       slideShow.current.sync(thumbs.current.splide);
     }
-    // if (slideShow.current) {
-    //   indexSlider = slideShow.current.splide.index;
-    //   return indexSlider;
-    // }
   }, slideShow);
 
   const [show, setShow] = React.useState();
 
   const { steps } = page;
+  let nextSlide;
+
   return (
     <>
       <header className="bg-black max-w-[100vw] overflow-hidden">
@@ -107,7 +146,16 @@ export default function HeroThematic({ locale, page }) {
             <SplideTrack>
               {steps.map((s, i) => (
                 <SplideSlide key={s.id}>
-                  {renderCard(s, steps, i, locale, show, setShow)}
+                  {renderCard(
+                    s,
+                    steps,
+                    i,
+                    locale,
+                    show,
+                    setShow,
+                    handleThumbs,
+                    steps[renderNextSlideIndex(steps, i)].thumbImage
+                  )}
                 </SplideSlide>
               ))}
             </SplideTrack>
@@ -145,9 +193,9 @@ export default function HeroThematic({ locale, page }) {
                             <div className="w-full h-full relative border-custom p-[6px]">
                               <div className="w-full h-full relative">
                                 <DatoImage
-                                  data={s.image.responsiveImage}
-                                  alt={s.image.responsiveImage.alt}
-                                  title={s.image.responsiveImage.title}
+                                  data={s.thumbImage.responsiveImage}
+                                  alt={s.thumbImage.responsiveImage.alt}
+                                  title={s.thumbImage.responsiveImage.title}
                                   layout="fill"
                                   objectFit="cover"
                                 />

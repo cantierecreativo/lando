@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import VideoPlayer from "components/video/VideoPlayer";
 import VideoEmbedded from "components/video/VideoEmbedded";
 
-export default function Text({ block, visual, locale }) {
+export default function Video({ block, visual, locale }) {
   const alignClass = block.alignCenter ? "text-center mx-auto " : "";
 
   const { ref, inView, entry } = useInView({

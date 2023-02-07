@@ -14,7 +14,11 @@ export default function Breadcrumbs({
     <nav
       aria-label="Breadcrumbs"
       className={`${
-        color === "rev" ? "bg-black" : ""
+        color === "rev"
+          ? "bg-black"
+          : color === "light"
+          ? "bg-[#f8f2e8] text-black font-semibold"
+          : ""
       } py-3 border-b border-white/20 lg:py-4`}
     >
       <div className="container">
@@ -27,7 +31,11 @@ export default function Breadcrumbs({
                 title="Homepage"
                 key="homepage"
               >
-                <Icon name="home" size="28" />
+                <Icon
+                  name="home"
+                  size="28"
+                  className={`${color === "light" ? "fill-black" : ""}`}
+                />
               </Link>
               {page.model !== "homepage" && (
                 <Icon name="down" className="-rotate-90 fill-siena" size="23" />

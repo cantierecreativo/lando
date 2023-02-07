@@ -55,6 +55,7 @@
     "vews_cta": "Vedi tutti",
     "downloadLabel": "Scarica il documento",
     "prev": "Torna al precedente",
+    "next": "Vai al prossimo",
     "read_all": "Leggi tutto",
     "path": "Il Percorso"
   },
@@ -113,6 +114,7 @@
     "vews_cta": "View all",
     "downloadLabel": "Download document",
     "prev": "Back to previous",
+    "next": "Go to next",
     "read_all": "Read all",
     "path": "The Path"
   }

@@ -20,11 +20,13 @@ import LogosBlock from "./blocks/LogosBlock";
 import MilestonBlock from "./blocks/MilestonBlock";
 import PropertiesBlock from "./blocks/PropertiesBlock";
 import Icon from "./layout/Icon";
+import ImageBlock from "./blocks/ImageBlock";
 
-export default function DastContent({ content, locale, site }) {
+export default function DastContent({ content, locale, site, color }) {
   return (
     <StructuredText
       data={content}
+      color={color}
       renderBlock={({ record }) => {
         switch (record.model) {
           case "artworks_block":
@@ -36,7 +38,11 @@ export default function DastContent({ content, locale, site }) {
           case "attachments_block":
             return (
               <div>
-                <AttachmentsBlock record={record} locale={locale} />
+                <AttachmentsBlock
+                  record={record}
+                  locale={locale}
+                  color={color}
+                />
               </div>
             );
           case "banner_block":
@@ -87,6 +93,12 @@ export default function DastContent({ content, locale, site }) {
                 <PropertiesBlock record={record} locale={locale} />
               </div>
             );
+          case "image_block":
+            return (
+              <div>
+                <ImageBlock record={record} locale={locale} />
+              </div>
+            );
           default:
             return <></>;
         }
@@ -110,15 +122,26 @@ export default function DastContent({ content, locale, site }) {
           return (
             <div key={key} className="container xl:grid xl:grid-cols-12 ">
               <div className="xl:col-span-10 xl:col-start-2">
-                <p className="text-white/80 xl:text-lg">{children}</p>
+                <p className="text-inherit/80 xl:text-lg">{children}</p>
               </div>
             </div>
           );
         }),
-        renderRule(isList, ({ children, key }) => {
+        renderRule(isList, ({ children, key, node }) => {
           return (
-            <div key={key} className="container xl:grid xl:grid-cols-12 ">
-              <ul className="xl:col-span-10 xl:col-start-2 ml-4">{children}</ul>
+            <div
+              key={key}
+              className="container custom-list xl:grid xl:grid-cols-12 "
+            >
+              {node.style == "numbered" ? (
+                <ol className="xl:col-span-10 xl:col-start-2 ml-4">
+                  {children}
+                </ol>
+              ) : (
+                <ul className="xl:col-span-10 xl:col-start-2 ml-4">
+                  {children}
+                </ul>
+              )}
             </div>
           );
         }),
@@ -130,26 +153,30 @@ export default function DastContent({ content, locale, site }) {
           );
         }),
         renderRule(isBlockquote, ({ node, children, key }) => {
+          const contentClass =
+            color === "light"
+              ? "border border-black/20 py-12 xl:py-20 px-4 xl:col-span-10 xl:col-start-2"
+              : "border border-white/10 py-12 xl:py-20 px-4 xl:col-span-10 xl:col-start-2";
           return (
             <blockquote
               key={key}
               className="px-4 py-6 container xl:grid xl:grid-cols-12 lg:py-12"
             >
-              <div className="border border-white/10 py-12 xl:py-20 px-4 xl:col-span-10 xl:col-start-2">
-                <div className="px-4 mb-2 xl:px-20">
+              <div className={contentClass}>
+                <div className="px-4 mb-2 xl:px-20 lg:mb-6">
                   <Icon
                     name="quote"
-                    className="xl:scale-150 ml-1"
+                    className={`${
+                      color === "light" ? "fill-red" : "fill-[#E0AA4C]"
+                    } xl:scale-150 ml-1`}
                     size="25"
-                    fill="#E0AA4C"
                   />
                 </div>
-                {children}
+                <div className="mb-2 xl:px-20 lg:mb-6">{children}</div>
                 <footer className="text-xxs uppercase font-semibold pt-6 px-4 xl:px-20">
                   {node.attribution}
                 </footer>
               </div>
-              {/* {console.log("node:", node)} */}
             </blockquote>
           );
         }),

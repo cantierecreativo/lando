@@ -51,26 +51,28 @@
     @apply text-xs text-red;
   }
 
-  .formatted-text ul div {
+  .custom-list ul div,
+  .custom-list ul div,
+  blockquote .container {
     grid-template-columns: none;
     @apply block max-w-none p-0;
   }
 
-  .formatted-text ol {
-    @apply my-2;
+  .custom-list ol {
     counter-reset: my-awesome-counter;
   }
 
-  .formatted-text ul li {
+  .custom-list ul li {
     @apply relative py-[3px] after:absolute after:top-[13px] after:-left-4 after:h-[7px] after:w-[7px] after:xl:top-[18px] after:rounded-full after:bg-yellow;
   }
 
-  .formatted-text ol li {
-    @apply relative py-[3px] before:pr-1 before:font-bold before:text-white;
+  .custom-list ol li {
+    @apply relative py-[3px] pl-2;
     counter-increment: my-awesome-counter;
   }
 
-  .formatted-text ol li:before {
+  .custom-list ol li:after {
+    @apply absolute top-[3px] -left-4 h-[7px] w-[7px] xl:top-[9px] text-inherit font-bold;
     content: counter(my-awesome-counter) ". ";
   }
 
@@ -90,7 +92,7 @@
   }
 
   blockquote p {
-    @apply !font-serif !text-white xl:!text-3xl;
+    @apply !font-serif !text-inherit xl:!text-3xl;
   }
 
   .container-left {
@@ -105,6 +107,9 @@
   }
   .thumbnail .splide__list {
     @apply items-center;
+  }
+  .gallery .splide__pagination__page:after {
+    @apply !hidden;
   }
 }
 

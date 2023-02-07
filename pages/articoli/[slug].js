@@ -1,15 +1,26 @@
 import Layout from "components/layout/Layout";
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
+import NewsTmp from "components/templates/NewsTmp";
+import Section from "components/layout/Section";
 
 function Article({ locale, site, page }) {
   return (
-    <Layout site={site} locale={locale} page={page}>
-      <div className="container py-20 text-5xl border-t">
-        <p>Title: {page.title}</p>
-        <p>Model: {page.model}</p>
-        <p>Category: {page.category.title}</p>
-      </div>
+    <Layout
+      site={site}
+      locale={locale}
+      page={page}
+      parent={site.newsIndex}
+      color="light"
+    >
+      <NewsTmp locale={locale} page={page}>
+        <Section
+          blocks={page.blocks}
+          locale={locale}
+          site={site}
+          color="light"
+        />
+      </NewsTmp>
     </Layout>
   );
 }

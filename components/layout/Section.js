@@ -1,7 +1,7 @@
 import DastContent from "components/DastContent";
 import { convertToSlug } from "lib/utils";
 
-export default function Section({ locale, blocks, site }) {
+export default function Section({ locale, blocks, site, color = "dark" }) {
   return (
     <>
       <div className="py-12 lg:py-20 gap-24 grid">
@@ -15,9 +15,14 @@ export default function Section({ locale, blocks, site }) {
               {b.title && (
                 <h2 className="font-serif text-xl lg:text-4xl">{b.title}</h2>
               )}
-              {b.subtitle && <h3 className="text-white/80">{b.subtitle}</h3>}
+              {b.subtitle && <h3 className="text-inherit/80">{b.subtitle}</h3>}
             </div>
-            <DastContent content={b.content} locale={locale} site={site} />
+            <DastContent
+              content={b.content}
+              locale={locale}
+              site={site}
+              color={color}
+            />
           </div>
         ))}
       </div>

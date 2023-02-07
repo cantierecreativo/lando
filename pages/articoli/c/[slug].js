@@ -5,7 +5,7 @@ import IndexNewsTmp from "components/templates/IndexNewsTmp";
 
 function NewsCategory({ locale, site, page, items }) {
   return (
-    <Layout site={site} locale={locale} page={page}>
+    <Layout site={site} locale={locale} page={page} parent={site.newsIndex}>
       <IndexNewsTmp locale={locale} page={page} items={items} />
     </Layout>
   );

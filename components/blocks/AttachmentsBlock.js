@@ -2,7 +2,7 @@ import Icon from "components/layout/Icon";
 import t from "lib/locales";
 import ExternalLink from "./ExternalLink";
 
-export default function AttachmentsBlock({ locale, record }) {
+export default function AttachmentsBlock({ locale, record, color }) {
   return (
     <>
       <div className="container py-6 lg:py-12">
@@ -20,7 +20,13 @@ export default function AttachmentsBlock({ locale, record }) {
                   key={a.id}
                   className="group"
                 >
-                  <div className="rounded-[5px] bg-white/10 p-4 xl:grid xl:grid-cols-5 duration-150 group-hover:bg-white/20">
+                  <div
+                    className={`${
+                      color === "light"
+                        ? "group-hover:bg-black/20 bg-black/10 border border-black/20"
+                        : "group-hover:bg-white/20 bg-white/10"
+                    } rounded-[5px] p-4 xl:grid xl:grid-cols-5 duration-150 `}
+                  >
                     <div className="text-sm font-semibold xl:col-span-3">
                       {a.title}
                     </div>
@@ -31,8 +37,7 @@ export default function AttachmentsBlock({ locale, record }) {
                       <Icon
                         name="download"
                         size="15"
-                        fill="white"
-                        className="xl:flex-none"
+                        className="xl:flex-none fill-inherit"
                       />
                     </div>
                   </div>
