@@ -4,7 +4,7 @@ import fetchData from "lib/dato";
 import NewsTmp from "components/templates/NewsTmp";
 import Section from "components/layout/Section";
 
-function Article({ locale, site, page }) {
+function Article({ locale, site, page, lastNews }) {
   return (
     <Layout
       site={site}
@@ -13,7 +13,7 @@ function Article({ locale, site, page }) {
       parent={site.newsIndex}
       color="light"
     >
-      <NewsTmp locale={locale} page={page}>
+      <NewsTmp locale={locale} page={page} site={site} lastNews={lastNews}>
         <Section
           blocks={page.blocks}
           locale={locale}
@@ -41,6 +41,7 @@ export async function getStaticProps({ params, locale = "it", preview }) {
     props: {
       locale,
       page: response.news,
+      lastNews: response.allNews,
       site,
     },
   };

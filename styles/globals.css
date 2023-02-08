@@ -52,7 +52,7 @@
   }
 
   .custom-list ul div,
-  .custom-list ul div,
+  .custom-list ol div,
   blockquote .container {
     grid-template-columns: none;
     @apply block max-w-none p-0;

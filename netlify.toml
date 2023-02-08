@@ -1,6 +1,6 @@
 # example netlify.toml
 [build]
-  command = "next build"
+  command = "node scripts/uploadData.js && next build"
   functions = "netlify/functions"
   publish = ".next"
 

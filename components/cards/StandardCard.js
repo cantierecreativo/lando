@@ -4,6 +4,9 @@ import { Image as DatoImage } from "react-datocms";
 import Icon from "components/layout/Icon";
 
 export default function StandardCard({ locale, record }) {
+  const categoryClass =
+    "uppercase white text-xxs bg-black text-white absolute top-3 left-3 tracking-wide rounded-2xl py-2 px-4 lg:relative lg:top-auto lg:left-auto hover:bg-siena duration-200";
+
   return (
     <>
       <InternalLink
@@ -22,6 +25,20 @@ export default function StandardCard({ locale, record }) {
               title={record.imageHero.responsiveImage.title}
               layout=""
             />
+          )}
+          {record.image && (
+            <DatoImage
+              className=""
+              data={record.image.responsiveImage}
+              alt={record.image.responsiveImage.alt}
+              title={record.image.responsiveImage.title}
+              layout=""
+            />
+          )}
+          {record.info && (
+            <div className="text-xxs font-semibold lg:flex lg:items-center lg:gap-4 lg:text-xs pt-3">
+              <span className="lg:opacity-80 lg:font-light">{record.info}</span>
+            </div>
           )}
           <div className="grid gap-2 content-start pt-4 lg:pt-6">
             <h2 className="uppercase font-serif text-xl">{record.title}</h2>
