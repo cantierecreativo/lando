@@ -16,7 +16,9 @@ const Hits = ({
   if (!searchResults) {
     return <></>;
   }
-
+  {
+    console.log("items:", items);
+  }
   const hitsIds = searchResults.hits.map((e) => e.objectID);
   const filteredItems = items.filter((e) => hitsIds.includes(e.id));
   return (

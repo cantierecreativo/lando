@@ -24,7 +24,6 @@ const searchClient = algoliasearch(
 const facetingAttributes = ["typology", "room"];
 
 export default function IndexArtworksTmp({ locale, page, items }) {
-  const { allArtworks } = items;
   const router = useRouter();
   const { asPath, pathname } = router;
   const [searchState, setSearchState] = useState({});
@@ -78,11 +77,7 @@ export default function IndexArtworksTmp({ locale, page, items }) {
                 </aside>
                 <section className="md:col-span-2 xl:col-span-3 xl:pr-16">
                   {/* <ScrollTo> */}
-                  <Hits
-                    locale={locale}
-                    items={allArtworks}
-                    component={CardSearch}
-                  />
+                  <Hits locale={locale} items={items} component={CardSearch} />
                   {/* </ScrollTo> */}
                   <div className="relative border-y-[2px] border-black py-8 md:border-0 md:after:absolute md:after:left-0 md:after:top-0 md:after:h-[2px] md:after:w-[100vw] md:after:bg-black">
                     <div className="container">
