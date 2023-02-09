@@ -57,7 +57,10 @@
     "prev": "Torna al precedente",
     "next": "Vai al prossimo",
     "read_all": "Leggi tutto",
-    "path": "Il Percorso"
+    "path": "Il Percorso",
+    "search": "Cerca",
+    "typology": "Tipologia",
+    "room": "Sale"
   },
   "en": {
     "it": "Italiano",
@@ -116,6 +119,9 @@
     "prev": "Back to previous",
     "next": "Go to next",
     "read_all": "Read all",
-    "path": "The Path"
+    "path": "The Path",
+    "search": "Search",
+    "typology": "Typology",
+    "room": "Rooms"
   }
 }

@@ -16,6 +16,7 @@ import CardSearch from "components/cards/CardSearch";
 import Search from "components/algolia/Search";
 import Pagination from "components/algolia/Pagination";
 import Hits from "components/algolia/Hits";
+import Icon from "components/layout/Icon";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -52,20 +53,21 @@ export default function IndexArtworksTmp({ locale, page, items }) {
               onSearchStateChange={onSearchStateChange}
               indexName={`artworks_${locale}`}
             >
-              <div className="grid gap-10 md:grid-cols-3 md:gap-0 xl:grid-cols-4">
-                <aside className="border-black px-6 md:border-r-[2px] md:pt-8 lg:pt-12 xl:pt-16 xl:pl-16 xl:pr-12">
-                  <div className="flex w-full justify-between">
+              <div className="pt-6 grid gap-6 lg:grid-cols-3 xl:grid-cols-4 lg:py-12">
+                <aside className="mt-4 lg:mt-0">
+                  <div className="flex w-full justify-between mb-6 lg:gap-2">
                     <Search locale={locale} />
                     <button
                       type="button"
-                      className="inline-flex items-center rounded-md border border-transparent bg-blue px-3 py-2 text-sm font-medium leading-4 text-white hover:bg-red hover:text-white focus:outline-none"
+                      className="bg-white/10 inline-flex items-center rounded-md border border-transparent bg-blue px-3 py-2 text-sm font-medium leading-4 text-white hover:bg-red hover:text-white focus:outline-none"
                       onClick={() => clearSearchState()}
                     >
-                      {/* <RefreshIcon className="h-5 w-5" /> */}
+                      <Icon name="reload" size="20" />
                       <span className="sr-only">Reload</span>
                     </button>
                   </div>
-                  <div className="mt-8 border-b border-black">
+
+                  <div className="border-b border-white border-dashed lg:border-none">
                     {facetingAttributes.map((attribute) => (
                       <AttributeFilter
                         key={attribute}
@@ -75,17 +77,10 @@ export default function IndexArtworksTmp({ locale, page, items }) {
                     ))}
                   </div>
                 </aside>
-                <section className="md:col-span-2 xl:col-span-3 xl:pr-16">
-                  {/* <ScrollTo> */}
-                  <Hits locale={locale} items={items} component={CardSearch} />
-                  {/* </ScrollTo> */}
-                  <div className="relative border-y-[2px] border-black py-8 md:border-0 md:after:absolute md:after:left-0 md:after:top-0 md:after:h-[2px] md:after:w-[100vw] md:after:bg-black">
-                    <div className="container">
-                      <Pagination defaultRefinement={1} />
-                    </div>
-                  </div>
-                </section>
+                <Hits locale={locale} items={items} component={CardSearch} />
               </div>
+
+              <Pagination defaultRefinement={1} />
             </InstantSearch>
           )}
           {/* <div className="grid-gap">
@@ -99,4 +94,77 @@ export default function IndexArtworksTmp({ locale, page, items }) {
       </div>
     </>
   );
+}
+
+export async function getStaticProps({ locale = "it", preview }) {
+  const data = await request({
+    query: gql`
+      query allArtworks($locale: SiteLocale!) {
+        allArtworks(
+          first: "100"
+          locale: $locale
+          filter: { _locales: { allIn: [$locale] } }
+        ) {
+          model: _modelApiKey
+          id
+          slug
+          title
+          textHero
+          author
+          year
+          typology {
+            id
+            title
+          }
+          room {
+            id
+            slug
+            title
+          }
+          carouselHero {
+            id
+            description
+            image {
+              responsiveImage(
+                sizes: "240px"
+                imgixParams: { auto: [format, compress], w: 240, fit: max }
+              ) {
+                fragment
+                imgFrag
+                on
+                ResponsiveImage {
+                  aspectRatio
+                  base64
+                  height
+                  sizes
+                  src
+                  srcSet
+                  webpSrcSet
+                  width
+                  alt
+                  title
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+    variables: { locale },
+    preview,
+  });
+  const response = await fetchDato(
+    queries.getArtworksIndex,
+    { locale },
+    preview
+  );
+  const site = await fetchDato(queries.site, { locale });
+  return {
+    props: {
+      locale,
+      data,
+      site,
+      page: response.artworksIndex,
+    },
+  };
 }

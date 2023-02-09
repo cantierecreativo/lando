@@ -61,7 +61,6 @@ const formatAssets = ({ assets, locales }) => {
   } = await getDatoLocales();
   const assets = await getDatoLocalizedAssets();
   const formattedAssets = formatAssets({ assets, locales });
-
   console.log("Indices found:", indices.join(", "));
   console.log("Locales found on DatoCMS:", locales.join(", "));
 

@@ -31,8 +31,6 @@ export default function ArtworkCard({ locale, record }) {
             {author && (
               <h4 className="text-xs font-bold xl:text-base">{author}</h4>
             )}
-            {record.typology.title} --
-            {record.room.title}
           </div>
         </div>
       </InternalLink>

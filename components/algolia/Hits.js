@@ -16,9 +16,6 @@ const Hits = ({
   if (!searchResults) {
     return <></>;
   }
-  {
-    console.log("items:", items);
-  }
   const hitsIds = searchResults.hits.map((e) => e.objectID);
   const filteredItems = items.filter((e) => hitsIds.includes(e.id));
   return (
@@ -29,7 +26,7 @@ const Hits = ({
         </div>
       ) : (
         <>
-          <div className="grid md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:col-span-2 xl:col-span-3 xl:grid-cols-3">
             {filteredItems.map((item, n) => {
               const searchResult = searchResults.hits.find(
                 (e) => e.objectID === item.id
@@ -41,6 +38,7 @@ const Hits = ({
                   hit={searchResult}
                   n={n}
                   {...item}
+                  item={item}
                 />
               );
             })}

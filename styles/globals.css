@@ -111,6 +111,18 @@
   .gallery .splide__pagination__page:after {
     @apply !hidden;
   }
+  .checkbox-custom {
+    @apply absolute h-6 w-6 opacity-0;
+  }
+  input:checked + div {
+    @apply border-siena;
+  }
+  input:focus-visible + div {
+    @apply border-siena;
+  }
+  input:checked + div svg {
+    @apply block;
+  }
 }
 
 .splide__pagination {

@@ -18,16 +18,10 @@ module.exports = {
           value
         }
         typology {
-          _allTitleLocales {
-            locale
-            value
-          }
+          title
         }
         room {
-          _allTitleLocales {
-            locale
-            value
-          }
+          title
         }
         _allSlugLocales {
           locale
