@@ -60,7 +60,8 @@
     "path": "Il Percorso",
     "search": "Cerca",
     "typology": "Tipologia",
-    "room": "Sale"
+    "room": "Sale",
+    "play_video": "Guarda il video"
   },
   "en": {
     "it": "Italiano",
@@ -122,6 +123,7 @@
     "path": "The Path",
     "search": "Search",
     "typology": "Typology",
-    "room": "Rooms"
+    "room": "Rooms",
+    "play_video": "Play video"
   }
 }

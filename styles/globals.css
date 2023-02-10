@@ -123,6 +123,15 @@
   input:checked + div svg {
     @apply block;
   }
+  .carousel-artworks .thumbnail .splide__slide.is-active {
+    @apply border-white border-2;
+  }
+  .carousel-artworks .thumbnail .splide__slide {
+    @apply lg:mb-2;
+  }
+  .carousel-artworks .thumbnail .splide__list {
+    @apply block;
+  }
 }
 
 .splide__pagination {
