@@ -3,7 +3,7 @@ import Icon from "components/layout/Icon";
 export default function Button({ label, color, icon, arrow }) {
   const colorBgClasses = {
     yellow: "bg-yellow text-black group-hover:bg-white px-3 xl:px-5",
-    white: "bg-white text-black group-hover:bg-yellow px-3 xl:px-5",
+    white: "bg-white text-black group-hover:bg-yellow px-4 xl:px-5",
     transparent: "",
     border:
       "border border-white/20 px-6 xl:px-5 group-hover:bg-yellow group-hover:text-black",

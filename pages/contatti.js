@@ -1,16 +1,15 @@
 import Layout from "components/layout/Layout";
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
-import FormBlock from "components/blocks/FormBlock";
+import EditorialTmp from "components/templates/EditorialTmp";
+import Section from "components/layout/Section";
 
-export default function Contact({ locale, site, page }) {
+export default function ContactPage({ locale, site, page }) {
   return (
     <Layout site={site} locale={locale} page={page}>
-      <div className="container py-20 text-5xl border-t">
-        <p>{page.title}</p>
-        <p>{page.model}</p>
-      </div>
-      <FormBlock locale={locale} />
+      <EditorialTmp locale={locale} page={page}>
+        <Section blocks={page.blocks} locale={locale} site={site} />
+      </EditorialTmp>
     </Layout>
   );
 }

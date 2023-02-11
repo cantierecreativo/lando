@@ -6,7 +6,7 @@ export default function OtherPages({ locale, pages }) {
   return (
     <>
       <div className="md:grid md:grid-cols-2">
-        {pages.map((p, n) => (
+        {pages?.map((p, n) => (
           <InternalLink
             key={p.id}
             element={p}

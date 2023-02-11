@@ -61,7 +61,8 @@
     "search": "Cerca",
     "typology": "Tipologia",
     "room": "Sale",
-    "play_video": "Guarda il video"
+    "play_video": "Guarda il video",
+    "send": "Invia richiesta"
   },
   "en": {
     "it": "Italiano",
@@ -124,6 +125,7 @@
     "search": "Search",
     "typology": "Typology",
     "room": "Rooms",
-    "play_video": "Play video"
+    "play_video": "Play video",
+    "send": "Send"
   }
 }

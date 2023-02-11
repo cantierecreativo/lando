@@ -5,26 +5,35 @@ export default function Section({ locale, blocks, site, color = "dark" }) {
   return (
     <>
       <div className="py-12 lg:py-20 gap-24 grid">
-        {blocks.map((b) => (
-          <div
-            className="gap-6 grid scroll-mt-24"
-            id={convertToSlug(b.label)}
-            key={b.id}
-          >
-            <div className="grid gap-2 lg:gap-5 container text-center lg:py-6">
-              {b.title && (
-                <h2 className="font-serif text-xl lg:text-4xl">{b.title}</h2>
+        {blocks.map((b) => {
+          const any = b.title || b.subtitle;
+          return (
+            <div
+              className="gap-6 grid scroll-mt-24"
+              id={convertToSlug(b.label)}
+              key={b.id}
+            >
+              {any && (
+                <div className="grid gap-2 lg:gap-5 container text-center lg:py-6">
+                  {b.title && (
+                    <h2 className="font-serif text-xl lg:text-4xl">
+                      {b.title}
+                    </h2>
+                  )}
+                  {b.subtitle && (
+                    <h3 className="text-inherit/80">{b.subtitle}</h3>
+                  )}
+                </div>
               )}
-              {b.subtitle && <h3 className="text-inherit/80">{b.subtitle}</h3>}
+              <DastContent
+                content={b.content}
+                locale={locale}
+                site={site}
+                color={color}
+              />
             </div>
-            <DastContent
-              content={b.content}
-              locale={locale}
-              site={site}
-              color={color}
-            />
-          </div>
-        ))}
+          );
+        })}
       </div>
     </>
   );

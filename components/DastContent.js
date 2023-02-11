@@ -21,6 +21,8 @@ import MilestonBlock from "./blocks/MilestonBlock";
 import PropertiesBlock from "./blocks/PropertiesBlock";
 import Icon from "./layout/Icon";
 import ImageBlock from "./blocks/ImageBlock";
+import FormBlock from "./blocks/FormBlock";
+import MapBlock from "./blocks/MapBlock";
 
 export default function DastContent({ content, locale, site, color }) {
   return (
@@ -97,6 +99,18 @@ export default function DastContent({ content, locale, site, color }) {
             return (
               <div>
                 <ImageBlock record={record} locale={locale} />
+              </div>
+            );
+          case "map_block":
+            return (
+              <div>
+                <MapBlock record={record} locale={locale} />
+              </div>
+            );
+          case "form_block":
+            return (
+              <div>
+                <FormBlock record={record} locale={locale} />
               </div>
             );
           default:

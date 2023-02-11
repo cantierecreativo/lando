@@ -3,11 +3,13 @@ import { useForm } from "react-hook-form";
 import t from "lib/locales";
 import ExternalLink from "components/blocks/ExternalLink";
 import FormMessage from "components/form/FormMessage";
+import CheckboxCustom from "components/layout/CheckboxCustom";
+import Button from "components/layout/Button";
 
 export default function ContactForm({ page, locale }) {
-  const labelClass = "";
+  const labelClass = "text-sm block mb-2";
   const inputClass =
-    "border lg:px-6 w-full border-pink px-2 placehoder:text-violet py-4";
+    "border lg:px-4 w-full border-white px-2 placeholder:text-white placeholder:text-sm bg-white/10 py-3";
   const checkboxClass =
     "h-4 w-4 shrink-0 rounded-full bg-white text-blue accent-blue";
 
@@ -20,8 +22,8 @@ export default function ContactForm({ page, locale }) {
     const formData = new FormData();
     formData.append("access_key", process.env.NEXT_PUBLIC_W3F);
     // formData.append("ccemail", process.env.NEXT_PUBLIC_CONTACT_EMAIL);
-    formData.append("from_name", "XXX Website");
-    // formData.append("subject", page.title);
+    formData.append("from_name", "Museo Civico Siena Website");
+    formData.append("subject", "Contatto dal sito");
 
     for (const key in data) {
       formData.append(key, data[key]);
@@ -40,7 +42,7 @@ export default function ContactForm({ page, locale }) {
   };
 
   return (
-    <form className="mt-6 pt-8" onSubmit={handleSubmit(onSubmit)}>
+    <form className="pt-8 xl:pt-0 grid gap-4" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label htmlFor="fullName" className={labelClass}>
           {t("formFullName", locale)}
@@ -70,6 +72,20 @@ export default function ContactForm({ page, locale }) {
         />
       </div>
       <div>
+        <label htmlFor="phone" className={labelClass}>
+          {t("phone", locale)}
+        </label>
+        <input
+          type="number"
+          name="phone"
+          id="phone"
+          placeholder={t("phone", locale)}
+          required={true}
+          className={inputClass}
+          {...register("Telefono")}
+        />
+      </div>
+      <div>
         <label htmlFor="message" className={`${labelClass}`}>
           {t("message", locale)}
         </label>
@@ -84,7 +100,7 @@ export default function ContactForm({ page, locale }) {
         />
       </div>
       <fieldset
-        className="mr-4 mt-3 flex px-2 lg:px-6 lg:mb-20"
+        className="mt-3 flex items-center"
         role="group"
         aria-label={t("formPrivacyFieldsetLabel")}
       >
@@ -96,8 +112,9 @@ export default function ContactForm({ page, locale }) {
           type="checkbox"
           value=""
           required={true}
-          className={checkboxClass}
+          className="checkbox-custom"
         />
+        <CheckboxCustom layout="small" />
         <label htmlFor="privacyCheckbox" className="ml-2 text-xs">
           {t("formPrivacyPre", locale)}
           <ExternalLink
@@ -115,7 +132,12 @@ export default function ContactForm({ page, locale }) {
       </fieldset>
       <div className="mt-2">
         <button className="" type="submit">
-          INVIA
+          <Button
+            label={t("send", locale)}
+            locale={locale}
+            color="white"
+            arrow={true}
+          />
         </button>
       </div>
       <FormMessage status={result} locale={locale} />
