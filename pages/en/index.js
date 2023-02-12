@@ -11,6 +11,8 @@ export async function getStaticProps({ locale = "en", preview }) {
     props: {
       locale,
       page: response.homepage,
+      rooms: response.allRooms,
+      news: response.allNews,
       site,
     },
   };

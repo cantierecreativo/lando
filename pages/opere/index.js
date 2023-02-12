@@ -3,7 +3,7 @@ import * as queries from "lib/queries";
 import fetchData from "lib/dato";
 import IndexArtworksTmp from "components/templates/IndexArtworksTmp";
 
-export default function ItineraryIndex({ locale, site, page, items }) {
+export default function ArtworksIndex({ locale, site, page, items }) {
   return (
     <Layout site={site} locale={locale} page={page}>
       <IndexArtworksTmp

@@ -1,8 +1,7 @@
 import * as queries from "lib/queries";
 import fetchData from "lib/dato";
 
-import { default as NewsCategory } from "pages/articoli/c/[slug]";
-export default NewsCategory;
+import { default as NewsCategory } from "pages/articoli/c/[slug].js";
 
 export async function getStaticPaths() {
   const response = await fetchData(queries.getAllCategoryNews, {
@@ -22,11 +21,7 @@ export async function getStaticProps({ params, locale = "en", preview }) {
     preview
   );
   const id = response.categoryNews.id;
-  const filter = await fetchData(
-    queries.getNewsByCategory,
-    { id, locale },
-    preview
-  );
+  const filter = await fetchData(queries.getNewsByCategory, { id, locale });
   const site = await fetchData(queries.site, { locale });
   return {
     props: {
@@ -37,3 +32,5 @@ export async function getStaticProps({ params, locale = "en", preview }) {
     },
   };
 }
+
+export default NewsCategory;

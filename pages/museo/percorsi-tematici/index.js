@@ -3,7 +3,7 @@ import * as queries from "lib/queries";
 import fetchData from "lib/dato";
 import IndexTmp from "components/templates/IndexTmp";
 
-export default function IndexBlog({ locale, site, page, items }) {
+export default function IndexThematicRoutes({ locale, site, page, items }) {
   return (
     <Layout site={site} locale={locale} page={page} parent={site.museumPage[0]}>
       <IndexTmp locale={locale} page={page} items={items}></IndexTmp>

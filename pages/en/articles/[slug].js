@@ -2,6 +2,7 @@ import * as queries from "lib/queries";
 import fetchData from "lib/dato";
 
 import { default as Article } from "pages/articoli/[slug].js";
+export default Article;
 
 export async function getStaticPaths() {
   const response = await fetchData(queries.getAllSlugsNews, { locale: "en" });
@@ -19,9 +20,8 @@ export async function getStaticProps({ params, locale = "en", preview }) {
     props: {
       locale,
       page: response.news,
+      lastNews: response.allNews,
       site,
     },
   };
 }
-
-export default Article;
