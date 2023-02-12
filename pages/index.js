@@ -103,7 +103,6 @@ export default function Home({ locale, site, page, rooms, news }) {
           ))}
         </div>
       </section>
-      <MainInfo site={site} locale={locale} social={true} />
     </Layout>
   );
 }

@@ -1,11 +1,9 @@
 import { renderHTML } from "lib/utils";
 import Icon from "components/layout/Icon";
-import InternalLink from "./InternalLink";
 import Link from "next/link";
 import t from "lib/locales";
 import ExternalLink from "./ExternalLink";
 import Button from "components/layout/Button";
-import Socials from "components/layout/Socials";
 
 export default function MainInfo({ locale, site, social = false }) {
   const info = site.organization;

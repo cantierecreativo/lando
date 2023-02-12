@@ -1,10 +1,7 @@
-import { Fragment } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import t from "lib/locales";
+import MainInfo from "components/blocks/MainInfo";
 import { resolveLink } from "lib/utils";
-import Script from "next/script";
-import InternalLink from "components/blocks/InternalLink";
 
 function RenderNavItem(locale, item) {
   if (!item.linkMenu) {
@@ -42,6 +39,7 @@ export default function Footer({ locale, site }) {
   const year = new Date().getFullYear();
   return (
     <>
+      <MainInfo site={site} locale={locale} social={true} />
       <div className="bg-black/20">
         <nav className="container">
           <div className="grid py-14 grid-cols-2 md:grid-cols-5 content-start gap-y-8 gap-x-2">
