@@ -42,7 +42,7 @@ export default function Footer({ locale, site }) {
       <MainInfo site={site} locale={locale} social={true} />
       <div className="bg-black/20">
         <nav className="container">
-          <div className="grid py-14 grid-cols-2 md:grid-cols-5 content-start gap-y-8 gap-x-2">
+          <div className="grid pt-16 pb-24 grid-cols-2 md:grid-cols-5 content-start gap-y-8 gap-x-2">
             {site.menu.groupsMenu.map((m) => RenderNavItem(locale, m))}
           </div>
         </nav>

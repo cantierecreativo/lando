@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;500;600;700&display=swap");
 
 @font-face {
   font-family: "MillerBanner";
@@ -23,7 +23,7 @@
     }
   }
   body {
-    @apply font-sans m-0 p-0 text-white text-base bg-red font-light;
+    @apply font-sans m-0 p-0 text-white text-base bg-red font-extralight;
   }
 }
 

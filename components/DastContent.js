@@ -123,7 +123,7 @@ export default function DastContent({ content, locale, site, color }) {
           let classTitle;
           if (node.level == 2) {
             classTitle = "text-lg xl:text-2xl";
-          } else classTitle = "font-bold xl:text-lg";
+          } else classTitle = "font-medium xl:text-lg";
           return (
             <div key={key} className="container xl:grid xl:grid-cols-12">
               <div className="xl:col-span-10 xl:col-start-2">

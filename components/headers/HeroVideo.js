@@ -16,7 +16,7 @@ export default function Hero({ page, visual }) {
   }, slideShow);
 
   return (
-    <header className="container py-8 xl:py-12 carousel-artworks">
+    <header className="container py-12 xl:py-24 carousel-artworks">
       <div className="grid gap-12 lg:flex lg:gap-0">
         <div className="lg:flex lg:gap-4 lg:flex-row-reverse lg:flex-none xl:w-1/2 lg:w-2/3 lg:justify-end">
           <div className="relative aspect-video w-full">
@@ -24,7 +24,7 @@ export default function Hero({ page, visual }) {
           </div>
         </div>
         <div className="xl:w-1/2 xl:flex-none xl:pl-24">
-          <h1 className="uppercase font-serif text-xl md:text-2xl lg:col-span-4 xl:text-4xl mb-2">
+          <h1 className="uppercase font-serif text-xl md:text-2xl lg:col-span-4 xl:text-4xl mb-2 xl:mb-6">
             {title}
           </h1>
           {textHero && (

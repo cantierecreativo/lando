@@ -7,7 +7,7 @@ export default function AttachmentsBlock({ locale, record, color }) {
     <>
       <div className="container py-6 lg:py-12">
         <div className="grid lg:grid-cols-12">
-          <div className="lg:col-span-5 lg:col-start-3">
+          <div className="lg:col-span-5 lg:col-start-2">
             {record.title && (
               <h2 className="text-lg xl:text-2xl">{record.title}</h2>
             )}
@@ -25,11 +25,9 @@ export default function AttachmentsBlock({ locale, record, color }) {
                       color === "light"
                         ? "group-hover:bg-black/20 bg-black/10 border border-black/20"
                         : "group-hover:bg-white/20 bg-white/10"
-                    } rounded-[5px] p-4 xl:grid xl:grid-cols-5 duration-150 `}
+                    } rounded-[5px] p-6 xl:grid xl:grid-cols-5 duration-150 `}
                   >
-                    <div className="text-sm font-semibold xl:col-span-3">
-                      {a.title}
-                    </div>
+                    <div className="font-semibold xl:col-span-3">{a.title}</div>
                     <div className="flex items-center text-xs gap-2 pt-1 xl:col-span-2 xl:pt-0">
                       <div className="xl:flex-none">
                         {t("downloadLabel", locale)}
