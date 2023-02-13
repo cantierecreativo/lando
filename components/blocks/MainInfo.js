@@ -9,7 +9,7 @@ export default function MainInfo({ locale, site, social = false }) {
   const info = site.organization;
   return (
     <>
-      <section className="container pb-16 lg:py-10">
+      <section className="container pb-16 lg:py-20">
         <div className="grid gap-8 md:grid-cols-8 lg:grid-cols-12">
           <div
             className={`${

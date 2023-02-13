@@ -48,7 +48,7 @@ export default function MilestonBlock({ locale, record, wide }) {
                 classes: {
                   arrows: "",
                   arrow:
-                    "z-20 bg-white fill-black w-8 h-6 rounded-[50%] hover:scale-150 duration-300 absolute top-24 md:top-28 lg:top-36 xl:scale-125",
+                    "z-20 bg-white fill-black w-10 h-8 rounded-[50%] hover:scale-150 duration-300 absolute top-24 md:top-28 lg:top-36 xl:scale-125",
                   next: "right-4 xl:right-8",
                   prev: "hidden xl:left-8 left-4 rotate-180",
                 },

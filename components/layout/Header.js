@@ -16,7 +16,7 @@ function RenderNavItem(item, locale) {
   const router = useRouter();
   const classNameActive = "text-red";
   const classNameItem =
-    "inline-flex items-center text-sm xl:text-base text-white font-light duration-200 relative focus:ring-siena after:absolute group-hover:color-red group-hover:after:right-0 after:duration-300 after:-bottom-1 group-hover:after:left-0 after:h-px after:bg-white after:right-1/2 after:left-1/2";
+    "inline-flex items-center text-sm text-white font-light duration-200 relative focus:ring-siena after:absolute group-hover:color-red group-hover:after:right-0 after:duration-300 after:-bottom-1 group-hover:after:left-0 after:h-px after:bg-white after:right-1/2 after:left-1/2";
   const classDropdownItem =
     "block whitespace-nowrap py-3 px-4 pr-12 text-xs xl:text-sm text-black";
   if (!item.linkMenu) {

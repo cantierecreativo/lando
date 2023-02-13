@@ -89,7 +89,7 @@ export default function ArtworksBlock({ locale, site }) {
               classes: {
                 arrows: "",
                 arrow:
-                  "z-20 bg-white w-8 h-6 rounded-[50%] hover:scale-150 duration-300 absolute top-24 md:top-32 xl:top-36 xl:scale-125",
+                  "z-20 bg-white w-10 h-8 rounded-[50%] hover:scale-150 duration-300 absolute top-24 md:top-32 xl:top-36 xl:scale-125",
                 next: "right-12 xl:-right-4",
                 prev: "hidden xl:block xl:-left-4 rotate-180",
               },

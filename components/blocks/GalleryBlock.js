@@ -18,7 +18,7 @@ export default function GalleryBlock({ locale, record }) {
               classes: {
                 arrows: "",
                 arrow:
-                  "z-20 bg-black fill-white w-8 h-6 rounded-[50%] hover:scale-150 duration-300 absolute top-28 md:top-36 lg:top-44 xl:top-52 xl:scale-125",
+                  "z-20 bg-black fill-white w-10 h-8 rounded-[50%] hover:scale-150 duration-300 absolute top-28 md:top-36 lg:top-44 xl:top-52 xl:scale-125",
                 next: "right-4 xl:right-8",
                 prev: "xl:left-8 left-4 rotate-180",
               },

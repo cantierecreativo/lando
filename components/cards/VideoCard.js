@@ -30,7 +30,7 @@ export default function VideoCard({ locale, record }) {
                 {renderHTML(record.textHero)}
               </h3>
             )}
-            <div className="w-8 h-6 group-hover:w-10 duration-300 rounded-[50%] bg-black relative lg:mt-2 lg:mb-4">
+            <div className="w-10 h-8  duration-300 rounded-[50%] bg-black relative lg:mt-2 lg:mb-4">
               <Icon
                 name="arrow"
                 className={`absolute centered`}
