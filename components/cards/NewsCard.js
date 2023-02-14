@@ -7,7 +7,7 @@ import InternalLink from "components/blocks/InternalLink";
 export default function NewsCard({ locale, news }) {
   const image = news.image;
   const categoryClass =
-    "uppercase white text-xxs bg-black text-white absolute top-3 left-3 tracking-wide rounded-2xl py-2 px-4 lg:relative lg:top-auto lg:left-auto hover:bg-siena duration-200";
+    "uppercase white text-xxs bg-black text-white tracking-wide lg:mt-0 rounded-2xl py-2 px-4 inline-block mt-4 lg:top-auto lg:left-auto hover:bg-red duration-200";
 
   return (
     <>
@@ -21,17 +21,17 @@ export default function NewsCard({ locale, news }) {
               title={image.responsiveImage.title}
               layout=""
             />
-            <InternalLink
-              element={news.category}
-              locale={locale}
-              label={news.category.title}
-              className="group z-20 relative"
-            >
-              <div className={`${categoryClass} lg:hidden`}>
-                {news.category.title}
-              </div>
-            </InternalLink>
           </div>
+          <InternalLink
+            element={news.category}
+            locale={locale}
+            label={news.category.title}
+            className="group z-20 relative"
+          >
+            <div className={`${categoryClass} lg:hidden`}>
+              {news.category.title}
+            </div>
+          </InternalLink>
           <div className="pt-4 lg:pt-0 lg:w-1/2">
             <div className="grid gap-3 lg:max-w-xs lg:h-full content-between">
               <div className="grid gap-3 content-start">
@@ -70,7 +70,7 @@ export default function NewsCard({ locale, news }) {
                 <Button
                   locale={locale}
                   arrow={true}
-                  color="transparent"
+                  color="transparentInv"
                   label={t("more", locale)}
                 />
               </InternalLink>

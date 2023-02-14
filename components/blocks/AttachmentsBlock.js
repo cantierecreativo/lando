@@ -27,7 +27,9 @@ export default function AttachmentsBlock({ locale, record, color }) {
                         : "group-hover:bg-white/20 bg-white/10"
                     } rounded-[5px] p-6 xl:grid xl:grid-cols-5 duration-150 `}
                   >
-                    <div className="font-semibold xl:col-span-3">{a.title}</div>
+                    <div className="font-semibold group-hover:text-yellow duration-300 xl:col-span-3">
+                      {a.title}
+                    </div>
                     <div className="flex items-center text-xs gap-2 pt-1 xl:col-span-2 xl:pt-0">
                       <div className="xl:flex-none">
                         {t("downloadLabel", locale)}

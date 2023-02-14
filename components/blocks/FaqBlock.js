@@ -1,5 +1,5 @@
-import { anchorId, convertToSlug, renderHTML } from "lib/utils";
-import { Disclosure } from "@headlessui/react";
+import { renderHTML } from "lib/utils";
+import { Disclosure, Transition } from "@headlessui/react";
 import Icon from "components/layout/Icon";
 
 export default function FaqBlock({ locale, record }) {
@@ -35,11 +35,20 @@ export default function FaqBlock({ locale, record }) {
                           className={`${open ? "rotate-180 fill-yellow" : ""}`}
                         />
                       </Disclosure.Button>
-                      <Disclosure.Panel>
-                        <div className="text-sm pb-3 xl:pb-5 xl:px-5">
-                          <span>{renderHTML(r.reply)}</span>
-                        </div>
-                      </Disclosure.Panel>
+                      <Transition
+                        enter="transition duration-300 ease-out"
+                        enterFrom="transform scale-100 opacity-0"
+                        enterTo="transform scale-300 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-300 opacity-100"
+                        leaveTo="transform scale-100 opacity-0"
+                      >
+                        <Disclosure.Panel>
+                          <div className="text-sm pb-3 xl:pb-5 xl:px-5">
+                            <span>{renderHTML(r.reply)}</span>
+                          </div>
+                        </Disclosure.Panel>
+                      </Transition>
                     </>
                   )}
                 </Disclosure>

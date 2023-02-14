@@ -18,12 +18,12 @@ export default function GalleryBlock({ locale, record }) {
               classes: {
                 arrows: "",
                 arrow:
-                  "z-20 bg-black fill-white w-10 h-8 rounded-[50%] hover:scale-150 duration-300 absolute top-28 md:top-36 lg:top-44 xl:top-52 xl:scale-125",
+                  "custom-arrow z-20 bg-black fill-white w-10 h-8 rounded-[50%] hover:bg-red duration-300 absolute top-28 md:top-36 lg:top-44 xl:top-52 xl:scale-125",
                 next: "right-4 xl:right-8",
                 prev: "xl:left-8 left-4 rotate-180",
               },
               arrowPath:
-                "m30.41666,14.59952a0.75677,0.7346 0 0 0 -0.04041,-0.04217l-5.4257,-5.26679a0.61431,0.59632 0 0 0 -0.86892,0.84347l4.37694,4.24776l-18.42416,0a0.61431,0.59632 0 1 0 0,1.19361l18.5262,0l-4.42038,4.28993a0.61431,0.59632 0 1 0 0.86892,0.84347l5.36811,-5.20795a0.68302,0.66301 0 0 0 0.04041,-0.90134l-0.00101,0l0,0.00001z",
+                "M39.7,19.2C39.7,19.2,39.6,19.2,39.7,19.2L29.4,8.9c-0.5-0.5-1.2-0.5-1.6,0c-0.5,0.5-0.5,1.2,0,1.6l8.3,8.3H1.2C0.5,18.8,0,19.3,0,20c0,0.6,0.5,1.2,1.2,1.2h35l-8.4,8.4c-0.5,0.5-0.5,1.2,0,1.6c0.5,0.5,1.2,0.5,1.6,0L39.6,21C40.1,20.5,40.1,19.7,39.7,19.2L39.7,19.2z",
             }}
             aria-label="Gallery"
           >

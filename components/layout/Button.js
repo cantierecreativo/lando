@@ -11,7 +11,7 @@ export default function Button({ label, color, icon, arrow }) {
   const colorIconClasses = {
     yellow: "fill-black",
     white: "fill-black",
-    border: "fill-white",
+    border: "fill-white group-hover:fill-black",
     transparentInv: "fill-white",
   };
   const classButton = "inline-block py-1 xl:py-2";
@@ -28,7 +28,7 @@ export default function Button({ label, color, icon, arrow }) {
               size="20"
             />
           )}
-          <div className="font-regular font-sans uppercase text-xs duration-200">
+          <div className="font-medium font-sans uppercase text-xs duration-200">
             {label}
           </div>
           {arrow == true && (
@@ -37,8 +37,8 @@ export default function Button({ label, color, icon, arrow }) {
                 color === "border"
                   ? "ml-3 mr-2"
                   : color === "transparentInv"
-                  ? "bg-black w-10 h-8 rounded-[50%] "
-                  : "bg-white w-10 h-8 rounded-[50%] "
+                  ? "bg-black w-10 h-8 rounded-[50%] group-hover:bg-red duration-200"
+                  : "bg-white w-10 h-8 rounded-[50%] group-hover:bg-yellow duration-200"
               } duration-300 relative`}
             >
               <Icon

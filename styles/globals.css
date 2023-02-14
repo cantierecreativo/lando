@@ -132,6 +132,15 @@
   .carousel-artworks .thumbnail .splide__list {
     @apply block;
   }
+  .hover-image {
+    @apply duration-1000 group-hover:scale-105;
+  }
+  .hover-text-red {
+    @apply duration-200 group-hover:text-red;
+  }
+  .custom-arrow svg {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.5];
+  }
 }
 
 .splide__pagination {

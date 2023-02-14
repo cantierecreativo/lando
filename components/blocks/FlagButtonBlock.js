@@ -11,7 +11,7 @@ export default function FlagButtonBlock({ locale, record }) {
             alignRev == true ? "lg:flex-row-reverse" : ""
           } lg:flex xl:col-span-10 xl:col-start-2 lg:justify-between`}
         >
-          <div className="lg:w-2/5 flex-none grid gap-4 content-start">
+          <div className="lg:w-2/5 flex-none grid gap-8 content-start">
             {title && <h2 className="text-xl xl:text-2xl">{title}</h2>}
             {text && <h3 className="text-white/80">{renderHTML(text)}</h3>}
           </div>
