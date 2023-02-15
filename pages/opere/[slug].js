@@ -5,6 +5,7 @@ import HeroArtwork from "components/headers/HeroArtwork";
 import OtherPages from "components/layout/OtherPages";
 import Section from "components/layout/Section";
 import Menu from "components/layout/Menu";
+import Tags from "components/blocks/Tags";
 
 function Artwork({ locale, site, page }) {
   return (
@@ -13,6 +14,7 @@ function Artwork({ locale, site, page }) {
       <Menu page={page} locale={locale} />
       <div className="bg-black color-white">
         <Section blocks={page.blocks} locale={locale} site={site} />
+        <Tags tags={page.tags} locale={locale} />
       </div>
       <OtherPages locale={locale} pages={page.pagesRelated} />
     </Layout>
