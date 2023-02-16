@@ -14,8 +14,8 @@ export default function Icon({ name, size = 30, fill, className = "" }) {
         >
           <path
             stroke={fill}
-            stroke-linecap="round"
-            stroke-width="1.4"
+            strokeLinecap="round"
+            strokeWidth="1.4"
             d="M1.7 5.3h18.6m-18.6 5h18.6m-18.6 5h18.6"
           />
         </svg>
@@ -32,7 +32,7 @@ export default function Icon({ name, size = 30, fill, className = "" }) {
           aria-hidden={true}
           focusable={false}
         >
-          <g clip-path="url(#a)">
+          <g clipPath="url(#a)">
             <path d="m21.84 8.147-2.852-2.854a.538.538 0 0 0-.761 0l-.38.38a1.062 1.062 0 0 1-1.522 0 1.062 1.062 0 0 1 0-1.52l.38-.381a.538.538 0 0 0 0-.761L13.852.158a.538.538 0 0 0-.76 0L.156 13.093a.538.538 0 0 0 0 .76l7.989 7.99c.21.21.55.21.76 0L21.842 8.908a.538.538 0 0 0 0-.76ZM8.527 20.7 1.3 13.473l8.749-8.75 1.332 1.331 5.896 5.897-8.75 8.75Zm9.51-9.51-6.633-6.634-.594-.595L13.472 1.3l2.092 2.093a2.16 2.16 0 0 0 0 3.043 2.16 2.16 0 0 0 3.044 0L20.7 8.528l-2.663 2.663Z" />
             <path d="M8.303 17.373a.456.456 0 0 0 .645 0l5.129-5.13a.456.456 0 1 0-.646-.645l-5.128 5.13a.457.457 0 0 0 0 .645ZM6.465 14.89a.457.457 0 0 0 .646.645l5.128-5.13a.456.456 0 1 0-.646-.644L6.466 14.89ZM10.4 7.922a.457.457 0 0 0-.645 0L4.627 13.05a.456.456 0 1 0 .645.645l5.129-5.13a.456.456 0 0 0 0-.644Z" />
           </g>
@@ -262,14 +262,14 @@ export default function Icon({ name, size = 30, fill, className = "" }) {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className={className}
           width={size}
           height={size}
         >
           <path
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
           />
@@ -281,14 +281,14 @@ export default function Icon({ name, size = 30, fill, className = "" }) {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className={className}
           width={size}
           height={size}
         >
           <path
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
             d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
           />
