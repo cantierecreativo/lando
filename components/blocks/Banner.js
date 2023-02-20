@@ -3,7 +3,7 @@ import { Image as DatoImage } from "react-datocms";
 import Button from "components/layout/Button";
 import DynamicLink from "components/blocks/DynamicLink";
 
-export default function Banner({ locale, record, color }) {
+export default function Banner({ locale, record }) {
   const { title, text, imageBg, cta, link } = record;
 
   return (
@@ -19,11 +19,7 @@ export default function Banner({ locale, record, color }) {
           objectFit="cover"
         />
         <div className="container py-8 md:px-20 lg:py-20">
-          <div
-            className={`${
-              color === "light" ? "text-white" : ""
-            } py-16 z-10 relative bg-back max-w-[1000px]`}
-          >
+          <div className="py-16 z-10 relative bg-back max-w-[1000px]">
             {title && <h2 className="text-xs lg:text-sm mb-6">{title}</h2>}
             {text && (
               <h3 className="max-w-sm title text-3xl lg:text-4xl lg:max-w-md mb-8 xl:mb-12">

@@ -46,7 +46,7 @@ function RenderCard(record, locale) {
 export default function ArtworksBlock({ locale, site }) {
   return (
     <>
-      <section className="text-white py-16 bg-black md:py-28 max-w-[100vw]">
+      <section className="">
         <div className="container">
           <div className="flex justify-between items-center flex-wrap gap-5">
             <h2 className="uppercase font-serif text-2xl md:text-3xl lg:text-4xl w-full md:w-auto">
