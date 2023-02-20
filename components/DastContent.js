@@ -50,7 +50,7 @@ export default function DastContent({ content, locale, site, color }) {
           case "banner_block":
             return (
               <div>
-                <Banner record={record} locale={locale} />
+                <Banner record={record} locale={locale} color={color} />
               </div>
             );
           case "card_block":

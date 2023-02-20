@@ -13,7 +13,7 @@ export default function NewsTmp({ locale, page, children, site, lastNews }) {
       <div className="bg-yellow-light text-black formatted-text">
         {children}
       </div>
-      <section className="container py-10 mb-8 lg:-mb-8">
+      <section className="container py-10 mb-8 lg:-mb-8 xl:py-20">
         <div className="flex justify-between items-center flex-wrap gap-5">
           <h2 className="uppercase font-serif text-2xl md:text-3xl lg:text-4xl w-full md:w-auto">
             {t("news_title", locale)}

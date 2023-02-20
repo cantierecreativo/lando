@@ -4,7 +4,7 @@ Allow: /
 Disallow: /server
 
 # Host
-Host: https://www.xxx.it/
+Host: https://#{process.env.SITE_URL}/
 
 # Sitemaps
-Sitemap: https://www.xxx.it/sitemap.xml
+Sitemap: https://#{process.env.SITE_URL}/sitemap.xml

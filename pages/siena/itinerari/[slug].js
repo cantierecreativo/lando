@@ -11,8 +11,8 @@ function ItineraryPage({ locale, site, page }) {
       site={site}
       locale={locale}
       page={page}
-      grandParent={site.museumPage[0]}
-      parent={site.thematicRoutesIndex}
+      grandParent={site.siena[0]}
+      parent={site.itinerariesIndex}
       color="rev"
     >
       <HeroThematic locale={locale} page={page} />
