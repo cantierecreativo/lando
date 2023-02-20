@@ -15,7 +15,8 @@ export default function FlagHp({ locale, record, site }) {
             alt={record.imageHistory.responsiveImage.alt}
             title={record.imageHistory.responsiveImage.title}
             layout=""
-            lazyLoad="false"
+            // lazyLoad="false"
+            usePlaceholder={false}
           />
           {record.descriptionImageHistory && (
             <div className="text-xs font-serif py-3 font-light">

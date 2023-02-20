@@ -18,7 +18,7 @@ export default function Button({ label, color, icon, arrow }) {
   return (
     <>
       <div
-        className={`${colorBgClasses[color]} rounded-3xl py-2 pt-[0.6rem] duration-150 inline-block`}
+        className={`${colorBgClasses[color]} rounded-3xl py-2 pt-[0.6rem] duration-200 inline-block`}
       >
         <div className="flex flex-none items-center gap-2">
           {icon && (
@@ -39,7 +39,7 @@ export default function Button({ label, color, icon, arrow }) {
                   : color === "transparentInv"
                   ? "bg-black w-10 h-8 rounded-[50%] group-hover:bg-red duration-200"
                   : "bg-white w-10 h-8 rounded-[50%] group-hover:bg-yellow duration-200"
-              } duration-300 relative`}
+              } duration-200 relative`}
             >
               <Icon
                 name="arrow"

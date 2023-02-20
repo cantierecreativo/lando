@@ -29,7 +29,7 @@ export default function Home({ locale, site, page, rooms, news }) {
           usePlaceholder={false}
           layout="fill"
         />
-        <div className="bg-black/95 absolute inset-0" />
+        <div className="bg-black/90 absolute inset-0" />
         <div className="bg-gradient-to-t from-red absolute h-[60%] bottom-0 left-0 right-0" />
         <div className="grid gap-10 xl:gap-24 content-start py-24 xl:py-44 z-10 relative container">
           <TitleSection title={page.titleIntro} text={page.subtitleIntro} />
