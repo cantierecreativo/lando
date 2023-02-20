@@ -23,7 +23,7 @@ export default function AttachmentsBlock({ locale, record, color }) {
                   <div
                     className={`${
                       color === "light"
-                        ? "group-hover:bg-black/20 bg-black/10 border border-black/20"
+                        ? "group-hover:bg-black/5 bg-black/10 border border-black/20"
                         : "group-hover:bg-white/20 bg-white/10"
                     } rounded-[5px] p-6 xl:grid xl:grid-cols-5 duration-150 `}
                   >
