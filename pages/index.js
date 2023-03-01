@@ -62,7 +62,7 @@ export default function Home({ locale, site, page, rooms, news }) {
           </section>
         </div>
       </div>
-      <div className="">
+      <div className="grid gap-12 lg:gap-24">
         {page.blocks.map((b) => (
           <PostContent site={site} key={b.id} record={b} locale={locale} />
         ))}
