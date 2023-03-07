@@ -20,6 +20,7 @@ export default function Header({ site, visual, org, page, locale }) {
             alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}
             priority="true"
             layout="fill"
+            objectPosition="left"
             objectFit="contain"
           />
         </div>

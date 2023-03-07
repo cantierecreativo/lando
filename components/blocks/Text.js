@@ -9,7 +9,7 @@ export default function Text({ block, visual, locale }) {
   const labelClass = block.colorsRev ? "text-accent-rev" : "text-accent";
   const colorsClass = block.colorsRev ? "bg-back-rev text-rev" : "text-alt";
   const spacingClass = block.colorsRev
-    ? "py-8 lg:py-24 xl:py-36"
+    ? "py-8 md:py-16 lg:py-24 xl:py-36"
     : "my-8 lg:my-24 xl:my-36";
 
   const { ref, inView, entry } = useInView({
@@ -25,7 +25,7 @@ export default function Text({ block, visual, locale }) {
       ref={ref}
       className={`${colorsClass} ${spacingClass} overflow-hidden`}
     >
-      <div className={`container`}>
+      <div className={`container xl:max-w-prose`}>
         {block.title && (
           <h2
             className={`${alignClass} ${uppercaseClass(

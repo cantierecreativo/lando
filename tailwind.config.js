@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: { DEFAULT: "1rem", md: "2rem", lg: "2.5rem" },
     },
     fontFamily: {
       heading: ["var(--font-heading)", "sans-serif"],

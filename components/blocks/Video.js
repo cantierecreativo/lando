@@ -35,10 +35,10 @@ export default function Text({ block, visual, locale }) {
       <div className="relative inline-block w-full mt-6 xl:mt-12">
         <div className="mt-[56.25%]" />
         <div className="absolute top-0 h-full w-full">
-          {block.videoExternal?.url && (
-            <VideoEmbedded record={block} video={block.videoExternal} />
+          {block.externalVideo?.url && (
+            <VideoEmbedded record={block} video={block.externalVideo} />
           )}
-          {block.videoInternal?.url && <VideoPlayer record={block} />}
+          {block.internalVideo?.url && <VideoPlayer record={block} />}
         </div>
       </div>
     </section>

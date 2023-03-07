@@ -10,7 +10,7 @@ export default function Cover({ block }) {
   const bgColor = block.colorsRev ? "bg-back-rev" : "";
   return (
     <div className={`${bgColor}`}>
-      <div className="mx-auto max-w-screen-2xl pb-8 lg:pb-24 xl:pb-36">
+      <div className="mx-auto max-w-screen-2xl">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           keyboard={true}

@@ -26,7 +26,7 @@ export default function Banner({ locale, block }) {
         objectFit="cover"
       />
       <div className="container py-8 lg:py-20 xl:py-28">
-        <div className="py-12 px-4 z-10 relative bg-back text-center lg:px-12 xl:py-20 max-w-[1000px] mx-auto">
+        <div className="py-12 px-4 z-10 relative bg-back text-center lg:px-12 xl:py-20 max-w-[1000px] mx-auto max-w-prose">
           {title && (
             <h2 className="uppercase font-heading font-medium text-accent text-lg md:text-xl mb-6 xl:text-2xl xl:mb-12">
               {title}

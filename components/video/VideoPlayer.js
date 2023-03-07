@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player";
 
 export default function VideoPlayer({ record }) {
-  const mp4Url = record.videoInternal.video.mp4Url;
+  const mp4Url = record.internalVideo.video.mp4Url;
   return (
     <ReactPlayer
       fluid={true}

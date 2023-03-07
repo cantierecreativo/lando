@@ -240,10 +240,7 @@ export async function getStaticProps({ locale }) {
             }
             ... on VideoBlockRecord {
               ${blockSetupFields}
-              menuLabel
-              title
-              text
-              videoExternal {
+              externalVideo {
                 url
                 height
                 width
@@ -252,7 +249,7 @@ export async function getStaticProps({ locale }) {
                 providerUid
                 thumbnailUrl
               }
-              videoInternal {
+              internalVideo {
                 height
                 width
                 title

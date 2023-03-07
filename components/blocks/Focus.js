@@ -15,7 +15,7 @@ export default function Focus({ block, visual }) {
   return (
     <section
       id={anchorId(block)}
-      className="container scroll-mt-20 lg:scroll-mt-30 xl:scroll-mt-40 my-12 lg:my-24 xl:my-36"
+      className="container md:py-16 scroll-mt-20 lg:scroll-mt-30 xl:scroll-mt-40 my-12 lg:my-24 xl:my-36"
     >
       <div
         ref={ref}
@@ -32,7 +32,7 @@ export default function Focus({ block, visual }) {
         )}
         <div className="xl:text-lg">{renderHTML(block.text)}</div>
       </div>
-      <div className="lg:flex lg:justify-between lg:gap-12 xl:gap-18">
+      <div className="lg:flex lg:justify-between xl:gap-18">
         {block.elements &&
           Object.values(block.elements).map((element) => (
             <Widget block={element} key={element.id} visual={visual} />

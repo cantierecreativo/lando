@@ -11,8 +11,8 @@ export default function Flag({ block, visual }) {
   const textClass = block.colorsRev ? "!text-base-rev" : "!text-base";
   const colorsClass = block.colorsRev ? "bg-back-rev text-rev" : "text-alt";
   const spacingClass = block.colorsRev
-    ? "py-8 lg:py-24 xl:py-36"
-    : "py-8 lg:py-24 xl:py-36";
+    ? "py-8 md:pt-16 lg:py-24 xl:py-30"
+    : "py-8 md:pt-16 lg:py-24 xl:py-30";
 
   const { ref, inView, entry } = useInView({
     threshold: 0.2,
