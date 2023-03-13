@@ -124,6 +124,10 @@ export async function getStaticProps({ locale }) {
                 ...responsiveImageFragment
               }
             }
+            ctaHeader {
+              label
+              url
+            }
           }
           contentBlocks {
             ... on CarouselBlockRecord {
