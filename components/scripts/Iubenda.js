@@ -3,6 +3,7 @@ import Script from "next/script";
 export default function Iubenda({ siteId, policyId, visual, locale }) {
   const buttonTextColor = visual.colorButton.hex;
   const buttonBackColor = visual.colorButtonBack.hex;
+  return null;
   return (
     <>
       <Script id="iubenda-cs" src="//cdn.iubenda.com/cs/iubenda_cs.js" />
