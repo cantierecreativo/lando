@@ -38,13 +38,14 @@ export default function Banner({ locale, block }) {
           )}
           {link && (
             <div className="inline-block">
-              <Link
-                href={link}
-                target="_blank"
-                rel="noreferrer noopener"
-                title={`${title} ${("linkExternal", locale)}`}
-              >
-                <a className="button-big">{cta}</a>
+              <Link href={link} title={`${title} ${("linkExternal", locale)}`}>
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="button-big"
+                >
+                  {cta}
+                </a>
               </Link>
             </div>
           )}
