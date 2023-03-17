@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import { renderHTML } from "lib/html";
 import { anchorId } from "lib/anchors";
 import { Image as DatoImage } from "react-datocms";
+import Link from "next/link";
 
 export default function Banner({ locale, block }) {
   const { ref, inView, entry } = useInView({
@@ -26,26 +27,27 @@ export default function Banner({ locale, block }) {
         objectFit="cover"
       />
       <div className="container py-8 lg:py-20 xl:py-28">
-        <div className="py-12 px-4 z-10 relative bg-back text-center lg:px-12 xl:py-20 max-w-[1000px] mx-auto max-w-prose">
+        <div className="py-12 px-4 z-10 relative text-center lg:px-12 xl:py-20 mx-auto max-w-prose grid gap-8 lg:gap-12">
           {title && (
-            <h2 className="uppercase font-heading font-medium text-accent text-lg md:text-xl mb-6 xl:text-2xl xl:mb-12">
+            <h2 className="font-heading font-bold text-lg md:text-2xl xl:text-2xl">
               {title}
             </h2>
           )}
           {text && (
-            <h2 className="text-sm md:text-base mb-6 xl:mb-12">
-              {renderHTML(text)}
-            </h2>
+            <h2 className="text-sm md:text-base mb-6">{renderHTML(text)}</h2>
           )}
-          <a
-            className="inline-flex font-heading text-button bg-button-back uppercase tracking-wide transition-opacity hover:opacity-80 text-sm py-4 px-4"
-            href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            title={`${title} ${("linkExternal", locale)}`}
-          >
-            {cta}
-          </a>
+          {link && (
+            <div className="inline-block">
+              <Link
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                title={`${title} ${("linkExternal", locale)}`}
+              >
+                <a className="button-big">{cta}</a>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

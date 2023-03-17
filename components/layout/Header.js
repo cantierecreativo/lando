@@ -2,17 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import i18n from "lib/i18n";
 import slugify from "@sindresorhus/slugify";
+import { useEffect, useState } from "react";
 
 export default function Header({ site, visual, org, page, locale }) {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, []);
+
   const locales = page._locales;
   const { contactsMenuLabel } = org;
-
   const menuItems = page.contentBlocks
     .map(({ menuLabel }) => menuLabel)
     .filter((e) => e);
 
   return (
-    <header className="sticky top-0 bg-back z-30">
+    <header
+      className={`${
+        scroll ? "bg-back-alt" : "bg-transparent"
+      } sticky top-0 z-30 border-b border-white duration-300`}
+    >
       <div className="container flex items-center justify-between py-2 xl:py-4">
         <div className="h-16 w-40 xl:w-60 relative">
           <Image
@@ -33,7 +44,7 @@ export default function Header({ site, visual, org, page, locale }) {
               {menuItems.map((item) => (
                 <li className="flex-none" key={item}>
                   <a
-                    className="button uppercase text-sm"
+                    className="button uppercase text-xs"
                     href={`#${slugify(item)}`}
                   >
                     {item}
@@ -42,7 +53,7 @@ export default function Header({ site, visual, org, page, locale }) {
               ))}
               {contactsMenuLabel && (
                 <li className="flex-none">
-                  <a className="button uppercase text-sm" href={`#footer`}>
+                  <a className="button uppercase text-xs" href={`#footer`}>
                     {contactsMenuLabel}
                   </a>
                 </li>

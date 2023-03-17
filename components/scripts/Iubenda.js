@@ -3,46 +3,55 @@ import Script from "next/script";
 export default function Iubenda({ siteId, policyId, visual, locale }) {
   const buttonTextColor = visual.colorButton.hex;
   const buttonBackColor = visual.colorButtonBack.hex;
-  return null;
   return (
     <>
-      <Script id="iubenda-cs" src="//cdn.iubenda.com/cs/iubenda_cs.js" />
       <Script
-        id="iubenda"
+        id="iubenda-policy"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-        var _iub = _iub || [];
-        _iub.csConfiguration = {
-          "lang":"it",
-          "siteId":2934512,
-          "cookiePolicyId":29463556,
-          "perPurposeConsent":true,
-          "localConsentDomain":"museocivico.comune.siena.it”,
-          "consentOnContinuedBrowsing": false,
-          "consentOnDocument": true,
-          "purposes": "1, 3, 4",
-          "banner":{
+          (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+        `,
+        }}
+      />
+      <Script
+        src="//cdn.iubenda.com/cs/iubenda_cs.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="iubenda-cs"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `var _iub = _iub || [];
+            _iub.csConfiguration = {
+            "consentOnContinuedBrowsing": true,
+            "lang":"${locale}",
+            "siteId":${siteId},
+            "cookiePolicyId":${policyId},
+            "perPurposeConsent": true,
+            "purposes": "1, 4, 5",
+            "banner":{
               "acceptButtonDisplay":true,
               "customizeButtonDisplay":true,
               "position":"float-bottom-right",
               "closeButtonDisplay":false,
-              "acceptButtonColor":"#146644",
-              "acceptButtonCaptionColor":"white",
-              "customizeButtonColor":"#146644",
-              "customizeButtonCaptionColor":"white",
-              "rejectButtonColor":"#146644",
-              "rejectButtonCaptionColor":"white",
-              "textColor":"#ffffff",
-              "backgroundColor":"#043D2F",
+              "acceptButtonColor":"${buttonBackColor}",
+              "acceptButtonCaptionColor":"${buttonTextColor}",
+              "customizeButtonColor":"${buttonBackColor}",
+              "customizeButtonCaptionColor":"${buttonTextColor}",
+              "rejectButtonColor":"${buttonBackColor}",
+              "rejectButtonCaptionColor":"${buttonTextColor}",
+              "textColor":"${visual.colorText.hex}",
+              "backgroundColor":"${visual.colorBack.hex}",
               "rejectButtonDisplay":true,
               "closeButtonRejects":true
             },
-            callback: {
+            "callback":{
               onPreferenceExpressedOrNotNeeded: function(preference) {
                 window.consentIsGiven = preference;
               }
-            }
-          }`,
+            }};
+            `,
         }}
       />
     </>

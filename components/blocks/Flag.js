@@ -8,7 +8,7 @@ export default function Flag({ block, visual }) {
   const image = block.image;
   const alignClass = block.alignRev ? "flex-row-reverse" : "";
   const titleClass = block.colorsRev ? "text-accent-rev" : "text-accent";
-  const textClass = block.colorsRev ? "!text-base-rev" : "!text-base";
+  const textClass = block.colorsRev ? "text-base-rev" : "";
   const colorsClass = block.colorsRev ? "bg-back-rev text-rev" : "text-alt";
   const spacingClass = block.colorsRev
     ? "py-8 md:pt-16 lg:py-24 xl:py-30"
@@ -25,7 +25,7 @@ export default function Flag({ block, visual }) {
     <section
       id={anchorId(block)}
       ref={ref}
-      className={`${colorsClass} ${spacingClass}`}
+      className={`${colorsClass} ${spacingClass} formatted-text`}
     >
       <div
         className={`${alignClass} container lg:flex lg:items-center lg:gap-12 xl:gap-24`}
@@ -37,7 +37,7 @@ export default function Flag({ block, visual }) {
           <h2
             className={`${uppercaseClass(
               visual
-            )} ${titleClass} font-heading font-medium break-words text-lg md:text-xl my-4 xl:my-6`}
+            )} ${titleClass} font-heading font-bold break-words text-lg md:text-2xl my-4 xl:my-6`}
           >
             {block.title}
           </h2>

@@ -19,7 +19,10 @@
 
   .button,
   .button-arrow {
-    @apply inline-flex items-center font-medium font-heading tracking-wide py-2 px-4 rounded;
+    @apply inline-flex items-center font-medium font-heading tracking-wide py-2 px-4 rounded hover:text-back duration-200;
+  }
+  .button-big {
+    @apply bg-back px-8 rounded-3xl pb-[11px] pt-[3px] lg:pb-4 lg:pt-[16px] lg:px-10 text-xs font-bold lg:text-base hover:bg-back/90 duration-300;
   }
 
   .button-arrow {
@@ -31,14 +34,6 @@
     @apply -z-10 content-[''] absolute inset-0 bg-back-rev/10 -top-[33vh];
   }
 
-  @media screen(lg) {
-    .product-bg:before {
-      @apply -right-full top-0;
-    }
-    .product-bg-rev:before {
-      @apply -left-full top-0;
-    }
-  }
   .fade-down {
     @apply transition-all duration-700 delay-100;
   }
@@ -57,6 +52,10 @@
 
   .image-contain img {
     @apply object-contain;
+  }
+
+  .formatted-text ul {
+    @apply ml-5 my-3 list-disc;
   }
 }
 

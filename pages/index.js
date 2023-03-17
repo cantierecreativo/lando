@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { request } from "lib/datocms";
 import {
   blockSetupFields,
@@ -20,8 +19,8 @@ import GoogleAnalytics from "components/scripts/GoogleAnalytics";
 import GoogleTagManager from "components/scripts/GoogleTagManager";
 import FacebookPixel from "components/scripts/FacebookPixel";
 
-export async function getStaticProps({ locale }) {
-  const formattedLocale = locale.split("-")[0];
+export async function getStaticProps({ locale = "en" }) {
+  const formattedLocale = locale;
   const graphqlRequest = {
     query: `
       {
@@ -120,7 +119,7 @@ export async function getStaticProps({ locale }) {
             alignCenter
             hideTitle
             image {
-              responsiveImage(sizes: "100vw", imgixParams: { fit: max, w: 1550, h: 850, auto: [format,compress] }) {
+              responsiveImage(sizes: "100vw", imgixParams: { fit: max, w: 1920, h: 1000, auto: [format,compress] }) {
                 ...responsiveImageFragment
               }
             }
@@ -286,7 +285,7 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Home({ data }) {
-  const locale = useRouter().locale;
+  const locale = "en";
   const { site, page, org, visual } = data;
 
   return (

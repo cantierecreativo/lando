@@ -42,7 +42,7 @@ export default function Footer({ org, visual, site, locale }) {
               </div>
             )}
           </div>
-          <div className="py-2 font-medium">
+          <div className="py-2 font-medium text-sm">
             <a
               className="block"
               href="https://www.cantierecreativo.net"
