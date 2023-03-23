@@ -8,7 +8,7 @@ export default function HeroImage({ block, visual }) {
   const titleClass = block.hideTitle ? "sr-only" : "";
 
   return (
-    <header className="mx-auto relative -mt-[100px] xl:-mt-[121px]">
+    <header className="mx-auto relative -mt-[101px] xl:-mt-[121px]">
       <div className="h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[900px]">
         <div className="w-full h-full relative">
           <Image

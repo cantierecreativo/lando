@@ -24,8 +24,8 @@ export default function Header({ site, visual, org, page, locale }) {
         scroll ? "bg-back-alt" : "bg-transparent"
       } sticky top-0 z-30 border-b border-white duration-300`}
     >
-      <div className="container flex items-center justify-between py-2 xl:py-4">
-        <div className="h-16 w-40 xl:w-60 relative">
+      <div className="container flex items-center justify-between xl:py-2">
+        <div className="h-20 w-44 xl:w-60 relative">
           <Image
             src={visual.logo.url}
             alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}

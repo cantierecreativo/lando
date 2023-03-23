@@ -18,8 +18,8 @@ export default function Footer({ org, visual, site, locale }) {
   return (
     <footer id="footer" className="bg-back-rev text-rev text-sm">
       <div className="container py-6 ">
-        <div className={`${alignClass} lg:flex gap-16 my-12`}>
-          <div className="h-16 w-40 xl:w-60 relative">
+        <div className={`${alignClass} lg:flex gap-16 my-6 lg:my-12`}>
+          <div className="h-20 w-48 xl:w-60 relative">
             <Image
               src={visual.logoRev.url}
               alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}
@@ -42,7 +42,7 @@ export default function Footer({ org, visual, site, locale }) {
               </div>
             )}
           </div>
-          <div className="py-2 font-medium text-sm">
+          <div className="py-2 font-medium text-xs text-left">
             <a
               className="block"
               href="https://www.cantierecreativo.net"
