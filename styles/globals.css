@@ -22,7 +22,7 @@
     @apply inline-flex items-center font-medium font-heading tracking-wide py-2 px-4 rounded hover:text-back duration-200;
   }
   .button-big {
-    @apply bg-back px-8 rounded-3xl pb-[11px] pt-[3px] lg:pb-4 lg:pt-[16px] lg:px-10 text-xs font-bold lg:text-base hover:bg-back/90 duration-300;
+    @apply bg-back px-8 rounded-full pb-[11px] pt-[3px] lg:pb-4 lg:pt-[16px] lg:px-10 text-xs font-bold lg:text-base hover:bg-back/90 duration-300;
   }
 
   .button-arrow {

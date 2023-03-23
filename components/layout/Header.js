@@ -46,8 +46,6 @@ export default function Header({ site, visual, org, page, locale }) {
                   <a
                     className="button uppercase text-xs"
                     href={`#${slugify(item)}`}
-                    target="_blank"
-                    rel="noreferrer noopener"
                   >
                     {item}
                   </a>

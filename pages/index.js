@@ -119,7 +119,7 @@ export async function getStaticProps({ locale = "en" }) {
             alignCenter
             hideTitle
             image {
-              responsiveImage(sizes: "100vw", imgixParams: { fit: max, w: 1920, h: 1000, auto: [format,compress] }) {
+              responsiveImage(sizes: "100vw", imgixParams: { w: 1920, h: 1000 }) {
                 ...responsiveImageFragment
               }
             }
