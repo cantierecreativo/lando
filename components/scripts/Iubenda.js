@@ -42,7 +42,7 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
               "rejectButtonColor":"${buttonBackColor}",
               "rejectButtonCaptionColor":"${buttonTextColor}",
               "textColor":"${visual.colorText.hex}",
-              "backgroundColor":"${visual.colorBack.hex}",
+              "backgroundColor":"${visual.colorBackAlt.hex}",
               "rejectButtonDisplay":true,
               "closeButtonRejects":true
             },
