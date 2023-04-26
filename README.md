@@ -1,7 +1,10 @@
 # Lando
 A Next.js + Tailwind + Netlify project to create beautiful landing pages without code required.
 
-## Getting Started
+## Fast clone
+[![Clone DatoCMS project](https://dashboard.datocms.com/clone/button.svg)](https://dashboard.datocms.com/deploy?repo=cantierecreativo%2Flando%3Amain)
+
+## Development
 
 First, run the development server:
 
