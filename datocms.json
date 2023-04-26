@@ -1,0 +1,18 @@
+{
+    "name": "Lando",
+    "description": "Generate and customize localized landing pages with Lando.",
+    "previewImage": "https://pasteboard.co/Up4GNTHkQQ2g.png",
+    "livePreviewUrl": "https://lando-cantiere.netlify.app/",
+    "datocmsProjectId": "99132",
+    "deploymentType": "netlify",
+    "environmentVariables": {
+      "DATOCMS_BACKEND_URL": {
+        "type": "datocmsProjectUrl"
+      },
+      "DATOCMS_READ_ONLY_API_TOKEN": {
+        "type": "datocmsAccessToken",
+        "tokenName": "be31bbf746ca0057141ba16165df02"
+      }
+    },
+    "buildCommand": "npm run build"
+  }
