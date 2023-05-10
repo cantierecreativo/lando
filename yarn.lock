@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@0no-co/graphql.web@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@0no-co/graphql.web/-/graphql.web-1.0.1.tgz#db3da0d2cd41548b50f0583c0d2f4743c767e56b"
+  integrity sha512-6Yaxyv6rOwRkLIvFaL0NrLDgfNqC/Ng9QOPmTmlqW4mORXMEKmh5NYGkIvvt5Yw8fZesnMAqkj8cIqTj8f40cQ==
+
 "@babel/code-frame@^7.0.0":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.16.7.tgz#44416b6bd7624b998f5b1af5d470856c40138789"
@@ -681,10 +686,12 @@ data-urls@^3.0.1:
     whatwg-mimetype "^3.0.0"
     whatwg-url "^10.0.0"
 
-datocms-listen@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/datocms-listen/-/datocms-listen-0.1.7.tgz#58f90ee2668b6a9480c47d79e91c5ca5993ab8ce"
-  integrity sha512-v0k6IStA6uCQa1rk03tVv2CfxUqDLa/ECN9hnYYGgV1BtZEj/HTbxvdsi/cCDPCi4iFQGY8xjqplnSgTXIA9tA==
+datocms-listen@^0.1.9:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/datocms-listen/-/datocms-listen-0.1.15.tgz#fc9d970ac9754f6f21b7f9e7a31ec7db1b0247f1"
+  integrity sha512-0LcdKYW/ilWdyrRzQ+YbkAk4r2dge63vzHtfv19L8pfbfYurQgXP9/ck703QZL//YqBoc0OKBS4BP4WUQ6JDKA==
+  dependencies:
+    "@0no-co/graphql.web" "^1.0.1"
 
 datocms-structured-text-generic-html-renderer@^2.0.1:
   version "2.0.1"
@@ -2186,15 +2193,16 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-react-datocms@^3.0.4:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-3.0.9.tgz#43b824a8ae2c0635fd61da64895ca6010748f54a"
-  integrity sha512-/x04yC/RMlIMBpgUWnJ0cwxy7/iF63sFlsG+wiRgCgGfG/L+DkR5IDpR7rWzOyldG8qxdl8h7BzrpCymSanXQw==
+react-datocms@^3.0.9:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-3.1.4.tgz#6326ee4bf0babbff4be61609a3b56e45cea61745"
+  integrity sha512-L+esZt3id1b/shQkjPmIUU+CEjwuz1ZRTMU+LylMC3uPUat3iuads/V625Bnz6blyrRxpPlcd14Uit9LxnHfcg==
   dependencies:
-    datocms-listen "^0.1.7"
+    datocms-listen "^0.1.9"
     datocms-structured-text-generic-html-renderer "^2.0.1"
     datocms-structured-text-utils "^2.0.1"
     react-intersection-observer "^8.33.1"
+    react-string-replace "^1.1.0"
     universal-base64 "^2.1.0"
     use-deep-compare-effect "^1.6.1"
 
@@ -2231,6 +2239,11 @@ react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+
+react-string-replace@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-string-replace/-/react-string-replace-1.1.0.tgz#a3f7b458e697e77d70b0ea663caf38ab38f7cc17"
+  integrity sha512-N6RalSDFGbOHs0IJi1H611WbZsvk3ZT47Jl2JEXFbiS3kTwsdCYij70Keo/tWtLy7sfhDsYm7CwNM/WmjXIaMw==
 
 react@17.0.2:
   version "17.0.2"
