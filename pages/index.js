@@ -125,6 +125,7 @@ export async function getStaticProps({ locale }) {
           contentBlocks {
             ... on CarouselBlockRecord {
                ${blockSetupFields}
+               colorsRev
                images {
                  id
                  responsiveImage(sizes: "(min-width: 1024px) 50vw, 100vw", imgixParams: { fit: clip, w: 1200, h: 600, auto: [format,compress] }) {
@@ -134,6 +135,7 @@ export async function getStaticProps({ locale }) {
             }
             ... on CoverBlockRecord {
                ${blockSetupFields}
+               colorsRev
                images {
                  id
                  responsiveImage(sizes: "100vw", imgixParams: { fit: crop, w: 1550, h: 800, auto: [format,compress] }) {
@@ -202,6 +204,7 @@ export async function getStaticProps({ locale }) {
               title
               text
               alignCenter
+              colorsRev
               link {
                 label
                 url
