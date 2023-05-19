@@ -1,0 +1,103 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply motion-safe:scroll-smooth;
+  }
+  body {
+    @apply font-body text-base bg-back;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .skiplink {
+    @apply bg-back-rev text-rev sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:inline-block focus-visible:p-2 focus-visible:left-1/2 focus-visible:-translate-x-1/2;
+  }
+
+  .button,
+  .button-arrow {
+    @apply inline-flex items-center font-medium font-heading tracking-wide py-2 px-4 rounded;
+  }
+
+  .button-arrow {
+    @apply after:m-2 after:h-2 after:w-2 after:block after:border-solid after:border-accent after:border-l-2 after:border-t-2 after:rotate-[135deg];
+  }
+
+  .cover {
+    @apply h-72 md:h-96 lg:h-128 xl:h-160;
+  }
+
+  .fade-down {
+    @apply transition-all duration-700 delay-100;
+  }
+
+  .fade-down-on {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .fade-down-off {
+    @apply opacity-0 -translate-y-6;
+  }
+}
+
+.product-bg:before,
+.product-bg-rev:before {
+  @apply -z-10 lg:top-0 absolute inset-0 bg-back-rev/10 -top-[33vh] content-[''];
+}
+
+.product-bg:before {
+  @apply lg:-right-full;
+}
+
+.product-bg-rev:before {
+  @apply lg:-left-full;
+}
+
+.swiper-pagination {
+  margin-bottom: var(--swiper-margin);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  margin: var(--swiper-margin);
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 0 !important;
+  display: block;
+  border: solid var(--swiper-theme-color);
+  border-width: 0 calc(var(--swiper-navigation-size) / 12)
+    calc(var(--swiper-navigation-size) / 12) 0;
+  padding: calc(var(--swiper-navigation-size) / 12);
+}
+
+.swiper-button-next:after {
+  transform: rotate(-45deg) translateX(-15%) translateY(-10%);
+}
+
+.swiper-button-prev:after {
+  transform: rotate(135deg) translateX(-20%) translateY(-10%);
+}
+
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(var(--color-white));
+  opacity: 0.4;
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+  z-index: -1;
+}
+
+.slider-auto-width .swiper-slide {
+  width: auto;
+}

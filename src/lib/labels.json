@@ -1,0 +1,25 @@
+{
+  "it": {
+    "localeNav": "Menu di cambio lingua",
+    "mainNav": "Menu di navigazione",
+    "newsletterPlaceholder": "La tua email",
+    "newsletterButton": "Continua",
+    "switchLocaleLabel": "eng",
+    "switchLocaleDescription": "Go to english version",
+    "skipLinksContent": "Vai al contenuto",
+    "skipLinksFooter": "Vai al footer",
+    "linkExternal": "(link esterno)"
+  },
+
+  "en": {
+    "localeNav": "Change language navigation",
+    "mainNav": "Main navigation",
+    "newsletterPlaceholder": "Email address",
+    "newsletterButton": "Sign Up",
+    "switchLocaleLabel": "ita",
+    "switchLocaleDescription": "Vai alla versione italiana",
+    "skipLinksContent": "Go to page content",
+    "skipLinksFooter": "Go to page footer",
+    "linkExternal": "(external link)"
+  }
+}
