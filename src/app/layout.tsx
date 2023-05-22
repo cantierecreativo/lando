@@ -1,10 +1,11 @@
+import Head from "next/head";
 import "src/app/globals.css";
-import { Playfair_Display, Poppins } from "next/font/google";
 import { request } from "@/lib/dato";
 import { renderMetaTags } from "react-datocms/seo";
 import { graphql } from "@/gql";
 import SkipLinks from "@/components/layout/SkipLinks";
 import { CSSProperties } from "react";
+import { setGoogleFonts } from "@/lib/fonts";
 
 const locale = "it";
 
@@ -100,20 +101,6 @@ const query = graphql(/* GraphQL */ `
 //   return name.replace(/\s+/g, "+");
 // }
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
-  weight: "700",
-  display: "swap",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  display: "swap",
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
-
 export default async function RootLayout({
   children,
 }: {
@@ -131,9 +118,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      {renderMetaTags(site.faviconMetaTags)}
+      <Head>
+        {setGoogleFonts(visual)}
+        {renderMetaTags(site.faviconMetaTags)}
+      </Head>
       <body
-        className={`${playfairDisplay.variable} ${poppins.variable}`}
         style={
           visual
             ? ({

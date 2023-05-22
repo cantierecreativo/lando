@@ -1,16 +1,10 @@
 /* eslint-disable */
-import { TypedDocumentNode as DocumentNode } from "@graphql-typed-document-node/core";
+import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = {
-  [K in keyof T]: T[K];
-};
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
-  [SubKey in K]?: Maybe<T[SubKey]>;
-};
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
-  [SubKey in K]: Maybe<T[SubKey]>;
-};
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -33,70 +27,77 @@ export type Scalars = {
 };
 
 export type AltTitleFileField = FileFieldInterface & {
-  __typename?: "AltTitleFileField";
-  _createdAt: Scalars["DateTime"];
-  _updatedAt: Scalars["DateTime"];
-  alt: Scalars["String"];
-  author?: Maybe<Scalars["String"]>;
-  basename: Scalars["String"];
-  blurUpThumb?: Maybe<Scalars["String"]>;
-  blurhash?: Maybe<Scalars["String"]>;
+  __typename?: 'AltTitleFileField';
+  _createdAt: Scalars['DateTime'];
+  _updatedAt: Scalars['DateTime'];
+  alt: Scalars['String'];
+  author?: Maybe<Scalars['String']>;
+  basename: Scalars['String'];
+  blurUpThumb?: Maybe<Scalars['String']>;
+  blurhash?: Maybe<Scalars['String']>;
   colors: Array<ColorField>;
-  copyright?: Maybe<Scalars["String"]>;
-  customData: Scalars["CustomData"];
-  exifInfo: Scalars["CustomData"];
-  filename: Scalars["String"];
+  copyright?: Maybe<Scalars['String']>;
+  customData: Scalars['CustomData'];
+  exifInfo: Scalars['CustomData'];
+  filename: Scalars['String'];
   focalPoint?: Maybe<FocalPoint>;
-  format: Scalars["String"];
-  height?: Maybe<Scalars["IntType"]>;
-  id: Scalars["UploadId"];
-  md5: Scalars["String"];
-  mimeType: Scalars["String"];
-  notes?: Maybe<Scalars["String"]>;
+  format: Scalars['String'];
+  height?: Maybe<Scalars['IntType']>;
+  id: Scalars['UploadId'];
+  md5: Scalars['String'];
+  mimeType: Scalars['String'];
+  notes?: Maybe<Scalars['String']>;
   responsiveImage?: Maybe<ResponsiveImage>;
-  size: Scalars["IntType"];
-  smartTags: Array<Scalars["String"]>;
-  tags: Array<Scalars["String"]>;
-  thumbhash?: Maybe<Scalars["String"]>;
-  title: Scalars["String"];
-  url: Scalars["String"];
+  size: Scalars['IntType'];
+  smartTags: Array<Scalars['String']>;
+  tags: Array<Scalars['String']>;
+  thumbhash?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  url: Scalars['String'];
   video?: Maybe<UploadVideoField>;
-  width?: Maybe<Scalars["IntType"]>;
+  width?: Maybe<Scalars['IntType']>;
 };
+
 
 export type AltTitleFileFieldAltArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type AltTitleFileFieldBlurUpThumbArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
-  punch?: Scalars["Float"];
-  quality?: Scalars["Int"];
-  size?: Scalars["Int"];
+  punch?: Scalars['Float'];
+  quality?: Scalars['Int'];
+  size?: Scalars['Int'];
 };
+
 
 export type AltTitleFileFieldCustomDataArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type AltTitleFileFieldFocalPointArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type AltTitleFileFieldResponsiveImageArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   imgixParams?: InputMaybe<ImgixParams>;
   locale?: InputMaybe<SiteLocale>;
-  sizes?: InputMaybe<Scalars["String"]>;
+  sizes?: InputMaybe<Scalars['String']>;
 };
+
 
 export type AltTitleFileFieldTitleArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 export type AltTitleFileFieldUrlArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
@@ -104,65 +105,68 @@ export type AltTitleFileFieldUrlArgs = {
 
 /** Block of type Banner con cta (banner_cta_block) */
 export type BannerCtaBlockRecord = RecordInterface & {
-  __typename?: "BannerCtaBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'BannerCtaBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  createdAt: Scalars["DateTime"];
-  cta?: Maybe<Scalars["String"]>;
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  createdAt: Scalars['DateTime'];
+  cta?: Maybe<Scalars['String']>;
+  id: Scalars['ItemId'];
   imageBg: AltTitleFileField;
-  link?: Maybe<Scalars["String"]>;
-  menuLabel?: Maybe<Scalars["String"]>;
-  text?: Maybe<Scalars["String"]>;
-  title?: Maybe<Scalars["String"]>;
-  updatedAt: Scalars["DateTime"];
+  link?: Maybe<Scalars['String']>;
+  menuLabel?: Maybe<Scalars['String']>;
+  text?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Banner con cta (banner_cta_block) */
 export type BannerCtaBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Banner con cta (banner_cta_block) */
 export type BannerCtaBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Specifies how to filter Boolean fields */
 export type BooleanFilter = {
   /** Search for records with an exact match */
-  eq?: InputMaybe<Scalars["BooleanType"]>;
+  eq?: InputMaybe<Scalars['BooleanType']>;
 };
 
 /** Block of type Carosello (carousel_block) */
 export type CarouselBlockRecord = RecordInterface & {
-  __typename?: "CarouselBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'CarouselBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  colorsRev?: Maybe<Scalars["BooleanType"]>;
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  colorsRev?: Maybe<Scalars['BooleanType']>;
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   images: Array<AltTitleFileField>;
-  updatedAt: Scalars["DateTime"];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Carosello (carousel_block) */
 export type CarouselBlockRecord_SeoMetaTagsArgs = {
@@ -170,55 +174,56 @@ export type CarouselBlockRecord_SeoMetaTagsArgs = {
 };
 
 export type CollectionMetadata = {
-  __typename?: "CollectionMetadata";
-  count: Scalars["IntType"];
+  __typename?: 'CollectionMetadata';
+  count: Scalars['IntType'];
 };
 
 export enum ColorBucketType {
-  Black = "black",
-  Blue = "blue",
-  Brown = "brown",
-  Cyan = "cyan",
-  Green = "green",
-  Grey = "grey",
-  Orange = "orange",
-  Pink = "pink",
-  Purple = "purple",
-  Red = "red",
-  White = "white",
-  Yellow = "yellow",
+  Black = 'black',
+  Blue = 'blue',
+  Brown = 'brown',
+  Cyan = 'cyan',
+  Green = 'green',
+  Grey = 'grey',
+  Orange = 'orange',
+  Pink = 'pink',
+  Purple = 'purple',
+  Red = 'red',
+  White = 'white',
+  Yellow = 'yellow'
 }
 
 export type ColorField = {
-  __typename?: "ColorField";
-  alpha: Scalars["IntType"];
-  blue: Scalars["IntType"];
-  cssRgb: Scalars["String"];
-  green: Scalars["IntType"];
-  hex: Scalars["String"];
-  red: Scalars["IntType"];
+  __typename?: 'ColorField';
+  alpha: Scalars['IntType'];
+  blue: Scalars['IntType'];
+  cssRgb: Scalars['String'];
+  green: Scalars['IntType'];
+  hex: Scalars['String'];
+  red: Scalars['IntType'];
 };
 
 /** Block of type Copertina (cover_block) */
 export type CoverBlockRecord = RecordInterface & {
-  __typename?: "CoverBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'CoverBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  colorsRev?: Maybe<Scalars["BooleanType"]>;
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  colorsRev?: Maybe<Scalars['BooleanType']>;
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   images: Array<AltTitleFileField>;
-  updatedAt: Scalars["DateTime"];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Copertina (cover_block) */
 export type CoverBlockRecord_SeoMetaTagsArgs = {
@@ -228,19 +233,19 @@ export type CoverBlockRecord_SeoMetaTagsArgs = {
 /** Specifies how to filter by creation datetime */
 export type CreatedAtFilter = {
   /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
-  eq?: InputMaybe<Scalars["DateTime"]>;
+  eq?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter records with a value that's strictly greater than the one specified. Seconds and milliseconds are truncated from the argument. */
-  gt?: InputMaybe<Scalars["DateTime"]>;
+  gt?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's greater than or equal to than the one specified. Seconds and milliseconds are truncated from the argument. */
-  gte?: InputMaybe<Scalars["DateTime"]>;
+  gte?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's less than the one specified. Seconds and milliseconds are truncated from the argument. */
-  lt?: InputMaybe<Scalars["DateTime"]>;
+  lt?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's less or equal than the one specified. Seconds and milliseconds are truncated from the argument. */
-  lte?: InputMaybe<Scalars["DateTime"]>;
+  lte?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's outside the specified minute range. Seconds and milliseconds are truncated from the argument. */
-  neq?: InputMaybe<Scalars["DateTime"]>;
+  neq?: InputMaybe<Scalars['DateTime']>;
 };
 
 export type ExternalLinkModelFilter = {
@@ -262,52 +267,57 @@ export type ExternalLinkModelFilter = {
 };
 
 export enum ExternalLinkModelOrderBy {
-  FirstPublishedAtAsc = "_firstPublishedAt_ASC",
-  FirstPublishedAtDesc = "_firstPublishedAt_DESC",
-  IsValidAsc = "_isValid_ASC",
-  IsValidDesc = "_isValid_DESC",
-  PublicationScheduledAtAsc = "_publicationScheduledAt_ASC",
-  PublicationScheduledAtDesc = "_publicationScheduledAt_DESC",
-  PublishedAtAsc = "_publishedAt_ASC",
-  PublishedAtDesc = "_publishedAt_DESC",
-  StatusAsc = "_status_ASC",
-  StatusDesc = "_status_DESC",
-  UnpublishingScheduledAtAsc = "_unpublishingScheduledAt_ASC",
-  UnpublishingScheduledAtDesc = "_unpublishingScheduledAt_DESC",
-  CreatedAtAsc = "createdAt_ASC",
-  CreatedAtDesc = "createdAt_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  LabelAsc = "label_ASC",
-  LabelDesc = "label_DESC",
-  UpdatedAtAsc = "updatedAt_ASC",
-  UpdatedAtDesc = "updatedAt_DESC",
-  UrlAsc = "url_ASC",
-  UrlDesc = "url_DESC",
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
+  FirstPublishedAtAsc = '_firstPublishedAt_ASC',
+  FirstPublishedAtDesc = '_firstPublishedAt_DESC',
+  IsValidAsc = '_isValid_ASC',
+  IsValidDesc = '_isValid_DESC',
+  PublicationScheduledAtAsc = '_publicationScheduledAt_ASC',
+  PublicationScheduledAtDesc = '_publicationScheduledAt_DESC',
+  PublishedAtAsc = '_publishedAt_ASC',
+  PublishedAtDesc = '_publishedAt_DESC',
+  StatusAsc = '_status_ASC',
+  StatusDesc = '_status_DESC',
+  UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
+  UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
+  CreatedAtAsc = 'createdAt_ASC',
+  CreatedAtDesc = 'createdAt_DESC',
+  IdAsc = 'id_ASC',
+  IdDesc = 'id_DESC',
+  LabelAsc = 'label_ASC',
+  LabelDesc = 'label_DESC',
+  UpdatedAtAsc = 'updatedAt_ASC',
+  UpdatedAtDesc = 'updatedAt_DESC',
+  UrlAsc = 'url_ASC',
+  UrlDesc = 'url_DESC'
 }
 
 /** Record of type Link esterno (external_link) */
 export type ExternalLinkRecord = RecordInterface & {
-  __typename?: "ExternalLinkRecord";
+  __typename?: 'ExternalLinkRecord';
   _allLabelLocales?: Maybe<Array<StringNonNullMultiLocaleField>>;
   _allUrlLocales?: Maybe<Array<StringNonNullMultiLocaleField>>;
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
-  label: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
-  url: Scalars["String"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
+  label: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
+  url: Scalars['String'];
 };
+
 
 /** Record of type Link esterno (external_link) */
 export type ExternalLinkRecord_AllLabelLocalesArgs = {
@@ -315,22 +325,26 @@ export type ExternalLinkRecord_AllLabelLocalesArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Link esterno (external_link) */
 export type ExternalLinkRecord_AllUrlLocalesArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Link esterno (external_link) */
 export type ExternalLinkRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Link esterno (external_link) */
 export type ExternalLinkRecordLabelArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Link esterno (external_link) */
 export type ExternalLinkRecordUrlArgs = {
@@ -339,145 +353,159 @@ export type ExternalLinkRecordUrlArgs = {
 };
 
 export enum FaviconType {
-  AppleTouchIcon = "appleTouchIcon",
-  Icon = "icon",
-  MsApplication = "msApplication",
+  AppleTouchIcon = 'appleTouchIcon',
+  Icon = 'icon',
+  MsApplication = 'msApplication'
 }
 
 export type FileField = FileFieldInterface & {
-  __typename?: "FileField";
-  _createdAt: Scalars["DateTime"];
-  _updatedAt: Scalars["DateTime"];
-  alt?: Maybe<Scalars["String"]>;
-  author?: Maybe<Scalars["String"]>;
-  basename: Scalars["String"];
-  blurUpThumb?: Maybe<Scalars["String"]>;
-  blurhash?: Maybe<Scalars["String"]>;
+  __typename?: 'FileField';
+  _createdAt: Scalars['DateTime'];
+  _updatedAt: Scalars['DateTime'];
+  alt?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
+  basename: Scalars['String'];
+  blurUpThumb?: Maybe<Scalars['String']>;
+  blurhash?: Maybe<Scalars['String']>;
   colors: Array<ColorField>;
-  copyright?: Maybe<Scalars["String"]>;
-  customData: Scalars["CustomData"];
-  exifInfo: Scalars["CustomData"];
-  filename: Scalars["String"];
+  copyright?: Maybe<Scalars['String']>;
+  customData: Scalars['CustomData'];
+  exifInfo: Scalars['CustomData'];
+  filename: Scalars['String'];
   focalPoint?: Maybe<FocalPoint>;
-  format: Scalars["String"];
-  height?: Maybe<Scalars["IntType"]>;
-  id: Scalars["UploadId"];
-  md5: Scalars["String"];
-  mimeType: Scalars["String"];
-  notes?: Maybe<Scalars["String"]>;
+  format: Scalars['String'];
+  height?: Maybe<Scalars['IntType']>;
+  id: Scalars['UploadId'];
+  md5: Scalars['String'];
+  mimeType: Scalars['String'];
+  notes?: Maybe<Scalars['String']>;
   responsiveImage?: Maybe<ResponsiveImage>;
-  size: Scalars["IntType"];
-  smartTags: Array<Scalars["String"]>;
-  tags: Array<Scalars["String"]>;
-  thumbhash?: Maybe<Scalars["String"]>;
-  title?: Maybe<Scalars["String"]>;
-  url: Scalars["String"];
+  size: Scalars['IntType'];
+  smartTags: Array<Scalars['String']>;
+  tags: Array<Scalars['String']>;
+  thumbhash?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  url: Scalars['String'];
   video?: Maybe<UploadVideoField>;
-  width?: Maybe<Scalars["IntType"]>;
+  width?: Maybe<Scalars['IntType']>;
 };
+
 
 export type FileFieldAltArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldBlurUpThumbArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
-  punch?: Scalars["Float"];
-  quality?: Scalars["Int"];
-  size?: Scalars["Int"];
+  punch?: Scalars['Float'];
+  quality?: Scalars['Int'];
+  size?: Scalars['Int'];
 };
+
 
 export type FileFieldCustomDataArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldFocalPointArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldResponsiveImageArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   imgixParams?: InputMaybe<ImgixParams>;
   locale?: InputMaybe<SiteLocale>;
-  sizes?: InputMaybe<Scalars["String"]>;
+  sizes?: InputMaybe<Scalars['String']>;
 };
+
 
 export type FileFieldTitleArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldUrlArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
 };
 
 export type FileFieldInterface = {
-  _createdAt: Scalars["DateTime"];
-  _updatedAt: Scalars["DateTime"];
-  alt?: Maybe<Scalars["String"]>;
-  author?: Maybe<Scalars["String"]>;
-  basename: Scalars["String"];
-  blurUpThumb?: Maybe<Scalars["String"]>;
-  blurhash?: Maybe<Scalars["String"]>;
+  _createdAt: Scalars['DateTime'];
+  _updatedAt: Scalars['DateTime'];
+  alt?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
+  basename: Scalars['String'];
+  blurUpThumb?: Maybe<Scalars['String']>;
+  blurhash?: Maybe<Scalars['String']>;
   colors: Array<ColorField>;
-  copyright?: Maybe<Scalars["String"]>;
-  customData: Scalars["CustomData"];
-  exifInfo: Scalars["CustomData"];
-  filename: Scalars["String"];
+  copyright?: Maybe<Scalars['String']>;
+  customData: Scalars['CustomData'];
+  exifInfo: Scalars['CustomData'];
+  filename: Scalars['String'];
   focalPoint?: Maybe<FocalPoint>;
-  format: Scalars["String"];
-  height?: Maybe<Scalars["IntType"]>;
-  id: Scalars["UploadId"];
-  md5: Scalars["String"];
-  mimeType: Scalars["String"];
-  notes?: Maybe<Scalars["String"]>;
+  format: Scalars['String'];
+  height?: Maybe<Scalars['IntType']>;
+  id: Scalars['UploadId'];
+  md5: Scalars['String'];
+  mimeType: Scalars['String'];
+  notes?: Maybe<Scalars['String']>;
   responsiveImage?: Maybe<ResponsiveImage>;
-  size: Scalars["IntType"];
-  smartTags: Array<Scalars["String"]>;
-  tags: Array<Scalars["String"]>;
-  thumbhash?: Maybe<Scalars["String"]>;
-  title?: Maybe<Scalars["String"]>;
-  url: Scalars["String"];
+  size: Scalars['IntType'];
+  smartTags: Array<Scalars['String']>;
+  tags: Array<Scalars['String']>;
+  thumbhash?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  url: Scalars['String'];
   video?: Maybe<UploadVideoField>;
-  width?: Maybe<Scalars["IntType"]>;
+  width?: Maybe<Scalars['IntType']>;
 };
+
 
 export type FileFieldInterfaceAltArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldInterfaceBlurUpThumbArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
-  punch?: Scalars["Float"];
-  quality?: Scalars["Int"];
-  size?: Scalars["Int"];
+  punch?: Scalars['Float'];
+  quality?: Scalars['Int'];
+  size?: Scalars['Int'];
 };
+
 
 export type FileFieldInterfaceCustomDataArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldInterfaceFocalPointArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type FileFieldInterfaceResponsiveImageArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   imgixParams?: InputMaybe<ImgixParams>;
   locale?: InputMaybe<SiteLocale>;
-  sizes?: InputMaybe<Scalars["String"]>;
+  sizes?: InputMaybe<Scalars['String']>;
 };
+
 
 export type FileFieldInterfaceTitleArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 export type FileFieldInterfaceUrlArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
@@ -485,105 +513,110 @@ export type FileFieldInterfaceUrlArgs = {
 
 /** Block of type Testo e immagine (flag_block) */
 export type FlagBlockRecord = RecordInterface & {
-  __typename?: "FlagBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'FlagBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  alignRev?: Maybe<Scalars["BooleanType"]>;
-  colorsRev?: Maybe<Scalars["BooleanType"]>;
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  alignRev?: Maybe<Scalars['BooleanType']>;
+  colorsRev?: Maybe<Scalars['BooleanType']>;
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   image: AltTitleFileField;
-  label: Scalars["String"];
-  menuLabel?: Maybe<Scalars["String"]>;
-  text: Scalars["String"];
-  title: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  label: Scalars['String'];
+  menuLabel?: Maybe<Scalars['String']>;
+  text: Scalars['String'];
+  title: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Testo e immagine (flag_block) */
 export type FlagBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Testo e immagine (flag_block) */
 export type FlagBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Block of type Focus (focus_block) */
 export type FocusBlockRecord = RecordInterface & {
-  __typename?: "FocusBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'FocusBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  createdAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  createdAt: Scalars['DateTime'];
   elements: Array<WidgetSubBlockRecord>;
-  id: Scalars["ItemId"];
-  menuLabel?: Maybe<Scalars["String"]>;
-  text: Scalars["String"];
-  title?: Maybe<Scalars["String"]>;
-  updatedAt: Scalars["DateTime"];
+  id: Scalars['ItemId'];
+  menuLabel?: Maybe<Scalars['String']>;
+  text: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Focus (focus_block) */
 export type FocusBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Focus (focus_block) */
 export type FocusBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type GlobalSeoField = {
-  __typename?: "GlobalSeoField";
-  facebookPageUrl?: Maybe<Scalars["String"]>;
+  __typename?: 'GlobalSeoField';
+  facebookPageUrl?: Maybe<Scalars['String']>;
   fallbackSeo?: Maybe<SeoField>;
-  siteName?: Maybe<Scalars["String"]>;
-  titleSuffix?: Maybe<Scalars["String"]>;
-  twitterAccount?: Maybe<Scalars["String"]>;
+  siteName?: Maybe<Scalars['String']>;
+  titleSuffix?: Maybe<Scalars['String']>;
+  twitterAccount?: Maybe<Scalars['String']>;
 };
 
 /** Block of type Header con immagine (hero_image_block) */
 export type HeroImageBlockRecord = RecordInterface & {
-  __typename?: "HeroImageBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'HeroImageBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  alignCenter?: Maybe<Scalars["BooleanType"]>;
-  createdAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  alignCenter?: Maybe<Scalars['BooleanType']>;
+  createdAt: Scalars['DateTime'];
   ctaHeader?: Maybe<ExternalLinkRecord>;
-  hideTitle?: Maybe<Scalars["BooleanType"]>;
-  id: Scalars["ItemId"];
+  hideTitle?: Maybe<Scalars['BooleanType']>;
+  id: Scalars['ItemId'];
   image: AltTitleFileField;
-  title: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  title: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Header con immagine (hero_image_block) */
 export type HeroImageBlockRecord_SeoMetaTagsArgs = {
@@ -591,7 +624,7 @@ export type HeroImageBlockRecord_SeoMetaTagsArgs = {
 };
 
 export type HeroImageBlockRecordListListNonNullMultiLocaleField = {
-  __typename?: "HeroImageBlockRecordListListNonNullMultiLocaleField";
+  __typename?: 'HeroImageBlockRecordListListNonNullMultiLocaleField';
   locale?: Maybe<SiteLocale>;
   value: Array<HeroImageBlockRecord>;
 };
@@ -606,7 +639,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/ar)
    */
-  ar?: InputMaybe<Scalars["String"]>;
+  ar?: InputMaybe<Scalars['String']>;
   /**
    * Automatic
    *
@@ -622,7 +655,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/bg)
    */
-  bg?: InputMaybe<Scalars["String"]>;
+  bg?: InputMaybe<Scalars['String']>;
   /**
    * Background Removal
    *
@@ -630,7 +663,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/rendering/background-removal/bg-remove)
    */
-  bgRemove?: InputMaybe<Scalars["BooleanType"]>;
+  bgRemove?: InputMaybe<Scalars['BooleanType']>;
   /**
    * Blend
    *
@@ -638,7 +671,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend)
    */
-  blend?: InputMaybe<Scalars["String"]>;
+  blend?: InputMaybe<Scalars['String']>;
   /**
    * Blend Align
    *
@@ -658,7 +691,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-alpha)
    */
-  blendAlpha?: InputMaybe<Scalars["IntType"]>;
+  blendAlpha?: InputMaybe<Scalars['IntType']>;
   /**
    * Blend Color
    *
@@ -666,7 +699,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-color)
    */
-  blendColor?: InputMaybe<Scalars["String"]>;
+  blendColor?: InputMaybe<Scalars['String']>;
   /**
    * Blend Crop
    *
@@ -696,7 +729,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-h)
    */
-  blendH?: InputMaybe<Scalars["FloatType"]>;
+  blendH?: InputMaybe<Scalars['FloatType']>;
   /**
    * Blend Mode
    *
@@ -716,7 +749,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-pad)
    */
-  blendPad?: InputMaybe<Scalars["IntType"]>;
+  blendPad?: InputMaybe<Scalars['IntType']>;
   /**
    * Blend Size
    *
@@ -736,7 +769,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-w)
    */
-  blendW?: InputMaybe<Scalars["FloatType"]>;
+  blendW?: InputMaybe<Scalars['FloatType']>;
   /**
    * Blend X Position
    *
@@ -746,7 +779,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-x)
    */
-  blendX?: InputMaybe<Scalars["IntType"]>;
+  blendX?: InputMaybe<Scalars['IntType']>;
   /**
    * Blend Y Position
    *
@@ -756,7 +789,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-y)
    */
-  blendY?: InputMaybe<Scalars["IntType"]>;
+  blendY?: InputMaybe<Scalars['IntType']>;
   /**
    * Gaussian Blur
    *
@@ -764,7 +797,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/blur)
    */
-  blur?: InputMaybe<Scalars["IntType"]>;
+  blur?: InputMaybe<Scalars['IntType']>;
   /**
    * Border Size & Color
    *
@@ -772,7 +805,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border)
    */
-  border?: InputMaybe<Scalars["String"]>;
+  border?: InputMaybe<Scalars['String']>;
   /**
    * Border Bottom
    *
@@ -782,7 +815,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-bottom)
    */
-  borderBottom?: InputMaybe<Scalars["IntType"]>;
+  borderBottom?: InputMaybe<Scalars['IntType']>;
   /**
    * Border Left
    *
@@ -792,7 +825,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-left)
    */
-  borderLeft?: InputMaybe<Scalars["IntType"]>;
+  borderLeft?: InputMaybe<Scalars['IntType']>;
   /**
    * Outer Border Radius
    *
@@ -802,7 +835,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius)
    */
-  borderRadius?: InputMaybe<Scalars["String"]>;
+  borderRadius?: InputMaybe<Scalars['String']>;
   /**
    * Inner Border Radius
    *
@@ -812,7 +845,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius-inner)
    */
-  borderRadiusInner?: InputMaybe<Scalars["String"]>;
+  borderRadiusInner?: InputMaybe<Scalars['String']>;
   /**
    * Border Right
    *
@@ -822,7 +855,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-right)
    */
-  borderRight?: InputMaybe<Scalars["IntType"]>;
+  borderRight?: InputMaybe<Scalars['IntType']>;
   /**
    * Border Top
    *
@@ -832,7 +865,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-top)
    */
-  borderTop?: InputMaybe<Scalars["IntType"]>;
+  borderTop?: InputMaybe<Scalars['IntType']>;
   /**
    * Brightness
    *
@@ -840,7 +873,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/bri)
    */
-  bri?: InputMaybe<Scalars["IntType"]>;
+  bri?: InputMaybe<Scalars['IntType']>;
   /**
    * Client Hints
    *
@@ -856,7 +889,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/chromasub)
    */
-  chromasub?: InputMaybe<Scalars["IntType"]>;
+  chromasub?: InputMaybe<Scalars['IntType']>;
   /**
    * Color Quantization
    *
@@ -864,7 +897,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/colorquant)
    */
-  colorquant?: InputMaybe<Scalars["IntType"]>;
+  colorquant?: InputMaybe<Scalars['IntType']>;
   /**
    * Palette Color Count
    *
@@ -874,7 +907,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/colors)
    */
-  colors?: InputMaybe<Scalars["IntType"]>;
+  colors?: InputMaybe<Scalars['IntType']>;
   /**
    * Contrast
    *
@@ -882,7 +915,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/con)
    */
-  con?: InputMaybe<Scalars["IntType"]>;
+  con?: InputMaybe<Scalars['IntType']>;
   /**
    * Mask Corner Radius
    *
@@ -892,7 +925,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask/corner-radius)
    */
-  cornerRadius?: InputMaybe<Scalars["String"]>;
+  cornerRadius?: InputMaybe<Scalars['String']>;
   /**
    * Crop Mode
    *
@@ -918,7 +951,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/dl)
    */
-  dl?: InputMaybe<Scalars["String"]>;
+  dl?: InputMaybe<Scalars['String']>;
   /**
    * Dots Per Inch
    *
@@ -926,7 +959,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/dpi)
    */
-  dpi?: InputMaybe<Scalars["IntType"]>;
+  dpi?: InputMaybe<Scalars['IntType']>;
   /**
    * Device Pixel Ratio
    *
@@ -934,7 +967,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/dpr)
    */
-  dpr?: InputMaybe<Scalars["FloatType"]>;
+  dpr?: InputMaybe<Scalars['FloatType']>;
   /**
    * Duotone
    *
@@ -942,7 +975,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/duotone)
    */
-  duotone?: InputMaybe<Scalars["String"]>;
+  duotone?: InputMaybe<Scalars['String']>;
   /**
    * Duotone Alpha
    *
@@ -952,7 +985,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/duotone-alpha)
    */
-  duotoneAlpha?: InputMaybe<Scalars["IntType"]>;
+  duotoneAlpha?: InputMaybe<Scalars['IntType']>;
   /**
    * Exposure
    *
@@ -960,7 +993,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/exp)
    */
-  exp?: InputMaybe<Scalars["IntType"]>;
+  exp?: InputMaybe<Scalars['IntType']>;
   /**
    * Url Expiration Timestamp
    *
@@ -968,7 +1001,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/expires)
    */
-  expires?: InputMaybe<Scalars["IntType"]>;
+  expires?: InputMaybe<Scalars['IntType']>;
   /**
    * Face Index
    *
@@ -978,7 +1011,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/faceindex)
    */
-  faceindex?: InputMaybe<Scalars["IntType"]>;
+  faceindex?: InputMaybe<Scalars['IntType']>;
   /**
    * Face Padding
    *
@@ -988,7 +1021,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/facepad)
    */
-  facepad?: InputMaybe<Scalars["FloatType"]>;
+  facepad?: InputMaybe<Scalars['FloatType']>;
   /**
    * Json Face Data
    *
@@ -998,7 +1031,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/faces)
    */
-  faces?: InputMaybe<Scalars["IntType"]>;
+  faces?: InputMaybe<Scalars['IntType']>;
   /**
    * Fill Mode
    *
@@ -1018,7 +1051,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-color)
    */
-  fillColor?: InputMaybe<Scalars["String"]>;
+  fillColor?: InputMaybe<Scalars['String']>;
   /**
    * Resize Fit Mode
    *
@@ -1052,7 +1085,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-debug)
    */
-  fpDebug?: InputMaybe<Scalars["BooleanType"]>;
+  fpDebug?: InputMaybe<Scalars['BooleanType']>;
   /**
    * Focal Point X Position
    *
@@ -1062,7 +1095,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-x)
    */
-  fpX?: InputMaybe<Scalars["FloatType"]>;
+  fpX?: InputMaybe<Scalars['FloatType']>;
   /**
    * Focal Point Y Position
    *
@@ -1072,7 +1105,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-y)
    */
-  fpY?: InputMaybe<Scalars["FloatType"]>;
+  fpY?: InputMaybe<Scalars['FloatType']>;
   /**
    * Focal Point Zoom
    *
@@ -1082,19 +1115,19 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-z)
    */
-  fpZ?: InputMaybe<Scalars["FloatType"]>;
+  fpZ?: InputMaybe<Scalars['FloatType']>;
   /**
    * Frames Per Second
    *
    * Specifies the framerate of the generated image.
    */
-  fps?: InputMaybe<Scalars["IntType"]>;
+  fps?: InputMaybe<Scalars['IntType']>;
   /**
    * Frame Selection
    *
    * Specifies the frame of an animated image to use.
    */
-  frame?: InputMaybe<Scalars["String"]>;
+  frame?: InputMaybe<Scalars['String']>;
   /**
    * Gamma
    *
@@ -1102,13 +1135,13 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/gam)
    */
-  gam?: InputMaybe<Scalars["IntType"]>;
+  gam?: InputMaybe<Scalars['IntType']>;
   /**
    * Animated Gif Quality
    *
    * Depends on: `fm=gif`
    */
-  gifQ?: InputMaybe<Scalars["IntType"]>;
+  gifQ?: InputMaybe<Scalars['IntType']>;
   /**
    * Grid Colors
    *
@@ -1116,7 +1149,7 @@ export type ImgixParams = {
    *
    * Depends on: `transparency`
    */
-  gridColors?: InputMaybe<Scalars["String"]>;
+  gridColors?: InputMaybe<Scalars['String']>;
   /**
    * Grid Size
    *
@@ -1124,7 +1157,7 @@ export type ImgixParams = {
    *
    * Depends on: `transparency`
    */
-  gridSize?: InputMaybe<Scalars["IntType"]>;
+  gridSize?: InputMaybe<Scalars['IntType']>;
   /**
    * Image Height
    *
@@ -1132,7 +1165,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/h)
    */
-  h?: InputMaybe<Scalars["FloatType"]>;
+  h?: InputMaybe<Scalars['FloatType']>;
   /**
    * Highlight
    *
@@ -1140,7 +1173,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/high)
    */
-  high?: InputMaybe<Scalars["IntType"]>;
+  high?: InputMaybe<Scalars['IntType']>;
   /**
    * Halftone
    *
@@ -1148,7 +1181,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/htn)
    */
-  htn?: InputMaybe<Scalars["IntType"]>;
+  htn?: InputMaybe<Scalars['IntType']>;
   /**
    * Hue Shift
    *
@@ -1156,13 +1189,13 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/hue)
    */
-  hue?: InputMaybe<Scalars["IntType"]>;
+  hue?: InputMaybe<Scalars['IntType']>;
   /**
    * Frame Interval
    *
    * Displays every Nth frame starting with the first frame.
    */
-  interval?: InputMaybe<Scalars["IntType"]>;
+  interval?: InputMaybe<Scalars['IntType']>;
   /**
    * Invert
    *
@@ -1170,7 +1203,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/invert)
    */
-  invert?: InputMaybe<Scalars["BooleanType"]>;
+  invert?: InputMaybe<Scalars['BooleanType']>;
   /**
    * Iptc Passthrough
    *
@@ -1182,7 +1215,7 @@ export type ImgixParams = {
    *
    * Specifies the number of times an animated image should repeat. A value of 0 means infinite looping.
    */
-  loop?: InputMaybe<Scalars["IntType"]>;
+  loop?: InputMaybe<Scalars['IntType']>;
   /**
    * Lossless Compression
    *
@@ -1192,7 +1225,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/lossless)
    */
-  lossless?: InputMaybe<Scalars["BooleanType"]>;
+  lossless?: InputMaybe<Scalars['BooleanType']>;
   /**
    * Watermark Image Url
    *
@@ -1200,7 +1233,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark)
    */
-  mark?: InputMaybe<Scalars["String"]>;
+  mark?: InputMaybe<Scalars['String']>;
   /**
    * Watermark Alignment Mode
    *
@@ -1220,7 +1253,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-alpha)
    */
-  markAlpha?: InputMaybe<Scalars["IntType"]>;
+  markAlpha?: InputMaybe<Scalars['IntType']>;
   /**
    * Watermark Base Url
    *
@@ -1230,7 +1263,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-base)
    */
-  markBase?: InputMaybe<Scalars["String"]>;
+  markBase?: InputMaybe<Scalars['String']>;
   /**
    * Watermark Fit Mode
    *
@@ -1250,7 +1283,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-h)
    */
-  markH?: InputMaybe<Scalars["FloatType"]>;
+  markH?: InputMaybe<Scalars['FloatType']>;
   /**
    * Watermark Padding
    *
@@ -1260,7 +1293,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-pad)
    */
-  markPad?: InputMaybe<Scalars["IntType"]>;
+  markPad?: InputMaybe<Scalars['IntType']>;
   /**
    * Watermark Rotation
    *
@@ -1268,7 +1301,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-rot)
    */
-  markRot?: InputMaybe<Scalars["FloatType"]>;
+  markRot?: InputMaybe<Scalars['FloatType']>;
   /**
    * Watermark Scale
    *
@@ -1278,7 +1311,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-scale)
    */
-  markScale?: InputMaybe<Scalars["IntType"]>;
+  markScale?: InputMaybe<Scalars['IntType']>;
   /**
    * Watermark Tile
    *
@@ -1298,7 +1331,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-w)
    */
-  markW?: InputMaybe<Scalars["FloatType"]>;
+  markW?: InputMaybe<Scalars['FloatType']>;
   /**
    * Watermark X Position
    *
@@ -1308,7 +1341,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-x)
    */
-  markX?: InputMaybe<Scalars["IntType"]>;
+  markX?: InputMaybe<Scalars['IntType']>;
   /**
    * Watermark Y Position
    *
@@ -1318,7 +1351,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-y)
    */
-  markY?: InputMaybe<Scalars["IntType"]>;
+  markY?: InputMaybe<Scalars['IntType']>;
   /**
    * Mask Type
    *
@@ -1326,7 +1359,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask)
    */
-  mask?: InputMaybe<Scalars["String"]>;
+  mask?: InputMaybe<Scalars['String']>;
   /**
    * Mask Background Color
    *
@@ -1336,7 +1369,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/mask/mask-bg)
    */
-  maskBg?: InputMaybe<Scalars["String"]>;
+  maskBg?: InputMaybe<Scalars['String']>;
   /**
    * Maximum Height
    *
@@ -1346,7 +1379,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/max-height)
    */
-  maxH?: InputMaybe<Scalars["IntType"]>;
+  maxH?: InputMaybe<Scalars['IntType']>;
   /**
    * Maximum Width
    *
@@ -1356,7 +1389,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/max-width)
    */
-  maxW?: InputMaybe<Scalars["IntType"]>;
+  maxW?: InputMaybe<Scalars['IntType']>;
   /**
    * Minimum Height
    *
@@ -1366,7 +1399,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/min-height)
    */
-  minH?: InputMaybe<Scalars["IntType"]>;
+  minH?: InputMaybe<Scalars['IntType']>;
   /**
    * Minimum Width
    *
@@ -1376,7 +1409,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/min-width)
    */
-  minW?: InputMaybe<Scalars["IntType"]>;
+  minW?: InputMaybe<Scalars['IntType']>;
   /**
    * Monochrome
    *
@@ -1384,7 +1417,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/monochrome)
    */
-  monochrome?: InputMaybe<Scalars["String"]>;
+  monochrome?: InputMaybe<Scalars['String']>;
   /**
    * Noise Reduction Bound
    *
@@ -1392,7 +1425,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/noise-reduction/nr)
    */
-  nr?: InputMaybe<Scalars["IntType"]>;
+  nr?: InputMaybe<Scalars['IntType']>;
   /**
    * Noise Reduction Sharpen
    *
@@ -1400,7 +1433,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/noise-reduction/nrs)
    */
-  nrs?: InputMaybe<Scalars["IntType"]>;
+  nrs?: InputMaybe<Scalars['IntType']>;
   /**
    * Orientation
    *
@@ -1408,7 +1441,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/orient)
    */
-  orient?: InputMaybe<Scalars["IntType"]>;
+  orient?: InputMaybe<Scalars['IntType']>;
   /**
    * Padding
    *
@@ -1416,7 +1449,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad)
    */
-  pad?: InputMaybe<Scalars["IntType"]>;
+  pad?: InputMaybe<Scalars['IntType']>;
   /**
    * Padding Bottom
    *
@@ -1424,7 +1457,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-bottom)
    */
-  padBottom?: InputMaybe<Scalars["IntType"]>;
+  padBottom?: InputMaybe<Scalars['IntType']>;
   /**
    * Padding Left
    *
@@ -1432,7 +1465,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-left)
    */
-  padLeft?: InputMaybe<Scalars["IntType"]>;
+  padLeft?: InputMaybe<Scalars['IntType']>;
   /**
    * Padding Right
    *
@@ -1440,7 +1473,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-right)
    */
-  padRight?: InputMaybe<Scalars["IntType"]>;
+  padRight?: InputMaybe<Scalars['IntType']>;
   /**
    * Padding Top
    *
@@ -1448,7 +1481,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-top)
    */
-  padTop?: InputMaybe<Scalars["IntType"]>;
+  padTop?: InputMaybe<Scalars['IntType']>;
   /**
    * Pdf Page Number
    *
@@ -1456,7 +1489,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/pdf/page)
    */
-  page?: InputMaybe<Scalars["IntType"]>;
+  page?: InputMaybe<Scalars['IntType']>;
   /**
    * Color Palette Extraction
    *
@@ -1472,7 +1505,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/pdf/pdf-annotation)
    */
-  pdfAnnotation?: InputMaybe<Scalars["BooleanType"]>;
+  pdfAnnotation?: InputMaybe<Scalars['BooleanType']>;
   /**
    * Css Prefix
    *
@@ -1482,7 +1515,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/prefix)
    */
-  prefix?: InputMaybe<Scalars["String"]>;
+  prefix?: InputMaybe<Scalars['String']>;
   /**
    * Pixellate
    *
@@ -1490,7 +1523,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/px)
    */
-  px?: InputMaybe<Scalars["IntType"]>;
+  px?: InputMaybe<Scalars['IntType']>;
   /**
    * Output Quality
    *
@@ -1500,7 +1533,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/format/q)
    */
-  q?: InputMaybe<Scalars["IntType"]>;
+  q?: InputMaybe<Scalars['IntType']>;
   /**
    * Source Rectangle Region
    *
@@ -1508,13 +1541,13 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/rect)
    */
-  rect?: InputMaybe<Scalars["String"]>;
+  rect?: InputMaybe<Scalars['String']>;
   /**
    * Reverse
    *
    * Reverses the frame order on the source animation.
    */
-  reverse?: InputMaybe<Scalars["BooleanType"]>;
+  reverse?: InputMaybe<Scalars['BooleanType']>;
   /**
    * Rotation
    *
@@ -1522,7 +1555,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/rot)
    */
-  rot?: InputMaybe<Scalars["FloatType"]>;
+  rot?: InputMaybe<Scalars['FloatType']>;
   /**
    * Saturation
    *
@@ -1530,7 +1563,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sat)
    */
-  sat?: InputMaybe<Scalars["IntType"]>;
+  sat?: InputMaybe<Scalars['IntType']>;
   /**
    * Sepia Tone
    *
@@ -1538,7 +1571,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/sepia)
    */
-  sepia?: InputMaybe<Scalars["IntType"]>;
+  sepia?: InputMaybe<Scalars['IntType']>;
   /**
    * Shadow
    *
@@ -1546,7 +1579,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/shad)
    */
-  shad?: InputMaybe<Scalars["FloatType"]>;
+  shad?: InputMaybe<Scalars['FloatType']>;
   /**
    * Sharpen
    *
@@ -1554,13 +1587,13 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sharp)
    */
-  sharp?: InputMaybe<Scalars["FloatType"]>;
+  sharp?: InputMaybe<Scalars['FloatType']>;
   /**
    * Frame Skip
    *
    * Skips every Nth frame starting with the first frame.
    */
-  skip?: InputMaybe<Scalars["IntType"]>;
+  skip?: InputMaybe<Scalars['IntType']>;
   /**
    * Transparency
    *
@@ -1586,7 +1619,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-color)
    */
-  trimColor?: InputMaybe<Scalars["String"]>;
+  trimColor?: InputMaybe<Scalars['String']>;
   /**
    * Trim Mean Difference
    *
@@ -1596,7 +1629,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-md)
    */
-  trimMd?: InputMaybe<Scalars["FloatType"]>;
+  trimMd?: InputMaybe<Scalars['FloatType']>;
   /**
    * Trim Padding
    *
@@ -1606,7 +1639,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-pad)
    */
-  trimPad?: InputMaybe<Scalars["IntType"]>;
+  trimPad?: InputMaybe<Scalars['IntType']>;
   /**
    * Trim Standard Deviation
    *
@@ -1616,7 +1649,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-sd)
    */
-  trimSd?: InputMaybe<Scalars["FloatType"]>;
+  trimSd?: InputMaybe<Scalars['FloatType']>;
   /**
    * Trim Tolerance
    *
@@ -1626,7 +1659,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-tol)
    */
-  trimTol?: InputMaybe<Scalars["FloatType"]>;
+  trimTol?: InputMaybe<Scalars['FloatType']>;
   /**
    * Text String
    *
@@ -1634,7 +1667,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt)
    */
-  txt?: InputMaybe<Scalars["String"]>;
+  txt?: InputMaybe<Scalars['String']>;
   /**
    * Text Align
    *
@@ -1664,7 +1697,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-color)
    */
-  txtColor?: InputMaybe<Scalars["String"]>;
+  txtColor?: InputMaybe<Scalars['String']>;
   /**
    * Text Fit Mode
    *
@@ -1684,7 +1717,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-font)
    */
-  txtFont?: InputMaybe<Scalars["String"]>;
+  txtFont?: InputMaybe<Scalars['String']>;
   /**
    * Text Leading
    *
@@ -1694,7 +1727,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/typesetting/txt-lead)
    */
-  txtLead?: InputMaybe<Scalars["IntType"]>;
+  txtLead?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Ligatures
    *
@@ -1704,7 +1737,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-lig)
    */
-  txtLig?: InputMaybe<Scalars["IntType"]>;
+  txtLig?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Outline
    *
@@ -1714,7 +1747,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-line)
    */
-  txtLine?: InputMaybe<Scalars["IntType"]>;
+  txtLine?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Outline Color
    *
@@ -1724,7 +1757,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-line-color)
    */
-  txtLineColor?: InputMaybe<Scalars["String"]>;
+  txtLineColor?: InputMaybe<Scalars['String']>;
   /**
    * Text Padding
    *
@@ -1734,7 +1767,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-pad)
    */
-  txtPad?: InputMaybe<Scalars["IntType"]>;
+  txtPad?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Shadow
    *
@@ -1744,7 +1777,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-shad)
    */
-  txtShad?: InputMaybe<Scalars["FloatType"]>;
+  txtShad?: InputMaybe<Scalars['FloatType']>;
   /**
    * Text Font Size
    *
@@ -1754,7 +1787,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-size)
    */
-  txtSize?: InputMaybe<Scalars["IntType"]>;
+  txtSize?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Tracking
    *
@@ -1764,7 +1797,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/typesetting/txt-track)
    */
-  txtTrack?: InputMaybe<Scalars["IntType"]>;
+  txtTrack?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Width
    *
@@ -1774,7 +1807,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-width)
    */
-  txtWidth?: InputMaybe<Scalars["IntType"]>;
+  txtWidth?: InputMaybe<Scalars['IntType']>;
   /**
    * Text X Position
    *
@@ -1784,7 +1817,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-x)
    */
-  txtX?: InputMaybe<Scalars["IntType"]>;
+  txtX?: InputMaybe<Scalars['IntType']>;
   /**
    * Text Y Position
    *
@@ -1794,7 +1827,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-y)
    */
-  txtY?: InputMaybe<Scalars["IntType"]>;
+  txtY?: InputMaybe<Scalars['IntType']>;
   /**
    * Unsharp Mask
    *
@@ -1802,7 +1835,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/usm)
    */
-  usm?: InputMaybe<Scalars["IntType"]>;
+  usm?: InputMaybe<Scalars['IntType']>;
   /**
    * Unsharp Mask Radius
    *
@@ -1812,7 +1845,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/usmrad)
    */
-  usmrad?: InputMaybe<Scalars["FloatType"]>;
+  usmrad?: InputMaybe<Scalars['FloatType']>;
   /**
    * Vibrance
    *
@@ -1820,7 +1853,7 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/vib)
    */
-  vib?: InputMaybe<Scalars["IntType"]>;
+  vib?: InputMaybe<Scalars['IntType']>;
   /**
    * Image Width
    *
@@ -1828,259 +1861,246 @@ export type ImgixParams = {
    *
    * [Open Imgix reference »](https://docs.imgix.com/apis/url/size/w)
    */
-  w?: InputMaybe<Scalars["FloatType"]>;
+  w?: InputMaybe<Scalars['FloatType']>;
 };
 
 export enum ImgixParamsAuto {
-  Compress = "compress",
-  Enhance = "enhance",
-  Format = "format",
-  Redeye = "redeye",
+  Compress = 'compress',
+  Enhance = 'enhance',
+  Format = 'format',
+  Redeye = 'redeye'
 }
 
 export enum ImgixParamsBlendAlign {
-  Bottom = "bottom",
-  Center = "center",
-  Left = "left",
-  Middle = "middle",
-  Right = "right",
-  Top = "top",
+  Bottom = 'bottom',
+  Center = 'center',
+  Left = 'left',
+  Middle = 'middle',
+  Right = 'right',
+  Top = 'top'
 }
 
 export enum ImgixParamsBlendCrop {
-  Bottom = "bottom",
-  Faces = "faces",
-  Left = "left",
-  Right = "right",
-  Top = "top",
+  Bottom = 'bottom',
+  Faces = 'faces',
+  Left = 'left',
+  Right = 'right',
+  Top = 'top'
 }
 
 export enum ImgixParamsBlendFit {
-  Clamp = "clamp",
-  Clip = "clip",
-  Crop = "crop",
-  Max = "max",
-  Scale = "scale",
+  Clamp = 'clamp',
+  Clip = 'clip',
+  Crop = 'crop',
+  Max = 'max',
+  Scale = 'scale'
 }
 
 export enum ImgixParamsBlendMode {
-  Burn = "burn",
-  Color = "color",
-  Darken = "darken",
-  Difference = "difference",
-  Dodge = "dodge",
-  Exclusion = "exclusion",
-  Hardlight = "hardlight",
-  Hue = "hue",
-  Lighten = "lighten",
-  Luminosity = "luminosity",
-  Multiply = "multiply",
-  Normal = "normal",
-  Overlay = "overlay",
-  Saturation = "saturation",
-  Screen = "screen",
-  Softlight = "softlight",
+  Burn = 'burn',
+  Color = 'color',
+  Darken = 'darken',
+  Difference = 'difference',
+  Dodge = 'dodge',
+  Exclusion = 'exclusion',
+  Hardlight = 'hardlight',
+  Hue = 'hue',
+  Lighten = 'lighten',
+  Luminosity = 'luminosity',
+  Multiply = 'multiply',
+  Normal = 'normal',
+  Overlay = 'overlay',
+  Saturation = 'saturation',
+  Screen = 'screen',
+  Softlight = 'softlight'
 }
 
 export enum ImgixParamsBlendSize {
-  Inherit = "inherit",
+  Inherit = 'inherit'
 }
 
 export enum ImgixParamsCh {
-  Dpr = "dpr",
-  SaveData = "saveData",
-  Width = "width",
+  Dpr = 'dpr',
+  SaveData = 'saveData',
+  Width = 'width'
 }
 
 export enum ImgixParamsCrop {
-  Bottom = "bottom",
-  Edges = "edges",
-  Entropy = "entropy",
-  Faces = "faces",
-  Focalpoint = "focalpoint",
-  Left = "left",
-  Right = "right",
-  Top = "top",
+  Bottom = 'bottom',
+  Edges = 'edges',
+  Entropy = 'entropy',
+  Faces = 'faces',
+  Focalpoint = 'focalpoint',
+  Left = 'left',
+  Right = 'right',
+  Top = 'top'
 }
 
 export enum ImgixParamsCs {
-  Adobergb1998 = "adobergb1998",
-  Srgb = "srgb",
-  Strip = "strip",
-  Tinysrgb = "tinysrgb",
+  Adobergb1998 = 'adobergb1998',
+  Srgb = 'srgb',
+  Strip = 'strip',
+  Tinysrgb = 'tinysrgb'
 }
 
 export enum ImgixParamsFill {
-  Blur = "blur",
-  Solid = "solid",
+  Blur = 'blur',
+  Solid = 'solid'
 }
 
 export enum ImgixParamsFit {
-  Clamp = "clamp",
-  Clip = "clip",
-  Crop = "crop",
-  Facearea = "facearea",
-  Fill = "fill",
-  Fillmax = "fillmax",
-  Max = "max",
-  Min = "min",
-  Scale = "scale",
+  Clamp = 'clamp',
+  Clip = 'clip',
+  Crop = 'crop',
+  Facearea = 'facearea',
+  Fill = 'fill',
+  Fillmax = 'fillmax',
+  Max = 'max',
+  Min = 'min',
+  Scale = 'scale'
 }
 
 export enum ImgixParamsFlip {
-  H = "h",
-  Hv = "hv",
-  V = "v",
+  H = 'h',
+  Hv = 'hv',
+  V = 'v'
 }
 
 export enum ImgixParamsFm {
-  Avif = "avif",
-  Blurhash = "blurhash",
-  Gif = "gif",
-  Jp2 = "jp2",
-  Jpg = "jpg",
-  Json = "json",
-  Jxr = "jxr",
-  Mp4 = "mp4",
-  Pjpg = "pjpg",
-  Png = "png",
-  Png8 = "png8",
-  Png32 = "png32",
-  Webm = "webm",
-  Webp = "webp",
+  Avif = 'avif',
+  Blurhash = 'blurhash',
+  Gif = 'gif',
+  Jp2 = 'jp2',
+  Jpg = 'jpg',
+  Json = 'json',
+  Jxr = 'jxr',
+  Mp4 = 'mp4',
+  Pjpg = 'pjpg',
+  Png = 'png',
+  Png8 = 'png8',
+  Png32 = 'png32',
+  Webm = 'webm',
+  Webp = 'webp'
 }
 
 export enum ImgixParamsIptc {
-  Allow = "allow",
-  Block = "block",
+  Allow = 'allow',
+  Block = 'block'
 }
 
 export enum ImgixParamsMarkAlign {
-  Bottom = "bottom",
-  Center = "center",
-  Left = "left",
-  Middle = "middle",
-  Right = "right",
-  Top = "top",
+  Bottom = 'bottom',
+  Center = 'center',
+  Left = 'left',
+  Middle = 'middle',
+  Right = 'right',
+  Top = 'top'
 }
 
 export enum ImgixParamsMarkFit {
-  Clip = "clip",
-  Crop = "crop",
-  Fill = "fill",
-  Max = "max",
-  Scale = "scale",
+  Clip = 'clip',
+  Crop = 'crop',
+  Fill = 'fill',
+  Max = 'max',
+  Scale = 'scale'
 }
 
 export enum ImgixParamsMarkTile {
-  Grid = "grid",
+  Grid = 'grid'
 }
 
 export enum ImgixParamsPalette {
-  Css = "css",
-  Json = "json",
+  Css = 'css',
+  Json = 'json'
 }
 
 export enum ImgixParamsTransparency {
-  Grid = "grid",
+  Grid = 'grid'
 }
 
 export enum ImgixParamsTrim {
-  Auto = "auto",
-  Color = "color",
+  Auto = 'auto',
+  Color = 'color'
 }
 
 export enum ImgixParamsTxtAlign {
-  Bottom = "bottom",
-  Center = "center",
-  Left = "left",
-  Middle = "middle",
-  Right = "right",
-  Top = "top",
+  Bottom = 'bottom',
+  Center = 'center',
+  Left = 'left',
+  Middle = 'middle',
+  Right = 'right',
+  Top = 'top'
 }
 
 export enum ImgixParamsTxtClip {
-  Ellipsis = "ellipsis",
-  End = "end",
-  Middle = "middle",
-  Start = "start",
+  Ellipsis = 'ellipsis',
+  End = 'end',
+  Middle = 'middle',
+  Start = 'start'
 }
 
 export enum ImgixParamsTxtFit {
-  Max = "max",
+  Max = 'max'
 }
 
 /** Specifies how to filter by usage */
 export type InUseFilter = {
   /** Search uploads that are currently used by some record or not */
-  eq?: InputMaybe<Scalars["BooleanType"]>;
+  eq?: InputMaybe<Scalars['BooleanType']>;
 };
 
 /** Specifies how to filter by ID */
 export type ItemIdFilter = {
   /** Search the record with the specified ID */
-  eq?: InputMaybe<Scalars["ItemId"]>;
+  eq?: InputMaybe<Scalars['ItemId']>;
   /** Search records with the specified IDs */
-  in?: InputMaybe<Array<InputMaybe<Scalars["ItemId"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['ItemId']>>>;
   /** Exclude the record with the specified ID */
-  neq?: InputMaybe<Scalars["ItemId"]>;
+  neq?: InputMaybe<Scalars['ItemId']>;
   /** Search records that do not have the specified IDs */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["ItemId"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ItemId']>>>;
 };
 
 export enum ItemStatus {
-  Draft = "draft",
-  Published = "published",
-  Updated = "updated",
+  Draft = 'draft',
+  Published = 'published',
+  Updated = 'updated'
 }
 
-export type LandingModelContentBlocksField =
-  | BannerCtaBlockRecord
-  | CarouselBlockRecord
-  | CoverBlockRecord
-  | FlagBlockRecord
-  | FocusBlockRecord
-  | PartnersBlockRecord
-  | ProductBlockRecord
-  | QuoteBlockRecord
-  | TextBlockRecord
-  | VideoBlockRecord;
+export type LandingModelContentBlocksField = BannerCtaBlockRecord | CarouselBlockRecord | CoverBlockRecord | FlagBlockRecord | FocusBlockRecord | PartnersBlockRecord | ProductBlockRecord | QuoteBlockRecord | TextBlockRecord | VideoBlockRecord;
 
 export type LandingModelContentBlocksFieldListListNonNullMultiLocaleField = {
-  __typename?: "LandingModelContentBlocksFieldListListNonNullMultiLocaleField";
+  __typename?: 'LandingModelContentBlocksFieldListListNonNullMultiLocaleField';
   locale?: Maybe<SiteLocale>;
   value: Array<LandingModelContentBlocksField>;
 };
 
 /** Record of type Landing (landing) */
 export type LandingRecord = RecordInterface & {
-  __typename?: "LandingRecord";
-  _allContentBlocksLocales?: Maybe<
-    Array<LandingModelContentBlocksFieldListListNonNullMultiLocaleField>
-  >;
-  _allHeaderBlocksLocales?: Maybe<
-    Array<HeroImageBlockRecordListListNonNullMultiLocaleField>
-  >;
+  __typename?: 'LandingRecord';
+  _allContentBlocksLocales?: Maybe<Array<LandingModelContentBlocksFieldListListNonNullMultiLocaleField>>;
+  _allHeaderBlocksLocales?: Maybe<Array<HeroImageBlockRecordListListNonNullMultiLocaleField>>;
   _allSeoLocales?: Maybe<Array<SeoFieldMultiLocaleField>>;
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
   _locales: Array<SiteLocale>;
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
   contentBlocks: Array<LandingModelContentBlocksField>;
-  createdAt: Scalars["DateTime"];
+  createdAt: Scalars['DateTime'];
   headerBlocks: Array<HeroImageBlockRecord>;
-  id: Scalars["ItemId"];
+  id: Scalars['ItemId'];
   seo?: Maybe<SeoField>;
-  updatedAt: Scalars["DateTime"];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Record of type Landing (landing) */
 export type LandingRecord_AllContentBlocksLocalesArgs = {
@@ -2088,11 +2108,13 @@ export type LandingRecord_AllContentBlocksLocalesArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Landing (landing) */
 export type LandingRecord_AllHeaderBlocksLocalesArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Landing (landing) */
 export type LandingRecord_AllSeoLocalesArgs = {
@@ -2100,10 +2122,12 @@ export type LandingRecord_AllSeoLocalesArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Landing (landing) */
 export type LandingRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Landing (landing) */
 export type LandingRecordContentBlocksArgs = {
@@ -2111,11 +2135,13 @@ export type LandingRecordContentBlocksArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Landing (landing) */
 export type LandingRecordHeaderBlocksArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Landing (landing) */
 export type LandingRecordSeoArgs = {
@@ -2124,50 +2150,51 @@ export type LandingRecordSeoArgs = {
 };
 
 export enum MuxThumbnailFormatType {
-  Gif = "gif",
-  Jpg = "jpg",
-  Png = "png",
+  Gif = 'gif',
+  Jpg = 'jpg',
+  Png = 'png'
 }
 
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord = RecordInterface & {
-  __typename?: "OrganizationRecord";
+  __typename?: 'OrganizationRecord';
   _allContactsMenuLabelLocales?: Maybe<Array<StringMultiLocaleField>>;
   _allIubendaPolicyIdLocales?: Maybe<Array<StringNonNullMultiLocaleField>>;
   _allNewsletterLabelLocales?: Maybe<Array<StringMultiLocaleField>>;
   _allNewsletterTitleLocales?: Maybe<Array<StringMultiLocaleField>>;
   _allStreetAddressLocales?: Maybe<Array<StringMultiLocaleField>>;
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
   _locales: Array<SiteLocale>;
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  contactsMenuLabel?: Maybe<Scalars["String"]>;
-  createdAt: Scalars["DateTime"];
-  emailAddress?: Maybe<Scalars["String"]>;
-  facebookPixelId?: Maybe<Scalars["String"]>;
-  facebookUrl?: Maybe<Scalars["String"]>;
-  googleAnalyticsId?: Maybe<Scalars["String"]>;
-  googleTagManagerId?: Maybe<Scalars["String"]>;
-  id: Scalars["ItemId"];
-  instagramUrl?: Maybe<Scalars["String"]>;
-  iubendaPolicyId: Scalars["String"];
-  iubendaSiteId: Scalars["String"];
-  newsletterFormUrl?: Maybe<Scalars["String"]>;
-  newsletterLabel?: Maybe<Scalars["String"]>;
-  newsletterTitle?: Maybe<Scalars["String"]>;
-  phoneNumber?: Maybe<Scalars["String"]>;
-  streetAddress?: Maybe<Scalars["String"]>;
-  twitterUrl?: Maybe<Scalars["String"]>;
-  updatedAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  contactsMenuLabel?: Maybe<Scalars['String']>;
+  createdAt: Scalars['DateTime'];
+  emailAddress?: Maybe<Scalars['String']>;
+  facebookPixelId?: Maybe<Scalars['String']>;
+  facebookUrl?: Maybe<Scalars['String']>;
+  googleAnalyticsId?: Maybe<Scalars['String']>;
+  googleTagManagerId?: Maybe<Scalars['String']>;
+  id: Scalars['ItemId'];
+  instagramUrl?: Maybe<Scalars['String']>;
+  iubendaPolicyId: Scalars['String'];
+  iubendaSiteId: Scalars['String'];
+  newsletterFormUrl?: Maybe<Scalars['String']>;
+  newsletterLabel?: Maybe<Scalars['String']>;
+  newsletterTitle?: Maybe<Scalars['String']>;
+  phoneNumber?: Maybe<Scalars['String']>;
+  streetAddress?: Maybe<Scalars['String']>;
+  twitterUrl?: Maybe<Scalars['String']>;
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord_AllContactsMenuLabelLocalesArgs = {
@@ -2175,11 +2202,13 @@ export type OrganizationRecord_AllContactsMenuLabelLocalesArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord_AllIubendaPolicyIdLocalesArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord_AllNewsletterLabelLocalesArgs = {
@@ -2187,22 +2216,26 @@ export type OrganizationRecord_AllNewsletterLabelLocalesArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord_AllNewsletterTitleLocalesArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord_AllStreetAddressLocalesArgs = {
   locale?: InputMaybe<SiteLocale>;
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
+
 
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecordContactsMenuLabelArgs = {
@@ -2210,11 +2243,13 @@ export type OrganizationRecordContactsMenuLabelArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecordIubendaPolicyIdArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecordNewsletterLabelArgs = {
@@ -2222,16 +2257,18 @@ export type OrganizationRecordNewsletterLabelArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecordNewsletterTitleArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Record of type Organizzazione (organization) */
 export type OrganizationRecordStreetAddressArgs = {
   locale?: InputMaybe<SiteLocale>;
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Specifies how to filter by image orientation */
@@ -2244,25 +2281,26 @@ export type OrientationFilter = {
 
 /** Block of type Partners (partners_block) */
 export type PartnersBlockRecord = RecordInterface & {
-  __typename?: "PartnersBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'PartnersBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   images: Array<AltTitleFileField>;
-  menuLabel?: Maybe<Scalars["String"]>;
-  title: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  menuLabel?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Partners (partners_block) */
 export type PartnersBlockRecord_SeoMetaTagsArgs = {
@@ -2271,67 +2309,70 @@ export type PartnersBlockRecord_SeoMetaTagsArgs = {
 
 /** Block of type Prodotto (product_block) */
 export type ProductBlockRecord = RecordInterface & {
-  __typename?: "ProductBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'ProductBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  alignRev?: Maybe<Scalars["BooleanType"]>;
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  alignRev?: Maybe<Scalars['BooleanType']>;
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   image: AltTitleFileField;
-  label: Scalars["String"];
+  label: Scalars['String'];
   smallImages: Array<AltTitleFileField>;
-  subText?: Maybe<Scalars["String"]>;
-  subTitle?: Maybe<Scalars["String"]>;
-  text: Scalars["String"];
-  title: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  subText?: Maybe<Scalars['String']>;
+  subTitle?: Maybe<Scalars['String']>;
+  text: Scalars['String'];
+  title: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Prodotto (product_block) */
 export type ProductBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Prodotto (product_block) */
 export type ProductBlockRecordSubTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
+
 
 /** Block of type Prodotto (product_block) */
 export type ProductBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Specifies how to filter by publication datetime */
 export type PublishedAtFilter = {
   /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
-  eq?: InputMaybe<Scalars["DateTime"]>;
+  eq?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter records with a value that's strictly greater than the one specified. Seconds and milliseconds are truncated from the argument. */
-  gt?: InputMaybe<Scalars["DateTime"]>;
+  gt?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's greater than or equal to than the one specified. Seconds and milliseconds are truncated from the argument. */
-  gte?: InputMaybe<Scalars["DateTime"]>;
+  gte?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's less than the one specified. Seconds and milliseconds are truncated from the argument. */
-  lt?: InputMaybe<Scalars["DateTime"]>;
+  lt?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's less or equal than the one specified. Seconds and milliseconds are truncated from the argument. */
-  lte?: InputMaybe<Scalars["DateTime"]>;
+  lte?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's outside the specified minute range. Seconds and milliseconds are truncated from the argument. */
-  neq?: InputMaybe<Scalars["DateTime"]>;
+  neq?: InputMaybe<Scalars['DateTime']>;
 };
 
 /** The query root for this schema */
 export type Query = {
-  __typename?: "Query";
+  __typename?: 'Query';
   /** Returns meta information regarding a record collection */
   _allExternalLinksMeta: CollectionMetadata;
   /** Returns meta information regarding an assets collection */
@@ -2354,6 +2395,7 @@ export type Query = {
   visualStyle?: Maybe<VisualStyleRecord>;
 };
 
+
 /** The query root for this schema */
 export type Query_AllExternalLinksMetaArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
@@ -2361,11 +2403,13 @@ export type Query_AllExternalLinksMetaArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** The query root for this schema */
 export type Query_AllUploadsMetaArgs = {
   filter?: InputMaybe<UploadFilter>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** The query root for this schema */
 export type Query_SiteArgs = {
@@ -2373,25 +2417,28 @@ export type Query_SiteArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** The query root for this schema */
 export type QueryAllExternalLinksArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   filter?: InputMaybe<ExternalLinkModelFilter>;
-  first?: InputMaybe<Scalars["IntType"]>;
+  first?: InputMaybe<Scalars['IntType']>;
   locale?: InputMaybe<SiteLocale>;
   orderBy?: InputMaybe<Array<InputMaybe<ExternalLinkModelOrderBy>>>;
-  skip?: InputMaybe<Scalars["IntType"]>;
+  skip?: InputMaybe<Scalars['IntType']>;
 };
+
 
 /** The query root for this schema */
 export type QueryAllUploadsArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   filter?: InputMaybe<UploadFilter>;
-  first?: InputMaybe<Scalars["IntType"]>;
+  first?: InputMaybe<Scalars['IntType']>;
   locale?: InputMaybe<SiteLocale>;
   orderBy?: InputMaybe<Array<InputMaybe<UploadOrderBy>>>;
-  skip?: InputMaybe<Scalars["IntType"]>;
+  skip?: InputMaybe<Scalars['IntType']>;
 };
+
 
 /** The query root for this schema */
 export type QueryExternalLinkArgs = {
@@ -2401,17 +2448,20 @@ export type QueryExternalLinkArgs = {
   orderBy?: InputMaybe<Array<InputMaybe<ExternalLinkModelOrderBy>>>;
 };
 
+
 /** The query root for this schema */
 export type QueryLandingArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** The query root for this schema */
 export type QueryOrganizationArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
+
 
 /** The query root for this schema */
 export type QueryUploadArgs = {
@@ -2421,6 +2471,7 @@ export type QueryUploadArgs = {
   orderBy?: InputMaybe<Array<InputMaybe<UploadOrderBy>>>;
 };
 
+
 /** The query root for this schema */
 export type QueryVisualStyleArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
@@ -2429,49 +2480,52 @@ export type QueryVisualStyleArgs = {
 
 /** Block of type Citazione (quote_block) */
 export type QuoteBlockRecord = RecordInterface & {
-  __typename?: "QuoteBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'QuoteBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  authorName: Scalars["String"];
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
-  text: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  authorName: Scalars['String'];
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
+  text: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Citazione (quote_block) */
 export type QuoteBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Citazione (quote_block) */
 export type QuoteBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type RecordInterface = {
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
 };
+
 
 export type RecordInterface_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
@@ -2490,52 +2544,54 @@ export type ResolutionFilter = {
 };
 
 export enum ResolutionType {
-  Icon = "icon",
-  Large = "large",
-  Medium = "medium",
-  Small = "small",
+  Icon = 'icon',
+  Large = 'large',
+  Medium = 'medium',
+  Small = 'small'
 }
 
 export type ResponsiveImage = {
-  __typename?: "ResponsiveImage";
-  alt?: Maybe<Scalars["String"]>;
-  aspectRatio: Scalars["FloatType"];
-  base64?: Maybe<Scalars["String"]>;
-  bgColor?: Maybe<Scalars["String"]>;
-  height: Scalars["IntType"];
-  sizes: Scalars["String"];
-  src: Scalars["String"];
-  srcSet: Scalars["String"];
-  title?: Maybe<Scalars["String"]>;
-  webpSrcSet: Scalars["String"];
-  width: Scalars["IntType"];
+  __typename?: 'ResponsiveImage';
+  alt?: Maybe<Scalars['String']>;
+  aspectRatio: Scalars['FloatType'];
+  base64?: Maybe<Scalars['String']>;
+  bgColor?: Maybe<Scalars['String']>;
+  height: Scalars['IntType'];
+  sizes: Scalars['String'];
+  src: Scalars['String'];
+  srcSet: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  webpSrcSet: Scalars['String'];
+  width: Scalars['IntType'];
 };
 
 export type SeoField = {
-  __typename?: "SeoField";
-  description?: Maybe<Scalars["String"]>;
+  __typename?: 'SeoField';
+  description?: Maybe<Scalars['String']>;
   image?: Maybe<FileField>;
-  title?: Maybe<Scalars["String"]>;
-  twitterCard?: Maybe<Scalars["String"]>;
+  title?: Maybe<Scalars['String']>;
+  twitterCard?: Maybe<Scalars['String']>;
 };
 
 export type SeoFieldMultiLocaleField = {
-  __typename?: "SeoFieldMultiLocaleField";
+  __typename?: 'SeoFieldMultiLocaleField';
   locale?: Maybe<SiteLocale>;
   value?: Maybe<SeoField>;
 };
 
 export type Site = {
-  __typename?: "Site";
+  __typename?: 'Site';
   favicon?: Maybe<FileField>;
   faviconMetaTags: Array<Tag>;
   globalSeo?: Maybe<GlobalSeoField>;
   locales: Array<SiteLocale>;
 };
 
+
 export type SiteFaviconMetaTagsArgs = {
   variants?: InputMaybe<Array<InputMaybe<FaviconType>>>;
 };
+
 
 export type SiteGlobalSeoArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
@@ -2543,8 +2599,8 @@ export type SiteGlobalSeoArgs = {
 };
 
 export enum SiteLocale {
-  En = "en",
-  It = "it",
+  En = 'en',
+  It = 'it'
 }
 
 /** Specifies how to filter by status */
@@ -2562,83 +2618,85 @@ export type StatusFilter = {
 /** Specifies how to filter Single-line string fields */
 export type StringFilter = {
   /** Search for records with an exact match */
-  eq?: InputMaybe<Scalars["String"]>;
+  eq?: InputMaybe<Scalars['String']>;
   /** Filter records with the specified field defined (i.e. with any value) or not [DEPRECATED] */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter records that equal one of the specified values */
-  in?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter records with the specified field set as blank (null or empty string) */
-  isBlank?: InputMaybe<Scalars["BooleanType"]>;
+  isBlank?: InputMaybe<Scalars['BooleanType']>;
   /** Filter records with the specified field present (neither null, nor empty string) */
-  isPresent?: InputMaybe<Scalars["BooleanType"]>;
+  isPresent?: InputMaybe<Scalars['BooleanType']>;
   /** Filter records based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude records with an exact match */
-  neq?: InputMaybe<Scalars["String"]>;
+  neq?: InputMaybe<Scalars['String']>;
   /** Filter records that do not equal one of the specified values */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Exclude records based on a regular expression */
   notMatches?: InputMaybe<StringMatchesFilter>;
 };
 
 export type StringMatchesFilter = {
-  caseSensitive?: InputMaybe<Scalars["BooleanType"]>;
-  pattern: Scalars["String"];
-  regexp?: InputMaybe<Scalars["BooleanType"]>;
+  caseSensitive?: InputMaybe<Scalars['BooleanType']>;
+  pattern: Scalars['String'];
+  regexp?: InputMaybe<Scalars['BooleanType']>;
 };
 
 export type StringMultiLocaleField = {
-  __typename?: "StringMultiLocaleField";
+  __typename?: 'StringMultiLocaleField';
   locale?: Maybe<SiteLocale>;
-  value?: Maybe<Scalars["String"]>;
+  value?: Maybe<Scalars['String']>;
 };
 
 export type StringNonNullMultiLocaleField = {
-  __typename?: "StringNonNullMultiLocaleField";
+  __typename?: 'StringNonNullMultiLocaleField';
   locale?: Maybe<SiteLocale>;
-  value: Scalars["String"];
+  value: Scalars['String'];
 };
 
 export type Tag = {
-  __typename?: "Tag";
-  attributes?: Maybe<Scalars["MetaTagAttributes"]>;
-  content?: Maybe<Scalars["String"]>;
-  tag: Scalars["String"];
+  __typename?: 'Tag';
+  attributes?: Maybe<Scalars['MetaTagAttributes']>;
+  content?: Maybe<Scalars['String']>;
+  tag: Scalars['String'];
 };
 
 /** Block of type Testo (text_block) */
 export type TextBlockRecord = RecordInterface & {
-  __typename?: "TextBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'TextBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  alignCenter?: Maybe<Scalars["BooleanType"]>;
-  colorsRev?: Maybe<Scalars["BooleanType"]>;
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  alignCenter?: Maybe<Scalars['BooleanType']>;
+  colorsRev?: Maybe<Scalars['BooleanType']>;
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   link?: Maybe<ExternalLinkRecord>;
-  menuLabel?: Maybe<Scalars["String"]>;
-  text?: Maybe<Scalars["String"]>;
-  title: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  menuLabel?: Maybe<Scalars['String']>;
+  text?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Testo (text_block) */
 export type TextBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Testo (text_block) */
 export type TextBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Specifies how to filter by upload type */
@@ -2656,35 +2714,35 @@ export type TypeFilter = {
 /** Specifies how to filter by update datetime */
 export type UpdatedAtFilter = {
   /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
-  eq?: InputMaybe<Scalars["DateTime"]>;
+  eq?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter records with a value that's strictly greater than the one specified. Seconds and milliseconds are truncated from the argument. */
-  gt?: InputMaybe<Scalars["DateTime"]>;
+  gt?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's greater than or equal to than the one specified. Seconds and milliseconds are truncated from the argument. */
-  gte?: InputMaybe<Scalars["DateTime"]>;
+  gte?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's less than the one specified. Seconds and milliseconds are truncated from the argument. */
-  lt?: InputMaybe<Scalars["DateTime"]>;
+  lt?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's less or equal than the one specified. Seconds and milliseconds are truncated from the argument. */
-  lte?: InputMaybe<Scalars["DateTime"]>;
+  lte?: InputMaybe<Scalars['DateTime']>;
   /** Filter records with a value that's outside the specified minute range. Seconds and milliseconds are truncated from the argument. */
-  neq?: InputMaybe<Scalars["DateTime"]>;
+  neq?: InputMaybe<Scalars['DateTime']>;
 };
 
 /** Specifies how to filter by default alt */
 export type UploadAltFilter = {
   /** Search the uploads with the specified alt */
-  eq?: InputMaybe<Scalars["String"]>;
+  eq?: InputMaybe<Scalars['String']>;
   /** Filter uploads with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Search uploads with the specified values as default alt */
-  in?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter uploads based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude the uploads with the specified alt */
-  neq?: InputMaybe<Scalars["String"]>;
+  neq?: InputMaybe<Scalars['String']>;
   /** Search uploads that do not have the specified values as default alt */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Exclude uploads based on a regular expression */
   notMatches?: InputMaybe<StringMatchesFilter>;
 };
@@ -2692,7 +2750,7 @@ export type UploadAltFilter = {
 /** Specifies how to filter by auhtor */
 export type UploadAuthorFilter = {
   /** Filter uploads with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter uploads based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude uploads based on a regular expression */
@@ -2724,7 +2782,7 @@ export type UploadColorsFilter = {
 /** Specifies how to filter by copyright */
 export type UploadCopyrightFilter = {
   /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter uploads based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude uploads based on a regular expression */
@@ -2734,17 +2792,17 @@ export type UploadCopyrightFilter = {
 /** Specifies how to filter by creation datetime */
 export type UploadCreatedAtFilter = {
   /** Search for uploads with an exact match */
-  eq?: InputMaybe<Scalars["DateTime"]>;
+  eq?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's strictly greater than the one specified */
-  gt?: InputMaybe<Scalars["DateTime"]>;
+  gt?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's greater than or equal to the one specified */
-  gte?: InputMaybe<Scalars["DateTime"]>;
+  gte?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's less than the one specified */
-  lt?: InputMaybe<Scalars["DateTime"]>;
+  lt?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's less or equal than the one specified */
-  lte?: InputMaybe<Scalars["DateTime"]>;
+  lte?: InputMaybe<Scalars['DateTime']>;
   /** Exclude uploads with an exact match */
-  neq?: InputMaybe<Scalars["DateTime"]>;
+  neq?: InputMaybe<Scalars['DateTime']>;
 };
 
 /** Specifies how to filter by filename */
@@ -2786,67 +2844,67 @@ export type UploadFilter = {
 /** Specifies how to filter by format */
 export type UploadFormatFilter = {
   /** Search the asset with the specified format */
-  eq?: InputMaybe<Scalars["String"]>;
+  eq?: InputMaybe<Scalars['String']>;
   /** Search assets with the specified formats */
-  in?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Exclude the asset with the specified format */
-  neq?: InputMaybe<Scalars["String"]>;
+  neq?: InputMaybe<Scalars['String']>;
   /** Search assets that do not have the specified formats */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
 /** Specifies how to filter by height */
 export type UploadHeightFilter = {
   /** Search assets with the specified height */
-  eq?: InputMaybe<Scalars["IntType"]>;
+  eq?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger than the specified height */
-  gt?: InputMaybe<Scalars["IntType"]>;
+  gt?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger or equal to the specified height */
-  gte?: InputMaybe<Scalars["IntType"]>;
+  gte?: InputMaybe<Scalars['IntType']>;
   /** Search all assets smaller than the specified height */
-  lt?: InputMaybe<Scalars["IntType"]>;
+  lt?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger or equal to the specified height */
-  lte?: InputMaybe<Scalars["IntType"]>;
+  lte?: InputMaybe<Scalars['IntType']>;
   /** Search assets that do not have the specified height */
-  neq?: InputMaybe<Scalars["IntType"]>;
+  neq?: InputMaybe<Scalars['IntType']>;
 };
 
 /** Specifies how to filter by ID */
 export type UploadIdFilter = {
   /** Search the asset with the specified ID */
-  eq?: InputMaybe<Scalars["UploadId"]>;
+  eq?: InputMaybe<Scalars['UploadId']>;
   /** Search assets with the specified IDs */
-  in?: InputMaybe<Array<InputMaybe<Scalars["UploadId"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['UploadId']>>>;
   /** Exclude the asset with the specified ID */
-  neq?: InputMaybe<Scalars["UploadId"]>;
+  neq?: InputMaybe<Scalars['UploadId']>;
   /** Search assets that do not have the specified IDs */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["UploadId"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['UploadId']>>>;
 };
 
 /** Specifies how to filter by MD5 */
 export type UploadMd5Filter = {
   /** Search the asset with the specified MD5 */
-  eq?: InputMaybe<Scalars["String"]>;
+  eq?: InputMaybe<Scalars['String']>;
   /** Search assets with the specified MD5s */
-  in?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Exclude the asset with the specified MD5 */
-  neq?: InputMaybe<Scalars["String"]>;
+  neq?: InputMaybe<Scalars['String']>;
   /** Search assets that do not have the specified MD5s */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
 /** Specifies how to filter by mime type */
 export type UploadMimeTypeFilter = {
   /** Search the asset with the specified mime type */
-  eq?: InputMaybe<Scalars["String"]>;
+  eq?: InputMaybe<Scalars['String']>;
   /** Search assets with the specified mime types */
-  in?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter uploads based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude the asset with the specified mime type */
-  neq?: InputMaybe<Scalars["String"]>;
+  neq?: InputMaybe<Scalars['String']>;
   /** Search assets that do not have the specified mime types */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Exclude uploads based on a regular expression */
   notMatches?: InputMaybe<StringMatchesFilter>;
 };
@@ -2854,7 +2912,7 @@ export type UploadMimeTypeFilter = {
 /** Specifies how to filter by notes */
 export type UploadNotesFilter = {
   /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Filter uploads based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude uploads based on a regular expression */
@@ -2862,122 +2920,124 @@ export type UploadNotesFilter = {
 };
 
 export enum UploadOrderBy {
-  CreatedAtAsc = "_createdAt_ASC",
-  CreatedAtDesc = "_createdAt_DESC",
-  UpdatedAtAsc = "_updatedAt_ASC",
-  UpdatedAtDesc = "_updatedAt_DESC",
-  BasenameAsc = "basename_ASC",
-  BasenameDesc = "basename_DESC",
-  FilenameAsc = "filename_ASC",
-  FilenameDesc = "filename_DESC",
-  FormatAsc = "format_ASC",
-  FormatDesc = "format_DESC",
-  IdAsc = "id_ASC",
-  IdDesc = "id_DESC",
-  MimeTypeAsc = "mimeType_ASC",
-  MimeTypeDesc = "mimeType_DESC",
-  ResolutionAsc = "resolution_ASC",
-  ResolutionDesc = "resolution_DESC",
-  SizeAsc = "size_ASC",
-  SizeDesc = "size_DESC",
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
+  BasenameAsc = 'basename_ASC',
+  BasenameDesc = 'basename_DESC',
+  FilenameAsc = 'filename_ASC',
+  FilenameDesc = 'filename_DESC',
+  FormatAsc = 'format_ASC',
+  FormatDesc = 'format_DESC',
+  IdAsc = 'id_ASC',
+  IdDesc = 'id_DESC',
+  MimeTypeAsc = 'mimeType_ASC',
+  MimeTypeDesc = 'mimeType_DESC',
+  ResolutionAsc = 'resolution_ASC',
+  ResolutionDesc = 'resolution_DESC',
+  SizeAsc = 'size_ASC',
+  SizeDesc = 'size_DESC'
 }
 
 export enum UploadOrientation {
-  Landscape = "landscape",
-  Portrait = "portrait",
-  Square = "square",
+  Landscape = 'landscape',
+  Portrait = 'portrait',
+  Square = 'square'
 }
 
 /** Specifies how to filter by size */
 export type UploadSizeFilter = {
   /** Search assets with the specified size (in bytes) */
-  eq?: InputMaybe<Scalars["IntType"]>;
+  eq?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger than the specified size (in bytes) */
-  gt?: InputMaybe<Scalars["IntType"]>;
+  gt?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger or equal to the specified size (in bytes) */
-  gte?: InputMaybe<Scalars["IntType"]>;
+  gte?: InputMaybe<Scalars['IntType']>;
   /** Search all assets smaller than the specified size (in bytes) */
-  lt?: InputMaybe<Scalars["IntType"]>;
+  lt?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger or equal to the specified size (in bytes) */
-  lte?: InputMaybe<Scalars["IntType"]>;
+  lte?: InputMaybe<Scalars['IntType']>;
   /** Search assets that do not have the specified size (in bytes) */
-  neq?: InputMaybe<Scalars["IntType"]>;
+  neq?: InputMaybe<Scalars['IntType']>;
 };
 
 /** Specifies how to filter by tags */
 export type UploadTagsFilter = {
   /** Filter uploads linked to all of the specified tags */
-  allIn?: InputMaybe<Array<Scalars["String"]>>;
+  allIn?: InputMaybe<Array<Scalars['String']>>;
   /** Filter uploads linked to at least one of the specified tags */
-  anyIn?: InputMaybe<Array<Scalars["String"]>>;
+  anyIn?: InputMaybe<Array<Scalars['String']>>;
   /** Filter uploads linked to the specified tag */
-  contains?: InputMaybe<Scalars["String"]>;
+  contains?: InputMaybe<Scalars['String']>;
   /** Search for uploads with an exact match */
-  eq?: InputMaybe<Array<Scalars["String"]>>;
+  eq?: InputMaybe<Array<Scalars['String']>>;
   /** Filter uploads not linked to any of the specified tags */
-  notIn?: InputMaybe<Array<Scalars["String"]>>;
+  notIn?: InputMaybe<Array<Scalars['String']>>;
 };
 
 /** Specifies how to filter by default title */
 export type UploadTitleFilter = {
   /** Search the asset with the specified title */
-  eq?: InputMaybe<Scalars["String"]>;
+  eq?: InputMaybe<Scalars['String']>;
   /** Filter assets with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars["BooleanType"]>;
+  exists?: InputMaybe<Scalars['BooleanType']>;
   /** Search assets with the specified as default title */
-  in?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter uploads based on a regular expression */
   matches?: InputMaybe<StringMatchesFilter>;
   /** Exclude the asset with the specified title */
-  neq?: InputMaybe<Scalars["String"]>;
+  neq?: InputMaybe<Scalars['String']>;
   /** Search assets that do not have the specified as default title */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Exclude uploads based on a regular expression */
   notMatches?: InputMaybe<StringMatchesFilter>;
 };
 
 export enum UploadType {
-  Archive = "archive",
-  Audio = "audio",
-  Image = "image",
-  Pdfdocument = "pdfdocument",
-  Presentation = "presentation",
-  Richtext = "richtext",
-  Spreadsheet = "spreadsheet",
-  Video = "video",
+  Archive = 'archive',
+  Audio = 'audio',
+  Image = 'image',
+  Pdfdocument = 'pdfdocument',
+  Presentation = 'presentation',
+  Richtext = 'richtext',
+  Spreadsheet = 'spreadsheet',
+  Video = 'video'
 }
 
 /** Specifies how to filter by update datetime */
 export type UploadUpdatedAtFilter = {
   /** Search for uploads with an exact match */
-  eq?: InputMaybe<Scalars["DateTime"]>;
+  eq?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's strictly greater than the one specified */
-  gt?: InputMaybe<Scalars["DateTime"]>;
+  gt?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's greater than or equal to the one specified */
-  gte?: InputMaybe<Scalars["DateTime"]>;
+  gte?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's less than the one specified */
-  lt?: InputMaybe<Scalars["DateTime"]>;
+  lt?: InputMaybe<Scalars['DateTime']>;
   /** Filter uploads with a value that's less or equal than the one specified */
-  lte?: InputMaybe<Scalars["DateTime"]>;
+  lte?: InputMaybe<Scalars['DateTime']>;
   /** Exclude uploads with an exact match */
-  neq?: InputMaybe<Scalars["DateTime"]>;
+  neq?: InputMaybe<Scalars['DateTime']>;
 };
 
 export type UploadVideoField = {
-  __typename?: "UploadVideoField";
-  duration?: Maybe<Scalars["Int"]>;
-  framerate?: Maybe<Scalars["Int"]>;
-  mp4Url?: Maybe<Scalars["String"]>;
-  muxAssetId: Scalars["String"];
-  muxPlaybackId: Scalars["String"];
-  streamingUrl: Scalars["String"];
-  thumbnailUrl: Scalars["String"];
+  __typename?: 'UploadVideoField';
+  duration?: Maybe<Scalars['Int']>;
+  framerate?: Maybe<Scalars['Int']>;
+  mp4Url?: Maybe<Scalars['String']>;
+  muxAssetId: Scalars['String'];
+  muxPlaybackId: Scalars['String'];
+  streamingUrl: Scalars['String'];
+  thumbnailUrl: Scalars['String'];
 };
+
 
 export type UploadVideoFieldMp4UrlArgs = {
   exactRes?: InputMaybe<VideoMp4Res>;
   res?: InputMaybe<VideoMp4Res>;
 };
+
 
 export type UploadVideoFieldThumbnailUrlArgs = {
   format?: InputMaybe<MuxThumbnailFormatType>;
@@ -2986,40 +3046,41 @@ export type UploadVideoFieldThumbnailUrlArgs = {
 /** Specifies how to filter by width */
 export type UploadWidthFilter = {
   /** Search assets with the specified width */
-  eq?: InputMaybe<Scalars["IntType"]>;
+  eq?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger than the specified width */
-  gt?: InputMaybe<Scalars["IntType"]>;
+  gt?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger or equal to the specified width */
-  gte?: InputMaybe<Scalars["IntType"]>;
+  gte?: InputMaybe<Scalars['IntType']>;
   /** Search all assets smaller than the specified width */
-  lt?: InputMaybe<Scalars["IntType"]>;
+  lt?: InputMaybe<Scalars['IntType']>;
   /** Search all assets larger or equal to the specified width */
-  lte?: InputMaybe<Scalars["IntType"]>;
+  lte?: InputMaybe<Scalars['IntType']>;
   /** Search assets that do not have the specified width */
-  neq?: InputMaybe<Scalars["IntType"]>;
+  neq?: InputMaybe<Scalars['IntType']>;
 };
 
 /** Block of type Video (video_block) */
 export type VideoBlockRecord = RecordInterface & {
-  __typename?: "VideoBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'VideoBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  createdAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  createdAt: Scalars['DateTime'];
   externalVideo?: Maybe<VideoField>;
-  id: Scalars["ItemId"];
+  id: Scalars['ItemId'];
   internalVideo?: Maybe<VideoFileField>;
   poster?: Maybe<FileField>;
-  updatedAt: Scalars["DateTime"];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Video (video_block) */
 export type VideoBlockRecord_SeoMetaTagsArgs = {
@@ -3027,106 +3088,113 @@ export type VideoBlockRecord_SeoMetaTagsArgs = {
 };
 
 export type VideoField = {
-  __typename?: "VideoField";
-  height: Scalars["IntType"];
-  provider: Scalars["String"];
-  providerUid: Scalars["String"];
-  thumbnailUrl: Scalars["String"];
-  title: Scalars["String"];
-  url: Scalars["String"];
-  width: Scalars["IntType"];
+  __typename?: 'VideoField';
+  height: Scalars['IntType'];
+  provider: Scalars['String'];
+  providerUid: Scalars['String'];
+  thumbnailUrl: Scalars['String'];
+  title: Scalars['String'];
+  url: Scalars['String'];
+  width: Scalars['IntType'];
 };
 
 export type VideoFileField = FileFieldInterface & {
-  __typename?: "VideoFileField";
-  _createdAt: Scalars["DateTime"];
-  _updatedAt: Scalars["DateTime"];
-  alt?: Maybe<Scalars["String"]>;
-  author?: Maybe<Scalars["String"]>;
-  basename: Scalars["String"];
-  blurUpThumb?: Maybe<Scalars["String"]>;
-  blurhash?: Maybe<Scalars["String"]>;
+  __typename?: 'VideoFileField';
+  _createdAt: Scalars['DateTime'];
+  _updatedAt: Scalars['DateTime'];
+  alt?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
+  basename: Scalars['String'];
+  blurUpThumb?: Maybe<Scalars['String']>;
+  blurhash?: Maybe<Scalars['String']>;
   colors: Array<ColorField>;
-  copyright?: Maybe<Scalars["String"]>;
-  customData: Scalars["CustomData"];
-  exifInfo: Scalars["CustomData"];
-  filename: Scalars["String"];
+  copyright?: Maybe<Scalars['String']>;
+  customData: Scalars['CustomData'];
+  exifInfo: Scalars['CustomData'];
+  filename: Scalars['String'];
   focalPoint?: Maybe<FocalPoint>;
-  format: Scalars["String"];
-  height?: Maybe<Scalars["IntType"]>;
-  id: Scalars["UploadId"];
-  md5: Scalars["String"];
-  mimeType: Scalars["String"];
-  notes?: Maybe<Scalars["String"]>;
+  format: Scalars['String'];
+  height?: Maybe<Scalars['IntType']>;
+  id: Scalars['UploadId'];
+  md5: Scalars['String'];
+  mimeType: Scalars['String'];
+  notes?: Maybe<Scalars['String']>;
   responsiveImage?: Maybe<ResponsiveImage>;
-  size: Scalars["IntType"];
-  smartTags: Array<Scalars["String"]>;
-  tags: Array<Scalars["String"]>;
-  thumbhash?: Maybe<Scalars["String"]>;
-  title?: Maybe<Scalars["String"]>;
-  url: Scalars["String"];
+  size: Scalars['IntType'];
+  smartTags: Array<Scalars['String']>;
+  tags: Array<Scalars['String']>;
+  thumbhash?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  url: Scalars['String'];
   video: UploadVideoField;
-  width?: Maybe<Scalars["IntType"]>;
+  width?: Maybe<Scalars['IntType']>;
 };
+
 
 export type VideoFileFieldAltArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type VideoFileFieldBlurUpThumbArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
-  punch?: Scalars["Float"];
-  quality?: Scalars["Int"];
-  size?: Scalars["Int"];
+  punch?: Scalars['Float'];
+  quality?: Scalars['Int'];
+  size?: Scalars['Int'];
 };
+
 
 export type VideoFileFieldCustomDataArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type VideoFileFieldFocalPointArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type VideoFileFieldResponsiveImageArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   imgixParams?: InputMaybe<ImgixParams>;
   locale?: InputMaybe<SiteLocale>;
-  sizes?: InputMaybe<Scalars["String"]>;
+  sizes?: InputMaybe<Scalars['String']>;
 };
+
 
 export type VideoFileFieldTitleArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 export type VideoFileFieldUrlArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
 };
 
 export enum VideoMp4Res {
-  High = "high",
-  Low = "low",
-  Medium = "medium",
+  High = 'high',
+  Low = 'low',
+  Medium = 'medium'
 }
 
 /** Record of type Impostazioni grafiche (visual_style) */
 export type VisualStyleRecord = RecordInterface & {
-  __typename?: "VisualStyleRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'VisualStyleRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
   colorAccent: ColorField;
   colorAccentRev: ColorField;
   colorBack: ColorField;
@@ -3137,29 +3205,30 @@ export type VisualStyleRecord = RecordInterface & {
   colorText: ColorField;
   colorTextAlt: ColorField;
   colorTextRev: ColorField;
-  createdAt: Scalars["DateTime"];
-  fontBaseHeight?: Maybe<Scalars["IntType"]>;
-  fontBaseSize: Scalars["IntType"];
-  fontBody: Scalars["String"];
-  fontHeading: Scalars["String"];
-  fontLgHeight: Scalars["IntType"];
-  fontLgSize: Scalars["IntType"];
-  fontSmHeight: Scalars["IntType"];
-  fontSmSize: Scalars["IntType"];
-  fontXlHeight: Scalars["IntType"];
-  fontXlSize: Scalars["IntType"];
-  fontXsHeight: Scalars["IntType"];
-  fontXsSize: Scalars["IntType"];
-  fontXxlHeight: Scalars["IntType"];
-  fontXxlSize: Scalars["IntType"];
-  fontXxxlHeight: Scalars["IntType"];
-  fontXxxlSize: Scalars["IntType"];
-  id: Scalars["ItemId"];
+  createdAt: Scalars['DateTime'];
+  fontBaseHeight?: Maybe<Scalars['IntType']>;
+  fontBaseSize: Scalars['IntType'];
+  fontBody: Scalars['String'];
+  fontHeading: Scalars['String'];
+  fontLgHeight: Scalars['IntType'];
+  fontLgSize: Scalars['IntType'];
+  fontSmHeight: Scalars['IntType'];
+  fontSmSize: Scalars['IntType'];
+  fontXlHeight: Scalars['IntType'];
+  fontXlSize: Scalars['IntType'];
+  fontXsHeight: Scalars['IntType'];
+  fontXsSize: Scalars['IntType'];
+  fontXxlHeight: Scalars['IntType'];
+  fontXxlSize: Scalars['IntType'];
+  fontXxxlHeight: Scalars['IntType'];
+  fontXxxlSize: Scalars['IntType'];
+  id: Scalars['ItemId'];
   logo: FileField;
   logoRev: FileField;
-  updatedAt: Scalars["DateTime"];
-  uppercaseTitles?: Maybe<Scalars["BooleanType"]>;
+  updatedAt: Scalars['DateTime'];
+  uppercaseTitles?: Maybe<Scalars['BooleanType']>;
 };
+
 
 /** Record of type Impostazioni grafiche (visual_style) */
 export type VisualStyleRecord_SeoMetaTagsArgs = {
@@ -3168,3211 +3237,143 @@ export type VisualStyleRecord_SeoMetaTagsArgs = {
 
 /** Block of type Widget (widget_sub_block) */
 export type WidgetSubBlockRecord = RecordInterface & {
-  __typename?: "WidgetSubBlockRecord";
-  _createdAt: Scalars["DateTime"];
-  _firstPublishedAt?: Maybe<Scalars["DateTime"]>;
-  _isValid: Scalars["BooleanType"];
-  _modelApiKey: Scalars["String"];
-  _publicationScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _publishedAt?: Maybe<Scalars["DateTime"]>;
+  __typename?: 'WidgetSubBlockRecord';
+  _createdAt: Scalars['DateTime'];
+  _firstPublishedAt?: Maybe<Scalars['DateTime']>;
+  _isValid: Scalars['BooleanType'];
+  _modelApiKey: Scalars['String'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']>;
+  _publishedAt?: Maybe<Scalars['DateTime']>;
   /** SEO meta tags */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
-  _unpublishingScheduledAt?: Maybe<Scalars["DateTime"]>;
-  _updatedAt: Scalars["DateTime"];
-  createdAt: Scalars["DateTime"];
-  id: Scalars["ItemId"];
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']>;
+  _updatedAt: Scalars['DateTime'];
+  createdAt: Scalars['DateTime'];
+  id: Scalars['ItemId'];
   image: AltTitleFileField;
-  text: Scalars["String"];
-  title: Scalars["String"];
-  updatedAt: Scalars["DateTime"];
+  text: Scalars['String'];
+  title: Scalars['String'];
+  updatedAt: Scalars['DateTime'];
 };
+
 
 /** Block of type Widget (widget_sub_block) */
 export type WidgetSubBlockRecord_SeoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+
 /** Block of type Widget (widget_sub_block) */
 export type WidgetSubBlockRecordTextArgs = {
-  markdown?: InputMaybe<Scalars["Boolean"]>;
+  markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type FocalPoint = {
-  __typename?: "focalPoint";
-  x: Scalars["FloatType"];
-  y: Scalars["FloatType"];
+  __typename?: 'focalPoint';
+  x: Scalars['FloatType'];
+  y: Scalars['FloatType'];
 };
 
-export type LayoutQueryVariables = Exact<{ [key: string]: never }>;
+export type LayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
-export type LayoutQuery = {
-  __typename?: "Query";
-  site: {
-    __typename?: "Site";
-    locales: Array<SiteLocale>;
-    faviconMetaTags: Array<{
-      __typename?: "Tag";
-      tag: string;
-      attributes?: any | null;
-      content?: string | null;
-    }>;
-    globalSeo?: {
-      __typename?: "GlobalSeoField";
-      siteName?: string | null;
-    } | null;
-  };
-  visual?: {
-    __typename?: "VisualStyleRecord";
-    uppercaseTitles?: any | null;
-    fontBody: string;
-    fontHeading: string;
-    fontBaseHeight?: any | null;
-    fontBaseSize: any;
-    fontLgHeight: any;
-    fontLgSize: any;
-    fontSmHeight: any;
-    fontXlHeight: any;
-    fontSmSize: any;
-    fontXlSize: any;
-    fontXsHeight: any;
-    fontXsSize: any;
-    fontXxlHeight: any;
-    fontXxlSize: any;
-    fontXxxlHeight: any;
-    fontXxxlSize: any;
-    logo: { __typename?: "FileField"; url: string };
-    colorText: { __typename?: "ColorField"; red: any; green: any; blue: any };
-    colorTextAlt: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-    colorTextRev: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-    colorBack: { __typename?: "ColorField"; red: any; green: any; blue: any };
-    colorBackAlt: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-    colorBackRev: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-    colorAccent: { __typename?: "ColorField"; red: any; green: any; blue: any };
-    colorAccentRev: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-    colorButton: { __typename?: "ColorField"; red: any; green: any; blue: any };
-    colorButtonBack: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-  } | null;
-};
 
-export type PageQueryVariables = Exact<{ [key: string]: never }>;
+export type LayoutQuery = { __typename?: 'Query', site: { __typename?: 'Site', locales: Array<SiteLocale>, faviconMetaTags: Array<{ __typename?: 'Tag', tag: string, attributes?: any | null, content?: string | null }>, globalSeo?: { __typename?: 'GlobalSeoField', siteName?: string | null } | null }, visual?: { __typename?: 'VisualStyleRecord', uppercaseTitles?: any | null, fontBody: string, fontHeading: string, fontBaseHeight?: any | null, fontBaseSize: any, fontLgHeight: any, fontLgSize: any, fontSmHeight: any, fontXlHeight: any, fontSmSize: any, fontXlSize: any, fontXsHeight: any, fontXsSize: any, fontXxlHeight: any, fontXxlSize: any, fontXxxlHeight: any, fontXxxlSize: any, logo: { __typename?: 'FileField', url: string }, colorText: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorTextAlt: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorTextRev: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorBack: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorBackAlt: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorBackRev: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorAccent: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorAccentRev: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorButton: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorButtonBack: { __typename?: 'ColorField', red: any, green: any, blue: any } } | null };
 
-export type PageQuery = {
-  __typename?: "Query";
-  visual?: {
-    __typename?: "VisualStyleRecord";
-    uppercaseTitles?: any | null;
-    logo: { __typename?: "FileField"; url: string };
-    logoRev: { __typename?: "FileField"; url: string };
-    colorButton: { __typename?: "ColorField"; red: any; green: any; blue: any };
-    colorButtonBack: {
-      __typename?: "ColorField";
-      red: any;
-      green: any;
-      blue: any;
-    };
-    colorText: { __typename?: "ColorField"; red: any; green: any; blue: any };
-    colorBack: { __typename?: "ColorField"; red: any; green: any; blue: any };
-  } | null;
-  site: {
-    __typename?: "Site";
-    locales: Array<SiteLocale>;
-    globalSeo?: {
-      __typename?: "GlobalSeoField";
-      siteName?: string | null;
-    } | null;
-  };
-  org?: {
-    __typename?: "OrganizationRecord";
-    emailAddress?: string | null;
-    facebookUrl?: string | null;
-    instagramUrl?: string | null;
-    newsletterFormUrl?: string | null;
-    newsletterTitle?: string | null;
-    newsletterLabel?: string | null;
-    contactsMenuLabel?: string | null;
-    phoneNumber?: string | null;
-    streetAddress?: string | null;
-    facebookPixelId?: string | null;
-    googleAnalyticsId?: string | null;
-    googleTagManagerId?: string | null;
-    iubendaPolicyId: string;
-    iubendaSiteId: string;
-  } | null;
-  page?: {
-    __typename?: "LandingRecord";
-    _locales: Array<SiteLocale>;
-    seo: Array<{
-      __typename?: "Tag";
-      attributes?: any | null;
-      content?: string | null;
-      tag: string;
-    }>;
-    headerBlocks: Array<
-      { __typename?: "HeroImageBlockRecord" } & {
-        " $fragmentRefs"?: { Header_BlockFragment: Header_BlockFragment };
-      }
-    >;
-    contentBlocks: Array<
-      | { __typename?: "BannerCtaBlockRecord" }
-      | { __typename?: "CarouselBlockRecord"; id: any }
-      | { __typename?: "CoverBlockRecord"; id: any }
-      | { __typename?: "FlagBlockRecord"; id: any; menuLabel?: string | null }
-      | { __typename?: "FocusBlockRecord"; id: any; menuLabel?: string | null }
-      | {
-          __typename?: "PartnersBlockRecord";
-          id: any;
-          menuLabel?: string | null;
-        }
-      | { __typename?: "ProductBlockRecord"; id: any }
-      | { __typename?: "QuoteBlockRecord"; id: any }
-      | { __typename?: "TextBlockRecord"; id: any; menuLabel?: string | null }
-      | { __typename?: "VideoBlockRecord" }
-    >;
-    blocks: Array<
-      | ({ __typename?: "BannerCtaBlockRecord" } & {
-          " $fragmentRefs"?: { Banner_BlockFragment: Banner_BlockFragment };
-        })
-      | ({ __typename?: "CarouselBlockRecord" } & {
-          " $fragmentRefs"?: { Carousel_BlockFragment: Carousel_BlockFragment };
-        })
-      | ({ __typename?: "CoverBlockRecord" } & {
-          " $fragmentRefs"?: { Cover_BlockFragment: Cover_BlockFragment };
-        })
-      | ({ __typename?: "FlagBlockRecord" } & {
-          " $fragmentRefs"?: { Flag_BlockFragment: Flag_BlockFragment };
-        })
-      | ({ __typename?: "FocusBlockRecord" } & {
-          " $fragmentRefs"?: { Focus_BlockFragment: Focus_BlockFragment };
-        })
-      | ({ __typename?: "PartnersBlockRecord" } & {
-          " $fragmentRefs"?: { Partners_BlockFragment: Partners_BlockFragment };
-        })
-      | ({ __typename?: "ProductBlockRecord" } & {
-          " $fragmentRefs"?: { Product_BlockFragment: Product_BlockFragment };
-        })
-      | ({ __typename?: "QuoteBlockRecord" } & {
-          " $fragmentRefs"?: { Quote_BlockFragment: Quote_BlockFragment };
-        })
-      | ({ __typename?: "TextBlockRecord" } & {
-          " $fragmentRefs"?: { Text_BlockFragment: Text_BlockFragment };
-        })
-      | { __typename?: "VideoBlockRecord" }
-    >;
-  } | null;
-};
+export type PageQueryVariables = Exact<{ [key: string]: never; }>;
 
-export type DatoImage_ResponsiveImageFragment = {
-  __typename?: "ResponsiveImage";
-  src: string;
-  srcSet: string;
-  base64?: string | null;
-  width: any;
-  height: any;
-  alt?: string | null;
-  title?: string | null;
-} & { " $fragmentName"?: "DatoImage_ResponsiveImageFragment" };
 
-export type Banner_BlockFragment = {
-  __typename?: "BannerCtaBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  cta?: string | null;
-  menuLabel?: string | null;
-  mainText?: string | null;
-  mainTitle?: string | null;
-  url?: string | null;
-  imageBg: {
-    __typename?: "AltTitleFileField";
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  };
-} & { " $fragmentName"?: "Banner_BlockFragment" };
+export type PageQuery = { __typename?: 'Query', visual?: { __typename?: 'VisualStyleRecord', uppercaseTitles?: any | null, logo: { __typename?: 'FileField', url: string }, logoRev: { __typename?: 'FileField', url: string }, colorButton: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorButtonBack: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorText: { __typename?: 'ColorField', red: any, green: any, blue: any }, colorBack: { __typename?: 'ColorField', red: any, green: any, blue: any } } | null, site: { __typename?: 'Site', locales: Array<SiteLocale>, globalSeo?: { __typename?: 'GlobalSeoField', siteName?: string | null } | null }, org?: { __typename?: 'OrganizationRecord', emailAddress?: string | null, facebookUrl?: string | null, instagramUrl?: string | null, newsletterFormUrl?: string | null, newsletterTitle?: string | null, newsletterLabel?: string | null, contactsMenuLabel?: string | null, phoneNumber?: string | null, streetAddress?: string | null, facebookPixelId?: string | null, googleAnalyticsId?: string | null, googleTagManagerId?: string | null, iubendaPolicyId: string, iubendaSiteId: string } | null, page?: { __typename?: 'LandingRecord', _locales: Array<SiteLocale>, seo: Array<{ __typename?: 'Tag', attributes?: any | null, content?: string | null, tag: string }>, headerBlocks: Array<(
+      { __typename?: 'HeroImageBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Header_BlockFragment': Header_BlockFragment } }
+    )>, contentBlocks: Array<{ __typename?: 'BannerCtaBlockRecord' } | { __typename?: 'CarouselBlockRecord', id: any } | { __typename?: 'CoverBlockRecord', id: any } | { __typename?: 'FlagBlockRecord', id: any, menuLabel?: string | null } | { __typename?: 'FocusBlockRecord', id: any, menuLabel?: string | null } | { __typename?: 'PartnersBlockRecord', id: any, menuLabel?: string | null } | { __typename?: 'ProductBlockRecord', id: any } | { __typename?: 'QuoteBlockRecord', id: any } | { __typename?: 'TextBlockRecord', id: any, menuLabel?: string | null } | { __typename?: 'VideoBlockRecord' }>, blocks: Array<(
+      { __typename?: 'BannerCtaBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Banner_BlockFragment': Banner_BlockFragment } }
+    ) | (
+      { __typename?: 'CarouselBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Carousel_BlockFragment': Carousel_BlockFragment } }
+    ) | (
+      { __typename?: 'CoverBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Cover_BlockFragment': Cover_BlockFragment } }
+    ) | (
+      { __typename?: 'FlagBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Flag_BlockFragment': Flag_BlockFragment } }
+    ) | (
+      { __typename?: 'FocusBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Focus_BlockFragment': Focus_BlockFragment } }
+    ) | (
+      { __typename?: 'PartnersBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Partners_BlockFragment': Partners_BlockFragment } }
+    ) | (
+      { __typename?: 'ProductBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Product_BlockFragment': Product_BlockFragment } }
+    ) | (
+      { __typename?: 'QuoteBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Quote_BlockFragment': Quote_BlockFragment } }
+    ) | (
+      { __typename?: 'TextBlockRecord' }
+      & { ' $fragmentRefs'?: { 'Text_BlockFragment': Text_BlockFragment } }
+    ) | { __typename?: 'VideoBlockRecord' }> } | null };
 
-export type Carousel_BlockFragment = {
-  __typename?: "CarouselBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  colorsRev?: any | null;
-  images: Array<{
-    __typename?: "AltTitleFileField";
-    id: any;
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  }>;
-} & { " $fragmentName"?: "Carousel_BlockFragment" };
+export type DatoImage_ResponsiveImageFragment = { __typename?: 'ResponsiveImage', src: string, srcSet: string, base64?: string | null, width: any, height: any, alt?: string | null, title?: string | null } & { ' $fragmentName'?: 'DatoImage_ResponsiveImageFragment' };
 
-export type Cover_BlockFragment = {
-  __typename?: "CoverBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  colorsRev?: any | null;
-  images: Array<{
-    __typename?: "AltTitleFileField";
-    id: any;
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  }>;
-} & { " $fragmentName"?: "Cover_BlockFragment" };
+export type Banner_BlockFragment = { __typename?: 'BannerCtaBlockRecord', id: any, _modelApiKey: string, cta?: string | null, menuLabel?: string | null, mainText?: string | null, mainTitle?: string | null, url?: string | null, imageBg: { __typename?: 'AltTitleFileField', responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null } } & { ' $fragmentName'?: 'Banner_BlockFragment' };
 
-export type Flag_BlockFragment = {
-  __typename?: "FlagBlockRecord";
-  _modelApiKey: string;
-  menuLabel?: string | null;
-  label: string;
-  text: string;
-  title: string;
-  alignRev?: any | null;
-  colorsRev?: any | null;
-  image: {
-    __typename?: "AltTitleFileField";
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  };
-} & { " $fragmentName"?: "Flag_BlockFragment" };
+export type Carousel_BlockFragment = { __typename?: 'CarouselBlockRecord', id: any, _modelApiKey: string, colorsRev?: any | null, images: Array<{ __typename?: 'AltTitleFileField', id: any, responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null }> } & { ' $fragmentName'?: 'Carousel_BlockFragment' };
 
-export type Focus_BlockFragment = {
-  __typename?: "FocusBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  menuLabel?: string | null;
-  text: string;
-  mainTitle?: string | null;
-  elements: Array<{
-    __typename?: "WidgetSubBlockRecord";
-    id: any;
-    title: string;
-    text: string;
-    image: {
-      __typename?: "AltTitleFileField";
-      responsiveImage?:
-        | ({ __typename?: "ResponsiveImage" } & {
-            " $fragmentRefs"?: {
-              DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-            };
-          })
-        | null;
-    };
-  }>;
-} & { " $fragmentName"?: "Focus_BlockFragment" };
+export type Cover_BlockFragment = { __typename?: 'CoverBlockRecord', id: any, _modelApiKey: string, colorsRev?: any | null, images: Array<{ __typename?: 'AltTitleFileField', id: any, responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null }> } & { ' $fragmentName'?: 'Cover_BlockFragment' };
 
-export type Partners_BlockFragment = {
-  __typename?: "PartnersBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  menuLabel?: string | null;
-  title: string;
-  images: Array<{
-    __typename?: "AltTitleFileField";
-    format: string;
-    url: string;
-    title: string;
-    alt: string;
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  }>;
-} & { " $fragmentName"?: "Partners_BlockFragment" };
+export type Flag_BlockFragment = { __typename?: 'FlagBlockRecord', _modelApiKey: string, menuLabel?: string | null, label: string, text: string, title: string, alignRev?: any | null, colorsRev?: any | null, image: { __typename?: 'AltTitleFileField', responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null } } & { ' $fragmentName'?: 'Flag_BlockFragment' };
 
-export type Product_BlockFragment = {
-  __typename?: "ProductBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  label: string;
-  title: string;
-  text: string;
-  subTitle?: string | null;
-  subText?: string | null;
-  alignRev?: any | null;
-  image: {
-    __typename?: "AltTitleFileField";
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  };
-  smallImages: Array<{
-    __typename?: "AltTitleFileField";
-    id: any;
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  }>;
-} & { " $fragmentName"?: "Product_BlockFragment" };
+export type Focus_BlockFragment = { __typename?: 'FocusBlockRecord', id: any, _modelApiKey: string, menuLabel?: string | null, text: string, mainTitle?: string | null, elements: Array<{ __typename?: 'WidgetSubBlockRecord', id: any, title: string, text: string, image: { __typename?: 'AltTitleFileField', responsiveImage?: (
+        { __typename?: 'ResponsiveImage' }
+        & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+      ) | null } }> } & { ' $fragmentName'?: 'Focus_BlockFragment' };
 
-export type Quote_BlockFragment = {
-  __typename?: "QuoteBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  text: string;
-  authorName: string;
-} & { " $fragmentName"?: "Quote_BlockFragment" };
+export type Partners_BlockFragment = { __typename?: 'PartnersBlockRecord', id: any, _modelApiKey: string, menuLabel?: string | null, title: string, images: Array<{ __typename?: 'AltTitleFileField', format: string, url: string, title: string, alt: string, responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null }> } & { ' $fragmentName'?: 'Partners_BlockFragment' };
 
-export type Text_BlockFragment = {
-  __typename?: "TextBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  menuLabel?: string | null;
-  title: string;
-  alignCenter?: any | null;
-  colorsRev?: any | null;
-  mainText?: string | null;
-  link?: {
-    __typename?: "ExternalLinkRecord";
-    label: string;
-    url: string;
-  } | null;
-} & { " $fragmentName"?: "Text_BlockFragment" };
+export type Product_BlockFragment = { __typename?: 'ProductBlockRecord', id: any, _modelApiKey: string, label: string, title: string, text: string, subTitle?: string | null, subText?: string | null, alignRev?: any | null, image: { __typename?: 'AltTitleFileField', responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null }, smallImages: Array<{ __typename?: 'AltTitleFileField', id: any, responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null }> } & { ' $fragmentName'?: 'Product_BlockFragment' };
 
-export type Header_BlockFragment = {
-  __typename?: "HeroImageBlockRecord";
-  id: any;
-  _modelApiKey: string;
-  title: string;
-  alignCenter?: any | null;
-  hideTitle?: any | null;
-  image: {
-    __typename?: "AltTitleFileField";
-    responsiveImage?:
-      | ({ __typename?: "ResponsiveImage" } & {
-          " $fragmentRefs"?: {
-            DatoImage_ResponsiveImageFragment: DatoImage_ResponsiveImageFragment;
-          };
-        })
-      | null;
-  };
-} & { " $fragmentName"?: "Header_BlockFragment" };
+export type Quote_BlockFragment = { __typename?: 'QuoteBlockRecord', id: any, _modelApiKey: string, text: string, authorName: string } & { ' $fragmentName'?: 'Quote_BlockFragment' };
 
-export const DatoImage_ResponsiveImageFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<DatoImage_ResponsiveImageFragment, unknown>;
-export const Banner_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Banner_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "BannerCtaBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainText" },
-            name: { kind: "Name", value: "text" },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainTitle" },
-            name: { kind: "Name", value: "title" },
-          },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "imageBg" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "crop" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1550" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "url" },
-            name: { kind: "Name", value: "link" },
-          },
-          { kind: "Field", name: { kind: "Name", value: "cta" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Banner_BlockFragment, unknown>;
-export const Carousel_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Carousel_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "CarouselBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "images" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "(min-width: 1024px) 50vw, 100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "clip" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1200" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "600" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Carousel_BlockFragment, unknown>;
-export const Cover_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Cover_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "CoverBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "images" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "crop" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1550" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Cover_BlockFragment, unknown>;
-export const Flag_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Flag_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "FlagBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          { kind: "Field", name: { kind: "Name", value: "label" } },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          { kind: "Field", name: { kind: "Name", value: "alignRev" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "image" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "(min-width: 1024px) 50vw, 100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "max" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Flag_BlockFragment, unknown>;
-export const Focus_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Focus_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "FocusBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainTitle" },
-            name: { kind: "Name", value: "title" },
-          },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "elements" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                { kind: "Field", name: { kind: "Name", value: "title" } },
-                { kind: "Field", name: { kind: "Name", value: "text" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "image" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "responsiveImage" },
-                        arguments: [
-                          {
-                            kind: "Argument",
-                            name: { kind: "Name", value: "sizes" },
-                            value: {
-                              kind: "StringValue",
-                              value: "(min-width: 1024px) 33vw, 100vw",
-                              block: false,
-                            },
-                          },
-                          {
-                            kind: "Argument",
-                            name: { kind: "Name", value: "imgixParams" },
-                            value: {
-                              kind: "ObjectValue",
-                              fields: [
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "fit" },
-                                  value: { kind: "EnumValue", value: "crop" },
-                                },
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "w" },
-                                  value: { kind: "IntValue", value: "800" },
-                                },
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "h" },
-                                  value: { kind: "IntValue", value: "800" },
-                                },
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "auto" },
-                                  value: {
-                                    kind: "ListValue",
-                                    values: [
-                                      { kind: "EnumValue", value: "format" },
-                                      { kind: "EnumValue", value: "compress" },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: {
-                                kind: "Name",
-                                value: "DatoImage_responsiveImage",
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Focus_BlockFragment, unknown>;
-export const Partners_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Partners_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "PartnersBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "images" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "format" } },
-                { kind: "Field", name: { kind: "Name", value: "url" } },
-                { kind: "Field", name: { kind: "Name", value: "title" } },
-                { kind: "Field", name: { kind: "Name", value: "alt" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "230px",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "clip" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "100" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Partners_BlockFragment, unknown>;
-export const Product_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Product_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ProductBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "label" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          { kind: "Field", name: { kind: "Name", value: "subTitle" } },
-          { kind: "Field", name: { kind: "Name", value: "subText" } },
-          { kind: "Field", name: { kind: "Name", value: "alignRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "image" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "(min-width: 1024px) 50vw, 80vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "max" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "smallImages" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "clip" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "70" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Product_BlockFragment, unknown>;
-export const Quote_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Quote_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "QuoteBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          { kind: "Field", name: { kind: "Name", value: "authorName" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Quote_BlockFragment, unknown>;
-export const Text_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Text_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "TextBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainText" },
-            name: { kind: "Name", value: "text" },
-          },
-          { kind: "Field", name: { kind: "Name", value: "alignCenter" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "link" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "label" } },
-                { kind: "Field", name: { kind: "Name", value: "url" } },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Text_BlockFragment, unknown>;
-export const Header_BlockFragmentDoc = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Header_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "HeroImageBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          { kind: "Field", name: { kind: "Name", value: "alignCenter" } },
-          { kind: "Field", name: { kind: "Name", value: "hideTitle" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "image" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "max" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1550" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "850" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<Header_BlockFragment, unknown>;
-export const LayoutDocument = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "OperationDefinition",
-      operation: "query",
-      name: { kind: "Name", value: "Layout" },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "site" },
-            name: { kind: "Name", value: "_site" },
-            arguments: [
-              {
-                kind: "Argument",
-                name: { kind: "Name", value: "locale" },
-                value: { kind: "EnumValue", value: "it" },
-              },
-            ],
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "faviconMetaTags" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "tag" } },
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "attributes" },
-                      },
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "content" },
-                      },
-                    ],
-                  },
-                },
-                { kind: "Field", name: { kind: "Name", value: "locales" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "globalSeo" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "siteName" },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "visual" },
-            name: { kind: "Name", value: "visualStyle" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "logo" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "url" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "uppercaseTitles" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorText" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorTextAlt" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorTextRev" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorBack" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorBackAlt" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorBackRev" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorAccent" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorAccentRev" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorButton" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorButtonBack" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                { kind: "Field", name: { kind: "Name", value: "fontBody" } },
-                { kind: "Field", name: { kind: "Name", value: "fontHeading" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontBaseHeight" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontBaseSize" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontLgHeight" },
-                },
-                { kind: "Field", name: { kind: "Name", value: "fontLgSize" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontSmHeight" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontXlHeight" },
-                },
-                { kind: "Field", name: { kind: "Name", value: "fontSmSize" } },
-                { kind: "Field", name: { kind: "Name", value: "fontXlSize" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontXsHeight" },
-                },
-                { kind: "Field", name: { kind: "Name", value: "fontXsSize" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontXxlHeight" },
-                },
-                { kind: "Field", name: { kind: "Name", value: "fontXxlSize" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontXxxlHeight" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "fontXxxlSize" },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<LayoutQuery, LayoutQueryVariables>;
-export const PageDocument = {
-  kind: "Document",
-  definitions: [
-    {
-      kind: "OperationDefinition",
-      operation: "query",
-      name: { kind: "Name", value: "Page" },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "visual" },
-            name: { kind: "Name", value: "visualStyle" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "logo" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "url" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "logoRev" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "url" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "uppercaseTitles" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorButton" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorButtonBack" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorText" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "colorBack" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      { kind: "Field", name: { kind: "Name", value: "red" } },
-                      { kind: "Field", name: { kind: "Name", value: "green" } },
-                      { kind: "Field", name: { kind: "Name", value: "blue" } },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "site" },
-            name: { kind: "Name", value: "_site" },
-            arguments: [
-              {
-                kind: "Argument",
-                name: { kind: "Name", value: "locale" },
-                value: { kind: "EnumValue", value: "it" },
-              },
-            ],
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "locales" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "globalSeo" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "siteName" },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "org" },
-            name: { kind: "Name", value: "organization" },
-            arguments: [
-              {
-                kind: "Argument",
-                name: { kind: "Name", value: "locale" },
-                value: { kind: "EnumValue", value: "it" },
-              },
-            ],
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "emailAddress" },
-                },
-                { kind: "Field", name: { kind: "Name", value: "facebookUrl" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "instagramUrl" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "newsletterFormUrl" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "newsletterTitle" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "newsletterLabel" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "contactsMenuLabel" },
-                },
-                { kind: "Field", name: { kind: "Name", value: "phoneNumber" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "streetAddress" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "facebookPixelId" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "googleAnalyticsId" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "googleTagManagerId" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "iubendaPolicyId" },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "iubendaSiteId" },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "page" },
-            name: { kind: "Name", value: "landing" },
-            arguments: [
-              {
-                kind: "Argument",
-                name: { kind: "Name", value: "locale" },
-                value: { kind: "EnumValue", value: "it" },
-              },
-            ],
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  alias: { kind: "Name", value: "seo" },
-                  name: { kind: "Name", value: "_seoMetaTags" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "attributes" },
-                      },
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "content" },
-                      },
-                      { kind: "Field", name: { kind: "Name", value: "tag" } },
-                    ],
-                  },
-                },
-                { kind: "Field", name: { kind: "Name", value: "_locales" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "headerBlocks" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: { kind: "Name", value: "Header_block" },
-                      },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "contentBlocks" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "CarouselBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "CoverBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "FlagBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "menuLabel" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "FocusBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "menuLabel" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "ProductBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "TextBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "menuLabel" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "QuoteBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "PartnersBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "id" },
-                            },
-                            {
-                              kind: "Field",
-                              name: { kind: "Name", value: "menuLabel" },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-                {
-                  kind: "Field",
-                  alias: { kind: "Name", value: "blocks" },
-                  name: { kind: "Name", value: "contentBlocks" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "BannerCtaBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Banner_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "CarouselBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Carousel_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "CoverBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Cover_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "FlagBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Flag_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "FocusBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Focus_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "ProductBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Product_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "TextBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Text_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "QuoteBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Quote_block" },
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        kind: "InlineFragment",
-                        typeCondition: {
-                          kind: "NamedType",
-                          name: { kind: "Name", value: "PartnersBlockRecord" },
-                        },
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: { kind: "Name", value: "Partners_block" },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "DatoImage_responsiveImage" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ResponsiveImage" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "src" } },
-          { kind: "Field", name: { kind: "Name", value: "srcSet" } },
-          { kind: "Field", name: { kind: "Name", value: "base64" } },
-          { kind: "Field", name: { kind: "Name", value: "width" } },
-          { kind: "Field", name: { kind: "Name", value: "height" } },
-          { kind: "Field", name: { kind: "Name", value: "alt" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Header_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "HeroImageBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          { kind: "Field", name: { kind: "Name", value: "alignCenter" } },
-          { kind: "Field", name: { kind: "Name", value: "hideTitle" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "image" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "max" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1550" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "850" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Banner_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "BannerCtaBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainText" },
-            name: { kind: "Name", value: "text" },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainTitle" },
-            name: { kind: "Name", value: "title" },
-          },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "imageBg" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "crop" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1550" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "url" },
-            name: { kind: "Name", value: "link" },
-          },
-          { kind: "Field", name: { kind: "Name", value: "cta" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Carousel_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "CarouselBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "images" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "(min-width: 1024px) 50vw, 100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "clip" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1200" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "600" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Cover_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "CoverBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "images" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "crop" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "1550" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Flag_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "FlagBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          { kind: "Field", name: { kind: "Name", value: "label" } },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          { kind: "Field", name: { kind: "Name", value: "alignRev" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "image" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "(min-width: 1024px) 50vw, 100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "max" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "w" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Focus_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "FocusBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainTitle" },
-            name: { kind: "Name", value: "title" },
-          },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "elements" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                { kind: "Field", name: { kind: "Name", value: "title" } },
-                { kind: "Field", name: { kind: "Name", value: "text" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "image" },
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "Field",
-                        name: { kind: "Name", value: "responsiveImage" },
-                        arguments: [
-                          {
-                            kind: "Argument",
-                            name: { kind: "Name", value: "sizes" },
-                            value: {
-                              kind: "StringValue",
-                              value: "(min-width: 1024px) 33vw, 100vw",
-                              block: false,
-                            },
-                          },
-                          {
-                            kind: "Argument",
-                            name: { kind: "Name", value: "imgixParams" },
-                            value: {
-                              kind: "ObjectValue",
-                              fields: [
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "fit" },
-                                  value: { kind: "EnumValue", value: "crop" },
-                                },
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "w" },
-                                  value: { kind: "IntValue", value: "800" },
-                                },
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "h" },
-                                  value: { kind: "IntValue", value: "800" },
-                                },
-                                {
-                                  kind: "ObjectField",
-                                  name: { kind: "Name", value: "auto" },
-                                  value: {
-                                    kind: "ListValue",
-                                    values: [
-                                      { kind: "EnumValue", value: "format" },
-                                      { kind: "EnumValue", value: "compress" },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                        selectionSet: {
-                          kind: "SelectionSet",
-                          selections: [
-                            {
-                              kind: "FragmentSpread",
-                              name: {
-                                kind: "Name",
-                                value: "DatoImage_responsiveImage",
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Product_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "ProductBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "label" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          { kind: "Field", name: { kind: "Name", value: "subTitle" } },
-          { kind: "Field", name: { kind: "Name", value: "subText" } },
-          { kind: "Field", name: { kind: "Name", value: "alignRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "image" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "(min-width: 1024px) 50vw, 80vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "max" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "800" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "smallImages" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "id" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "100vw",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "clip" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "70" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Text_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "TextBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          {
-            kind: "Field",
-            alias: { kind: "Name", value: "mainText" },
-            name: { kind: "Name", value: "text" },
-          },
-          { kind: "Field", name: { kind: "Name", value: "alignCenter" } },
-          { kind: "Field", name: { kind: "Name", value: "colorsRev" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "link" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "label" } },
-                { kind: "Field", name: { kind: "Name", value: "url" } },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Quote_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "QuoteBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "text" } },
-          { kind: "Field", name: { kind: "Name", value: "authorName" } },
-        ],
-      },
-    },
-    {
-      kind: "FragmentDefinition",
-      name: { kind: "Name", value: "Partners_block" },
-      typeCondition: {
-        kind: "NamedType",
-        name: { kind: "Name", value: "PartnersBlockRecord" },
-      },
-      selectionSet: {
-        kind: "SelectionSet",
-        selections: [
-          { kind: "Field", name: { kind: "Name", value: "id" } },
-          { kind: "Field", name: { kind: "Name", value: "_modelApiKey" } },
-          { kind: "Field", name: { kind: "Name", value: "menuLabel" } },
-          { kind: "Field", name: { kind: "Name", value: "title" } },
-          {
-            kind: "Field",
-            name: { kind: "Name", value: "images" },
-            selectionSet: {
-              kind: "SelectionSet",
-              selections: [
-                { kind: "Field", name: { kind: "Name", value: "format" } },
-                { kind: "Field", name: { kind: "Name", value: "url" } },
-                { kind: "Field", name: { kind: "Name", value: "title" } },
-                { kind: "Field", name: { kind: "Name", value: "alt" } },
-                {
-                  kind: "Field",
-                  name: { kind: "Name", value: "responsiveImage" },
-                  arguments: [
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "sizes" },
-                      value: {
-                        kind: "StringValue",
-                        value: "230px",
-                        block: false,
-                      },
-                    },
-                    {
-                      kind: "Argument",
-                      name: { kind: "Name", value: "imgixParams" },
-                      value: {
-                        kind: "ObjectValue",
-                        fields: [
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "fit" },
-                            value: { kind: "EnumValue", value: "clip" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "h" },
-                            value: { kind: "IntValue", value: "100" },
-                          },
-                          {
-                            kind: "ObjectField",
-                            name: { kind: "Name", value: "auto" },
-                            value: {
-                              kind: "ListValue",
-                              values: [
-                                { kind: "EnumValue", value: "format" },
-                                { kind: "EnumValue", value: "compress" },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                  selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [
-                      {
-                        kind: "FragmentSpread",
-                        name: {
-                          kind: "Name",
-                          value: "DatoImage_responsiveImage",
-                        },
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  ],
-} as unknown as DocumentNode<PageQuery, PageQueryVariables>;
+export type Text_BlockFragment = { __typename?: 'TextBlockRecord', id: any, _modelApiKey: string, menuLabel?: string | null, title: string, alignCenter?: any | null, colorsRev?: any | null, mainText?: string | null, link?: { __typename?: 'ExternalLinkRecord', label: string, url: string } | null } & { ' $fragmentName'?: 'Text_BlockFragment' };
+
+export type Header_BlockFragment = { __typename?: 'HeroImageBlockRecord', id: any, _modelApiKey: string, title: string, alignCenter?: any | null, hideTitle?: any | null, image: { __typename?: 'AltTitleFileField', responsiveImage?: (
+      { __typename?: 'ResponsiveImage' }
+      & { ' $fragmentRefs'?: { 'DatoImage_ResponsiveImageFragment': DatoImage_ResponsiveImageFragment } }
+    ) | null } } & { ' $fragmentName'?: 'Header_BlockFragment' };
+
+export const DatoImage_ResponsiveImageFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<DatoImage_ResponsiveImageFragment, unknown>;
+export const Banner_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Banner_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BannerCtaBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","alias":{"kind":"Name","value":"mainText"},"name":{"kind":"Name","value":"text"}},{"kind":"Field","alias":{"kind":"Name","value":"mainTitle"},"name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"imageBg"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"crop"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1550"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"url"},"name":{"kind":"Name","value":"link"}},{"kind":"Field","name":{"kind":"Name","value":"cta"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Banner_BlockFragment, unknown>;
+export const Carousel_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Carousel_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CarouselBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 50vw, 100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"clip"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1200"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"600"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Carousel_BlockFragment, unknown>;
+export const Cover_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Cover_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CoverBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"crop"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1550"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Cover_BlockFragment, unknown>;
+export const Flag_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Flag_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FlagBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"alignRev"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 50vw, 100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"max"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Flag_BlockFragment, unknown>;
+export const Focus_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Focus_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FocusBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","alias":{"kind":"Name","value":"mainTitle"},"name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"elements"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 33vw, 100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"crop"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Focus_BlockFragment, unknown>;
+export const Partners_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Partners_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PartnersBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"format"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"230px","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"clip"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"100"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Partners_BlockFragment, unknown>;
+export const Product_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Product_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProductBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"subTitle"}},{"kind":"Field","name":{"kind":"Name","value":"subText"}},{"kind":"Field","name":{"kind":"Name","value":"alignRev"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 50vw, 80vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"max"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"smallImages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"clip"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"70"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Product_BlockFragment, unknown>;
+export const Quote_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Quote_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"QuoteBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"authorName"}}]}}]} as unknown as DocumentNode<Quote_BlockFragment, unknown>;
+export const Text_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Text_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TextBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","alias":{"kind":"Name","value":"mainText"},"name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"alignCenter"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]} as unknown as DocumentNode<Text_BlockFragment, unknown>;
+export const Header_BlockFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Header_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroImageBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"alignCenter"}},{"kind":"Field","name":{"kind":"Name","value":"hideTitle"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"max"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1550"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"850"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}}]} as unknown as DocumentNode<Header_BlockFragment, unknown>;
+export const LayoutDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Layout"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"site"},"name":{"kind":"Name","value":"_site"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"EnumValue","value":"it"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"faviconMetaTags"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"tag"}},{"kind":"Field","name":{"kind":"Name","value":"attributes"}},{"kind":"Field","name":{"kind":"Name","value":"content"}}]}},{"kind":"Field","name":{"kind":"Name","value":"locales"}},{"kind":"Field","name":{"kind":"Name","value":"globalSeo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"siteName"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"visual"},"name":{"kind":"Name","value":"visualStyle"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"uppercaseTitles"}},{"kind":"Field","name":{"kind":"Name","value":"colorText"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorTextAlt"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorTextRev"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorBack"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorBackAlt"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorBackRev"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorAccent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorAccentRev"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorButton"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorButtonBack"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"fontBody"}},{"kind":"Field","name":{"kind":"Name","value":"fontHeading"}},{"kind":"Field","name":{"kind":"Name","value":"fontBaseHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontBaseSize"}},{"kind":"Field","name":{"kind":"Name","value":"fontLgHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontLgSize"}},{"kind":"Field","name":{"kind":"Name","value":"fontSmHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontXlHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontSmSize"}},{"kind":"Field","name":{"kind":"Name","value":"fontXlSize"}},{"kind":"Field","name":{"kind":"Name","value":"fontXsHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontXsSize"}},{"kind":"Field","name":{"kind":"Name","value":"fontXxlHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontXxlSize"}},{"kind":"Field","name":{"kind":"Name","value":"fontXxxlHeight"}},{"kind":"Field","name":{"kind":"Name","value":"fontXxxlSize"}}]}}]}}]} as unknown as DocumentNode<LayoutQuery, LayoutQueryVariables>;
+export const PageDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Page"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"visual"},"name":{"kind":"Name","value":"visualStyle"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"logoRev"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"uppercaseTitles"}},{"kind":"Field","name":{"kind":"Name","value":"colorButton"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorButtonBack"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorText"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}},{"kind":"Field","name":{"kind":"Name","value":"colorBack"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"red"}},{"kind":"Field","name":{"kind":"Name","value":"green"}},{"kind":"Field","name":{"kind":"Name","value":"blue"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"site"},"name":{"kind":"Name","value":"_site"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"EnumValue","value":"it"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locales"}},{"kind":"Field","name":{"kind":"Name","value":"globalSeo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"siteName"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"org"},"name":{"kind":"Name","value":"organization"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"EnumValue","value":"it"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"emailAddress"}},{"kind":"Field","name":{"kind":"Name","value":"facebookUrl"}},{"kind":"Field","name":{"kind":"Name","value":"instagramUrl"}},{"kind":"Field","name":{"kind":"Name","value":"newsletterFormUrl"}},{"kind":"Field","name":{"kind":"Name","value":"newsletterTitle"}},{"kind":"Field","name":{"kind":"Name","value":"newsletterLabel"}},{"kind":"Field","name":{"kind":"Name","value":"contactsMenuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"phoneNumber"}},{"kind":"Field","name":{"kind":"Name","value":"streetAddress"}},{"kind":"Field","name":{"kind":"Name","value":"facebookPixelId"}},{"kind":"Field","name":{"kind":"Name","value":"googleAnalyticsId"}},{"kind":"Field","name":{"kind":"Name","value":"googleTagManagerId"}},{"kind":"Field","name":{"kind":"Name","value":"iubendaPolicyId"}},{"kind":"Field","name":{"kind":"Name","value":"iubendaSiteId"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"page"},"name":{"kind":"Name","value":"landing"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"EnumValue","value":"it"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"seo"},"name":{"kind":"Name","value":"_seoMetaTags"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"attributes"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"tag"}}]}},{"kind":"Field","name":{"kind":"Name","value":"_locales"}},{"kind":"Field","name":{"kind":"Name","value":"headerBlocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Header_block"}}]}},{"kind":"Field","name":{"kind":"Name","value":"contentBlocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CarouselBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CoverBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FlagBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FocusBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProductBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TextBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"QuoteBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PartnersBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"blocks"},"name":{"kind":"Name","value":"contentBlocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BannerCtaBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Banner_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CarouselBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Carousel_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CoverBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Cover_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FlagBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Flag_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FocusBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Focus_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProductBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Product_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TextBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Text_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"QuoteBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Quote_block"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PartnersBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"Partners_block"}}]}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"DatoImage_responsiveImage"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ResponsiveImage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"srcSet"}},{"kind":"Field","name":{"kind":"Name","value":"base64"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Header_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroImageBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"alignCenter"}},{"kind":"Field","name":{"kind":"Name","value":"hideTitle"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"max"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1550"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"850"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Banner_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BannerCtaBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","alias":{"kind":"Name","value":"mainText"},"name":{"kind":"Name","value":"text"}},{"kind":"Field","alias":{"kind":"Name","value":"mainTitle"},"name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"imageBg"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"crop"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1550"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"url"},"name":{"kind":"Name","value":"link"}},{"kind":"Field","name":{"kind":"Name","value":"cta"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Carousel_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CarouselBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 50vw, 100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"clip"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1200"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"600"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Cover_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CoverBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"crop"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"1550"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Flag_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FlagBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"alignRev"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 50vw, 100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"max"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Focus_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FocusBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","alias":{"kind":"Name","value":"mainTitle"},"name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"elements"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 33vw, 100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"crop"}},{"kind":"ObjectField","name":{"kind":"Name","value":"w"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Product_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProductBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"subTitle"}},{"kind":"Field","name":{"kind":"Name","value":"subText"}},{"kind":"Field","name":{"kind":"Name","value":"alignRev"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"(min-width: 1024px) 50vw, 80vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"max"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"800"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"smallImages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"100vw","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"clip"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"70"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Text_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TextBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","alias":{"kind":"Name","value":"mainText"},"name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"alignCenter"}},{"kind":"Field","name":{"kind":"Name","value":"colorsRev"}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Quote_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"QuoteBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"authorName"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"Partners_block"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PartnersBlockRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"_modelApiKey"}},{"kind":"Field","name":{"kind":"Name","value":"menuLabel"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"format"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"sizes"},"value":{"kind":"StringValue","value":"230px","block":false}},{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"fit"},"value":{"kind":"EnumValue","value":"clip"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"IntValue","value":"100"}},{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"ListValue","values":[{"kind":"EnumValue","value":"format"},{"kind":"EnumValue","value":"compress"}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"DatoImage_responsiveImage"}}]}}]}}]}}]} as unknown as DocumentNode<PageQuery, PageQueryVariables>;
