@@ -267,8 +267,8 @@ export type ExternalLinkModelFilter = {
 };
 
 export enum ExternalLinkModelOrderBy {
-  CreatedAtAsc = '_createdAt_ASC',
-  CreatedAtDesc = '_createdAt_DESC',
+  _CreatedAtAsc = '_createdAt_ASC',
+  _CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -281,8 +281,8 @@ export enum ExternalLinkModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  UpdatedAtAsc = '_updatedAt_ASC',
-  UpdatedAtDesc = '_updatedAt_DESC',
+  _UpdatedAtAsc = '_updatedAt_ASC',
+  _UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -2920,10 +2920,10 @@ export type UploadNotesFilter = {
 };
 
 export enum UploadOrderBy {
-  CreatedAtAsc = '_createdAt_ASC',
-  CreatedAtDesc = '_createdAt_DESC',
-  UpdatedAtAsc = '_updatedAt_ASC',
-  UpdatedAtDesc = '_updatedAt_DESC',
+  _CreatedAtAsc = '_createdAt_ASC',
+  _CreatedAtDesc = '_createdAt_DESC',
+  _UpdatedAtAsc = '_updatedAt_ASC',
+  _UpdatedAtDesc = '_updatedAt_DESC',
   BasenameAsc = 'basename_ASC',
   BasenameDesc = 'basename_DESC',
   FilenameAsc = 'filename_ASC',

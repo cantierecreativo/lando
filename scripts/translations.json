@@ -1,0 +1,13 @@
+{
+  "defaultLocale": "en",
+  "languages": ["en", "it"],
+
+  "translations": {
+    "schedule": {
+      "it": "agenda"
+    },
+    "speakers": {
+      "it": "relatori"
+    }
+  }
+}
