@@ -29,6 +29,8 @@ export type Scalars = {
 export type AltTitleFileField = FileFieldInterface & {
   __typename?: 'AltTitleFileField';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _updatedAt: Scalars['DateTime'];
   alt: Scalars['String'];
   author?: Maybe<Scalars['String']>;
@@ -107,6 +109,8 @@ export type AltTitleFileFieldUrlArgs = {
 export type BannerCtaBlockRecord = RecordInterface & {
   __typename?: 'BannerCtaBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -150,6 +154,8 @@ export type BooleanFilter = {
 export type CarouselBlockRecord = RecordInterface & {
   __typename?: 'CarouselBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -207,6 +213,8 @@ export type ColorField = {
 export type CoverBlockRecord = RecordInterface & {
   __typename?: 'CoverBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -301,6 +309,8 @@ export type ExternalLinkRecord = RecordInterface & {
   _allLabelLocales?: Maybe<Array<StringNonNullMultiLocaleField>>;
   _allUrlLocales?: Maybe<Array<StringNonNullMultiLocaleField>>;
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -361,6 +371,8 @@ export enum FaviconType {
 export type FileField = FileFieldInterface & {
   __typename?: 'FileField';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _updatedAt: Scalars['DateTime'];
   alt?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
@@ -437,6 +449,8 @@ export type FileFieldUrlArgs = {
 
 export type FileFieldInterface = {
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _updatedAt: Scalars['DateTime'];
   alt?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
@@ -515,6 +529,8 @@ export type FileFieldInterfaceUrlArgs = {
 export type FlagBlockRecord = RecordInterface & {
   __typename?: 'FlagBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -553,6 +569,8 @@ export type FlagBlockRecordTextArgs = {
 export type FocusBlockRecord = RecordInterface & {
   __typename?: 'FocusBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -597,6 +615,8 @@ export type GlobalSeoField = {
 export type HeroImageBlockRecord = RecordInterface & {
   __typename?: 'HeroImageBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -2082,6 +2102,8 @@ export type LandingRecord = RecordInterface & {
   _allHeaderBlocksLocales?: Maybe<Array<HeroImageBlockRecordListListNonNullMultiLocaleField>>;
   _allSeoLocales?: Maybe<Array<SeoFieldMultiLocaleField>>;
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _locales: Array<SiteLocale>;
@@ -2164,6 +2186,8 @@ export type OrganizationRecord = RecordInterface & {
   _allNewsletterTitleLocales?: Maybe<Array<StringMultiLocaleField>>;
   _allStreetAddressLocales?: Maybe<Array<StringMultiLocaleField>>;
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _locales: Array<SiteLocale>;
@@ -2283,6 +2307,8 @@ export type OrientationFilter = {
 export type PartnersBlockRecord = RecordInterface & {
   __typename?: 'PartnersBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -2311,6 +2337,8 @@ export type PartnersBlockRecord_SeoMetaTagsArgs = {
 export type ProductBlockRecord = RecordInterface & {
   __typename?: 'ProductBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -2482,6 +2510,8 @@ export type QueryVisualStyleArgs = {
 export type QuoteBlockRecord = RecordInterface & {
   __typename?: 'QuoteBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -2513,6 +2543,8 @@ export type QuoteBlockRecordTextArgs = {
 
 export type RecordInterface = {
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -2666,6 +2698,8 @@ export type Tag = {
 export type TextBlockRecord = RecordInterface & {
   __typename?: 'TextBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -3063,6 +3097,8 @@ export type UploadWidthFilter = {
 export type VideoBlockRecord = RecordInterface & {
   __typename?: 'VideoBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -3101,6 +3137,8 @@ export type VideoField = {
 export type VideoFileField = FileFieldInterface & {
   __typename?: 'VideoFileField';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _updatedAt: Scalars['DateTime'];
   alt?: Maybe<Scalars['String']>;
   author?: Maybe<Scalars['String']>;
@@ -3185,6 +3223,8 @@ export enum VideoMp4Res {
 export type VisualStyleRecord = RecordInterface & {
   __typename?: 'VisualStyleRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
@@ -3239,6 +3279,8 @@ export type VisualStyleRecord_SeoMetaTagsArgs = {
 export type WidgetSubBlockRecord = RecordInterface & {
   __typename?: 'WidgetSubBlockRecord';
   _createdAt: Scalars['DateTime'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']>;
   _firstPublishedAt?: Maybe<Scalars['DateTime']>;
   _isValid: Scalars['BooleanType'];
   _modelApiKey: Scalars['String'];
