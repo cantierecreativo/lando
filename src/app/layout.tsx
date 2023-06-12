@@ -6,44 +6,11 @@ import { graphql } from "@/gql";
 import SkipLinks from "@/components/layout/SkipLinks";
 import { CSSProperties } from "react";
 import { setGoogleFonts } from "@/lib/fonts";
-
-type colorType = {
-  red: number;
-  green: number;
-  blue: number;
-};
-type VisualType = {
-  colorText: colorType;
-  colorTextAlt: colorType;
-  colorTextRev: colorType;
-  colorBack: colorType;
-  colorBackAlt: colorType;
-  colorBackRev: colorType;
-  colorAccentRev: colorType;
-  colorButton: colorType;
-  colorButtonBack: colorType;
-  colorAccent: colorType;
-  fontBody: string;
-  fontHeading: string;
-  fontXsSize: number;
-  fontXsHeight: number;
-  fontSmSize: number;
-  fontSmHeight: number;
-  fontBaseHeight: number;
-  fontBaseSize: number;
-  fontLgSize: number;
-  fontLgHeight: number;
-  fontXlSize: number;
-  fontXlHeight: number;
-  fontXxlSize: number;
-  fontXxlHeight: number;
-  fontXxxlSize: number;
-  fontXxxlHeight: number;
-};
+import { VisualStyleRecord } from "@/gql/graphql";
 
 const layoutVariantsQuery = graphql(/* GraphQL */ `
   query LayoutQuery($locale: SiteLocale!) {
-    site: _site(locale: $locale) {
+    _site(locale: $locale) {
       faviconMetaTags {
         tag
         attributes
@@ -148,7 +115,7 @@ export default async function RootLayout({
     return size + "px";
   }
 
-  function getStyleFromVisualObjet(visual: VisualType) {
+  function getStyleFromVisualObjet(visual: VisualStyleRecord | undefined) {
     return {
       "--color-white": "255 255 255",
       "--color-text": colorToRule(visual.colorText),
@@ -187,7 +154,7 @@ export default async function RootLayout({
   }
 
   const styles = Object.values(allVisualStyles).map((visual) => {
-    return getStyleFromVisualObjet(visual as VisualType);
+    return getStyleFromVisualObjet(visual as VisualStyleRecord);
   });
 
   return (
@@ -197,7 +164,7 @@ export default async function RootLayout({
         {renderMetaTags(_site.faviconMetaTags)}
       </Head>
 
-      <body style={styles[0] as CSSProperties}>
+      <body style={styles[1] as CSSProperties}>
         <SkipLinks locale={locale} />
         {children}
       </body>

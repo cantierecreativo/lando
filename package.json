@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "gen": "graphql-codegen",
-    "dev": "next dev",
+    "dev": "yarn gen && yarn fix && next dev",
     "build": "yarn gen && yarn fix && next build",
     "start": "next start",
     "lint": "next lint",
