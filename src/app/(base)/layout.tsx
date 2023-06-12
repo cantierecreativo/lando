@@ -7,8 +7,6 @@ import SkipLinks from "@/components/layout/SkipLinks";
 import { CSSProperties } from "react";
 import { setGoogleFonts } from "@/lib/fonts";
 
-const locale = "it";
-
 const query = graphql(/* GraphQL */ `
   query Layout {
     site: _site(locale: it) {
@@ -22,10 +20,11 @@ const query = graphql(/* GraphQL */ `
         siteName
       }
     }
-    visual: visualStyle {
+    visuals: allVisualStyles {
       logo {
         url
       }
+      theme
       uppercaseTitles
       colorText {
         red
@@ -97,16 +96,13 @@ const query = graphql(/* GraphQL */ `
   }
 `);
 
-// function nameForGoogleFonts(name) {
-//   return name.replace(/\s+/g, "+");
-// }
-
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { visual, site } = await request(query);
+  const locale = "it";
+  const { site, visuals } = await request(query as any);
 
   function colorToRule(color: { red: number; green: number; blue: number }) {
     return `${color.red} ${color.green} ${color.blue}`;
@@ -119,11 +115,12 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        {setGoogleFonts(visual)}
+        {Object.values(visuals).map((visual) => setGoogleFonts(visual))}
         {renderMetaTags(site.faviconMetaTags)}
       </Head>
       <body
         style={
+          Object.values(visuals).map((visual) =>
           visual
             ? ({
                 "--color-white": "255 255 255",
