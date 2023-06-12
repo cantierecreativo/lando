@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "gen": "graphql-codegen",
-    "dev": "concurrently \"next dev\" \"graphql-codegen --watch\"",
-    "gen": "graphql-codegen",
+    "dev": "next dev",
     "build": "yarn gen && yarn fix && next build",
     "start": "next start",
     "lint": "next lint",
