@@ -23,8 +23,9 @@ export default function Footer({ org, visual, site, locale }) {
             <Image
               src={visual.logo.url}
               alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}
-              width={220}
-              height={90}
+              width={120}
+              height={50}
+              objectPosition="left"
             />
           </div>
           {streetAddress && (

@@ -205,10 +205,6 @@ export async function getStaticProps({ locale }) {
               text
               alignCenter
               colorsRev
-              link {
-                label
-                url
-              }
             }
             ... on PartnersBlockRecord {
               ${blockSetupFields}
@@ -235,7 +231,6 @@ export async function getStaticProps({ locale }) {
                   ...responsiveImageFragment
                 }
               }
-              link
               cta
               menuLabel
             }
