@@ -22,6 +22,7 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
             "lang":"${locale}",
             "cookiePolicyId":${policyId},
             "banner":{
+              "prependOnBody":true,
               "acceptButtonDisplay":true,
               "closeButtonDisplay":false,
               "customizeButtonDisplay":true,
@@ -43,16 +44,22 @@ export default function Iubenda({ siteId, policyId, visual, locale }) {
         }}
       />
       <Script
-        id="iubenda-script"
+        id="iubenda-cs-1"
         type="text/javascript"
-        strategy="afterInteractive"
-        src={`//cs.iubenda.com/sync/${siteId}.js`}
+        src={`https://cs.iubenda.com/autoblocking/${siteId}.js`}
       />
       <Script
-        id="iubenda-cs"
+        id="iubenda-cs-2"
         type="text/javascript"
-        strategy="afterInteractive"
-        src="//cdn.iubenda.com/cs/beta/iubenda_cs.js"
+        src="//cdn.iubenda.com/cs/iubenda_cs.js"
+        strategy="lazyOnload"
+      />
+      <Script
+        id="active-modal-cookie"
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);`,
+        }}
       />
     </>
   );
