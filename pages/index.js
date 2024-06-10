@@ -234,6 +234,19 @@ export async function getStaticProps({ locale }) {
               cta
               menuLabel
             }
+            ... on MapBlockRecord {
+              ${blockSetupFields}
+              title
+              text
+              menuLabel
+              map {
+                latitude
+                longitude
+              }
+              zoom
+              style
+              token
+            }
           }
         }
       }

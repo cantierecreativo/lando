@@ -8,6 +8,7 @@ import Quote from "components/blocks/Quote";
 import Text from "components/blocks/Text";
 import Partners from "components/blocks/Partners";
 import Banner from "components/blocks/Banner";
+import MapBlock from "components/blocks/MapBlock";
 
 function renderBlock(block, visual, locale) {
   switch (block._modelApiKey) {
@@ -50,6 +51,16 @@ function renderBlock(block, visual, locale) {
     case "banner_cta_block":
       return (
         <Banner block={block} visual={visual} key={block.id} locale={locale} />
+      );
+
+    case "map_block":
+      return (
+        <MapBlock
+          block={block}
+          visual={visual}
+          key={block.id}
+          locale={locale}
+        />
       );
   }
 }
