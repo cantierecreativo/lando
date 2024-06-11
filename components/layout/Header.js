@@ -21,6 +21,8 @@ export default function Header({ site, visual, org, page, locale }) {
             width={220}
             height={90}
             priority="true"
+            objectPosition="left"
+            objectFit="contain"
           />
         </div>
         {menuItems && (

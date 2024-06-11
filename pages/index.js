@@ -121,27 +121,31 @@ export async function getStaticProps({ locale }) {
                 ...responsiveImageFragment
               }
             }
+            ctaHeader {
+              url
+              label
+            }
           }
           contentBlocks {
             ... on CarouselBlockRecord {
-               ${blockSetupFields}
-               colorsRev
-               images {
-                 id
-                 responsiveImage(sizes: "(min-width: 1024px) 50vw, 100vw", imgixParams: { fit: clip, w: 1200, h: 600, auto: [format,compress] }) {
-                   ...responsiveImageFragment
-                 }
-               }
+              ${blockSetupFields}
+              colorsRev
+              images {
+                id
+                responsiveImage(sizes: "(min-width: 1024px) 50vw, 100vw", imgixParams: { fit: clip, w: 1200, h: 600, auto: [format,compress] }) {
+                  ...responsiveImageFragment
+                }
+              }
             }
             ... on CoverBlockRecord {
-               ${blockSetupFields}
-               colorsRev
-               images {
-                 id
-                 responsiveImage(sizes: "100vw", imgixParams: { fit: crop, w: 1550, h: 800, auto: [format,compress] }) {
-                   ...responsiveImageFragment
-                 }
-               }
+              ${blockSetupFields}
+              colorsRev
+              images {
+                id
+                responsiveImage(sizes: "100vw", imgixParams: { fit: crop, w: 1550, h: 800, auto: [format,compress] }) {
+                  ...responsiveImageFragment
+                }
+              }
             }
             ... on FlagBlockRecord {
               ${blockSetupFields}
@@ -205,6 +209,10 @@ export async function getStaticProps({ locale }) {
               text
               alignCenter
               colorsRev
+              link {
+                url
+                label
+              }
             }
             ... on PartnersBlockRecord {
               ${blockSetupFields}
@@ -246,6 +254,32 @@ export async function getStaticProps({ locale }) {
               zoom
               style
               token
+            }
+            ... on VideoBlockRecord {
+              ${blockSetupFields}
+              internalVideo {
+                video {
+                  muxPlaybackId
+                  title
+                  width
+                  height
+                  blurUpThumb
+                  mp4Url(res: medium)
+                  thumbnailUrl(format: jpg)
+                  muxAssetId
+                  framerate
+                  duration
+                  muxPlaybackId
+                  streamingUrl
+                }
+              }
+              externalVideo {
+                url
+                provider
+                providerUid
+                thumbnailUrl
+              }
+              menuLabel
             }
           }
         }

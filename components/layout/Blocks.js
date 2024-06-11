@@ -9,6 +9,7 @@ import Text from "components/blocks/Text";
 import Partners from "components/blocks/Partners";
 import Banner from "components/blocks/Banner";
 import MapBlock from "components/blocks/MapBlock";
+import VideoBlock from "components/blocks/VideoBlock";
 
 function renderBlock(block, visual, locale) {
   switch (block._modelApiKey) {
@@ -56,6 +57,15 @@ function renderBlock(block, visual, locale) {
     case "map_block":
       return (
         <MapBlock
+          block={block}
+          visual={visual}
+          key={block.id}
+          locale={locale}
+        />
+      );
+    case "video_block":
+      return (
+        <VideoBlock
           block={block}
           visual={visual}
           key={block.id}

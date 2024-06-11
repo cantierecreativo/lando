@@ -21,7 +21,7 @@ export default function Text({ block, visual, locale }) {
       ref={ref}
       className={`${inViewClass} ${colorsClass} fade-down scroll-mt-20 lg:scroll-mt-30 xl:scroll-mt-40`}
     >
-      <div className="container py-12 lg:py-24 xl:py-36">
+      <div className="container my-12 lg:my-24 xl:my-36">
         <h2
           className={`${alignClass} ${colorsClass} ${uppercaseClass(
             visual
@@ -31,10 +31,10 @@ export default function Text({ block, visual, locale }) {
         </h2>
         <div className={`${alignClass} max-w-xl xl:text-lg`}>
           {renderHTML(block.text)}
-          {block.link && (
+          {block.link.url && (
             <div className="mt-8">
               <a
-                className="inline-flex rounded text-button bg-button-back uppercase tracking-wide transition-opacity hover:opacity-80 text-sm py-4 px-6 xl:text-lg"
+                className={`inline-flex rounded text-rev bg-button uppercase tracking-wide transition-opacity hover:opacity-80 text-sm py-4 px-6 xl:text-lg`}
                 href={block.link.url}
                 target="_blank"
                 rel="noreferrer noopener"

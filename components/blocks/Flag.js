@@ -20,7 +20,11 @@ export default function Flag({ block, visual }) {
   const inViewClass = inView ? "fade-down-on" : "fade-down-off";
 
   return (
-    <section ref={ref} className={`${colorsClass} ${spacingClass}`}>
+    <section
+      id={anchorId(block)}
+      ref={ref}
+      className={`${colorsClass} ${spacingClass} scroll-mt-20 xl:scroll-mt-32`}
+    >
       <div
         className={`${alignClass} container lg:flex lg:items-center lg:gap-12 xl:gap-24`}
       >

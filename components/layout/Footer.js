@@ -24,8 +24,9 @@ export default function Footer({ org, visual, site, locale }) {
               src={visual.logo.url}
               alt={`Logo ${site.globalSeo && site.globalSeo.siteName}`}
               width={120}
-              height={50}
-              objectPosition="left"
+              height={90}
+              objectPosition={newsletterFormUrl ? "left" : "center"}
+              objectFit="contain"
             />
           </div>
           {streetAddress && (
