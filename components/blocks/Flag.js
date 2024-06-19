@@ -2,6 +2,7 @@ import { renderHTML } from "lib/html";
 import { uppercaseClass } from "lib/visual";
 import { Image } from "react-datocms";
 import { useInView } from "react-intersection-observer";
+import { anchorId } from "lib/anchors";
 
 export default function Flag({ block, visual }) {
   const image = block.image;
